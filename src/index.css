@@ -5,4 +5,12 @@
   --color-grow: #bbb;
   --color-primary: #ffa500;
   --color-accent: #111;
+
+  /* light */
+}
+.light {
+  --color-back: #eee;
+  --color-grow: #444;
+  --color-primary: #ff6600;
+  --color-accent: #ccc;
 }

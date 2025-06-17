@@ -29,16 +29,15 @@ const navLinks = [
   },
 ];
 
-const Sidebar = () => {
-  let [isTrue, setIsTrue] = useState(false);
+const Sidebar = ({ isTrue, setIsTrue }) => {
   const slideBarHandler = () => {
     setIsTrue(!isTrue);
   };
 
   return (
-    <div className="relative">
+    <div className="relative z-998">
       <aside
-        className={`h-screen bg-back text-grow flex flex-col items-center py-20 gap-1 border-r border-accent/50 fixed top-0 ${
+        className={`h-screen bg-back text-grow flex flex-col items-center py-25 gap-1 border-r border-accent/50 fixed top-0 ${
           isTrue ? "-left-20 border-none" : "left-0"
         } overflow-hidden transition-all duration-300`}
       >
@@ -48,9 +47,9 @@ const Sidebar = () => {
               onClick={slideBarHandler}
               key={id}
               to={route}
-              className="text-xl shadow-accent px-8 py-3  drop-shadow-[1px_5px_1px] text-accent"
+              className="text-xl px-8 py-3   drop-shadow-[1px_5px_1px] shadow-accent text-accent"
             >
-              <div className="text-grow hover:text-primary transition-all duration-300">
+              <div className="text-grow hover:text-primary hover:scale-110 transition-all duration-300">
                 {icon}
               </div>
             </Link>
@@ -64,7 +63,7 @@ const Sidebar = () => {
       >
         <IoIosArrowForward
           onClick={slideBarHandler}
-          className="text-grow rotate-180 text-4xl hover:text-primary cursor-pointer"
+          className="text-grow rotate-180 text-4xl hover:text-primary cursor-pointer transition-all duration-300 hover:scale-120"
         />
       </div>
     </div>
