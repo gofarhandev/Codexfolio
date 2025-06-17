@@ -1,0 +1,8 @@
+@import "tailwindcss";
+
+@theme {
+  --color-back: #242424;
+  --color-grow: #bbb;
+  --color-primary: #ffa500;
+  --color-accent: #111;
+}
