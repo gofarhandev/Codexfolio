@@ -58,14 +58,14 @@ const skill = [
 
 const Skills = () => {
   return (
-    <div className="mb-30 sm:mb:40  -rotate-12 sm:-rotate-5 xl:-rotate-3">
-      <div className="flex gap-0">
+    <div className="mb-30 sm:mb:40">
+      <div className="flex gap-0 -rotate-14 sm:-rotate-12 xl:-rotate-8 overflow-hidden">
         <div className="marquee flex ">
           {skill.map(({ id, icon, name }) => {
             return (
               <div
                 key={id}
-                className="drop-shadow-[1px_5px_2px] text-accent/30 text-3xl sm:text-5xl font-bold mr-20"
+                className="drop-shadow-[1px_5px_2px] text-accent text-3xl sm:text-5xl font-bold mr-20"
               >
                 <span className="text-primary flex gap-1 items-center">
                   {icon}
@@ -80,7 +80,7 @@ const Skills = () => {
             return (
               <div
                 key={id}
-                className="drop-shadow-[1px_5px_2px] text-accent/30 text-3xl sm:text-5xl font-bold mr-20"
+                className="drop-shadow-[1px_5px_2px] text-accent text-3xl sm:text-5xl font-bold mr-20"
               >
                 <span className="text-primary flex gap-1 items-center">
                   {icon}

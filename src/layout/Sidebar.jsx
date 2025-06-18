@@ -11,15 +11,16 @@ const navLinks = [
     icon: <TiHome />,
     route: "/",
   },
+
   {
     id: 2,
-    icon: <LuLaptopMinimal />,
-    route: "/projects",
+    icon: <ImUser />,
+    route: "/about",
   },
   {
     id: 3,
-    icon: <ImUser />,
-    route: "/about",
+    icon: <LuLaptopMinimal />,
+    route: "/projects",
   },
   {
     id: 4,
@@ -35,7 +36,7 @@ const Sidebar = ({ isTrue, setIsTrue }) => {
 
   return (
     <aside
-      className={`z-111 h-screen bg-back text-grow flex flex-col items-center py-25 gap-1 shadow-[5px_1px_1px] shadow-accent/20 fixed top-0 ${
+      className={`z-111 h-screen bg-back text-grow flex flex-col items-center py-25 gap-1 shadow-[5px_1px_1px] shadow-accent fixed top-0 ${
         isTrue ? "-left-20 border-none" : "left-0"
       } transition-all duration-300`}
     >

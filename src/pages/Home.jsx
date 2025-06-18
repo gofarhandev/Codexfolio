@@ -1,3 +1,4 @@
+import AfterProjects from "../components/AfterProjects";
 import Hero from "../components/Hero";
 import Skills from "../components/Skills";
 import About from "../pages/About";
@@ -8,6 +9,7 @@ const Home = () => {
       <Hero />
       <Skills />
       <About />
+      <AfterProjects />
     </div>
   );
 };

@@ -9,10 +9,10 @@
   /* light */
 }
 .light {
-  --color-back: #eee;
-  --color-grow: #444;
-  --color-primary: #ff6600;
-  --color-accent: #ccc;
+  --color-back: hsl(0, 0%, 100%);
+  --color-grow: #000000;
+  --color-primary: #1919fe;
+  --color-accent: #cacaca;
 }
 
 /* loading */
