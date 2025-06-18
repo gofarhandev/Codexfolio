@@ -8,7 +8,7 @@ const Navbar = ({ isDark, setIsDark }) => {
   };
 
   return (
-    <div className="fixed top-0 left-0 w-full h-20 z-999 border-b border-accent/50 bg-back transition-all duration-300">
+    <div className="fixed top-0 left-0 w-full h-16 z-999 shadow-[1px_5px_1px] shadow-accent/20 bg-back transition-all duration-300">
       <div className="w-full h-full flex justify-between items-center pl-4 pr-10">
         <h2 className="drop-shadow-[1px_5px_1px] shadow-accent text-accent text-2xl">
           <Link to="/" className="text-primary font-bold">
