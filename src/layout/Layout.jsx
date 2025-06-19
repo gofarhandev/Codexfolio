@@ -5,6 +5,7 @@ import { useEffect, useState } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { Outlet } from "react-router-dom";
+import Footer from "./Footer";
 
 const Layout = ({ children }) => {
   const handleAnimationComplete = () => {
@@ -42,7 +43,7 @@ const Layout = ({ children }) => {
       >
         <SplitText
           text="ASSALAMU ALAIKUM"
-          className="text-4xl sm:text-4xl xl:text-6xl font-semibold text-center text-grow"
+          className="text-3xl sm:text-4xl xl:text-6xl font-semibold text-center text-grow"
           delay={100}
           duration={0.6}
           ease="power3.out"
@@ -58,9 +59,10 @@ const Layout = ({ children }) => {
 
       <Navbar isDark={isDark} setIsDark={setIsDark} />
       <Sidebar isTrue={isTrue} setIsTrue={setIsTrue} />
-      <main className="px-10 pt-25 sm:px-20 lg:px-30 w-full min-h-screen  bg-back  text-grow p-6 trans">
+      <main className="px-5 pt-25 sm:px-20 lg:px-30 w-full min-h-screen  bg-back  text-grow p-6 trans">
         {/* {children} */}
         <Outlet />
+      <Footer />
       </main>
     </div>
   );

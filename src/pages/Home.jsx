@@ -2,6 +2,7 @@ import Hero from "../components/Hero";
 import Skills from "../components/Skills";
 import About from "../pages/About";
 import Projects from "../pages/Projects";
+import Contact from "./Contact";
 import Services from "./Services";
 
 const Home = () => {
@@ -12,6 +13,7 @@ const Home = () => {
       <About />
       <Projects />
       <Services />
+      <Contact />
     </div>
   );
 };

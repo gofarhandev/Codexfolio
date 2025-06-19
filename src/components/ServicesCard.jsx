@@ -34,7 +34,7 @@ const ServicesCard = () => {
           return (
             <div
               key={id}
-              className="p-5 text-grow font-bold tracking-wider rounded bg-accent/10 backdrop-blur-2xl"
+              className="p-5 text-grow font-bold tracking-wider border rounded border-primary/20 bg-accent/10 backdrop-blur-2xl"
             >
               <div className="text-4xl ">{icon}</div>
               <div className="text-xl  pt-5 pb-2">{name}</div>

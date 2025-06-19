@@ -17,7 +17,7 @@ const About = () => {
               </span>
             </p>
           </div>
-          <div className="bg-accent/10 backdrop-blur-2xl order-2 sm:order-1 col-span-2 text-grow p-5 w-full rounded">
+          <div className="bg-accent/10 backdrop-blur-2xl order-2 sm:order-1 col-span-2 text-grow p-5 w-full border rounded border-primary/20">
             <p className="drop-shadow-[1px_5px_1px] text-accent text:sm  sm:text-medium font-medium">
               <span className="text-grow">
                 <b>👋 Introduction</b> I’m MD Farhan Sadik, a passionate
@@ -26,14 +26,14 @@ const About = () => {
               </span>
             </p>
           </div>
-          <button className="text-grow order-1 p-5 w-full sm:col-span-1  rounded flex items-center backdrop-blur-2xl bg-accent/10 justify-center">
+          <button className="text-grow order-1 p-5 w-full sm:col-span-1  border rounded border-primary/20 flex items-center backdrop-blur-2xl bg-accent/10 justify-center">
             <p className="w-full drop-shadow-[1px_5px_1px] text-accent text-xl  sm:text-2xl font-bold">
               <span className="text-grow flex justify-center items-center gap-2 whitespace-nowrap hover:text-primary cursor-pointer transition-all duration-300">
                 <IoMdCloudDownload /> Resume
               </span>
             </p>
           </button>
-          <div className="bg-accent/10 col-span-2 order-3 sm:order-2 text-grow p-5 w-full rounded backdrop-blur-2xl">
+          <div className="bg-accent/10 col-span-2 order-3 sm:order-2 text-grow p-5 w-full border rounded border-primary/20 backdrop-blur-2xl">
             <p className="drop-shadow-[1px_5px_1px] text-accent text:sm  sm:text-medium font-medium">
               <span className="text-grow">
                 <b>💻 My Journey & Expertise</b> I'm a frontend developer
@@ -45,7 +45,7 @@ const About = () => {
               </span>
             </p>
           </div>
-          <div className="bg-accent/10 order-4 sm:order-2 col-span-2 text-grow p-5 w-full rounded backdrop-blur-2xl">
+          <div className="bg-accent/10 order-4 sm:order-2 col-span-2 text-grow p-5 w-full border rounded border-primary/20 backdrop-blur-2xl">
             <p className="drop-shadow-[1px_5px_1px] text-accent text:sm  sm:text-medium font-medium">
               <span className="text-grow">
                 <b>🚀 Vision & Values</b> I see development as a means to solve

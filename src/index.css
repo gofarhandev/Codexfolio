@@ -9,10 +9,10 @@
   /* light */
 }
 .light {
-  --color-back: hwb(0 100% 0%);
-  --color-grow: #000000;
-  --color-primary: #1919fe;
-  --color-accent: #a3b7c5;
+  --color-back: #d8d8d8;
+  --color-grow: #555555;
+  --color-primary: #cd4202;
+  --color-accent: #00000016;
 }
 .trans{
   transition: all .3s linear;
@@ -31,4 +31,20 @@
 .marquee {
   white-space: nowrap;
   animation: marquee 20s linear infinite;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus, 
+textarea:-webkit-autofill, 
+textarea:-webkit-autofill:hover, 
+textarea:-webkit-autofill:focus, 
+select:-webkit-autofill, 
+select:-webkit-autofill:hover, 
+select:-webkit-autofill:focus {
+  -webkit-text-fill-color: #fff !important;
+  transition: background-color 5000s ease-in-out 0s;
+}
+.light input:-webkit-autofill {
+  -webkit-text-fill-color: #000 !important;
 }

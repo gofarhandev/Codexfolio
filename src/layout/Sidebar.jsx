@@ -4,6 +4,7 @@ import { MdMiscellaneousServices } from "react-icons/md";
 import { ImUser } from "react-icons/im";
 import { LuLaptopMinimal } from "react-icons/lu";
 import { IoIosArrowForward } from "react-icons/io";
+import { IoMdContacts } from "react-icons/io";
 
 const navLinks = [
   {
@@ -27,6 +28,11 @@ const navLinks = [
     icon: <MdMiscellaneousServices />,
     route: "/services",
   },
+  {
+    id: 5,
+    icon: <IoMdContacts />,
+    route: "/contact",
+  },
 ];
 
 const Sidebar = ({ isTrue, setIsTrue }) => {
@@ -36,7 +42,7 @@ const Sidebar = ({ isTrue, setIsTrue }) => {
 
   return (
     <aside
-      className={`z-111 h-screen bg-back text-grow flex flex-col items-center py-25 gap-1 shadow-[5px_1px_1px] shadow-accent fixed top-0 ${
+      className={`z-111 h-screen bg-back text-grow flex flex-col items-center py-24 gap-1 shadow-[5px_1px_1px] shadow-accent fixed top-0 ${
         isTrue ? "-left-20 border-none" : "left-0"
       } trans`}
     >
@@ -46,7 +52,7 @@ const Sidebar = ({ isTrue, setIsTrue }) => {
             onClick={slideBarHandler}
             key={id}
             to={route}
-            className="px-5 sm:px-7 pb-7 text-xl sm:text-2xl drop-shadow-[1px_5px_1px] shadow-accent  text-accent"
+            className="px-5 sm:px-7 pb-6 text-xl drop-shadow-[1px_5px_1px] shadow-accent  text-accent"
           >
             <div className="text-grow hover:text-primary hover:scale-110 trans">
               {icon}

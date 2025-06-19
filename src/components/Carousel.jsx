@@ -150,7 +150,7 @@ export default function Carousel({
   //     : "rounded-[24px] border border-grow"
   // }
   return (
-    <div className="overflow-hidden rounded border-primary/20 border h-[310px] flex items-baseline justify-center">
+    <div className="overflow-hidden rounded h-[310px] flex items-baseline justify-center">
       <div
         ref={containerRef}
         className={`relative p-4 
@@ -197,7 +197,7 @@ export default function Carousel({
                 className={`relative shrink-0 flex flex-col ${
                   round
                     ? "items-center justify-center text-center bg-back border-0"
-                    : "items-start justify-between bg-back border border-primary/50 rounded"
+                    : "items-start justify-between bg-back border border-primary/20 rounded"
                 } overflow-hidden cursor-grab active:cursor-grabbing`}
                 style={{
                   width: itemWidth,
