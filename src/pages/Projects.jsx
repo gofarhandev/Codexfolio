@@ -1,9 +1,13 @@
-import React from 'react'
+import AfterProjects from "../components/AfterProjects";
+import ProjectCard from "../components/ProjectCard";
 
 const Projects = () => {
   return (
-    <div className=''>Projects</div>
-  )
-}
+    <div className="relative pb-30">
+      <AfterProjects />
+      <ProjectCard />
+    </div>
+  );
+};
 
-export default Projects
+export default Projects;

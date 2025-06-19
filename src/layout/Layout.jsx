@@ -1,3 +1,4 @@
+import SplitText from "../components/SplitText";
 import Navbar from "./Navbar";
 import Sidebar from "./Sidebar";
 import { useEffect, useState } from "react";
@@ -6,6 +7,10 @@ import "aos/dist/aos.css";
 import { Outlet } from "react-router-dom";
 
 const Layout = ({ children }) => {
+  const handleAnimationComplete = () => {
+    console.log("All letters have animated!");
+  };
+
   let [isTrue, setIsTrue] = useState(false);
   let [isDark, setIsDark] = useState(true);
   if (!isDark) {
@@ -35,16 +40,25 @@ const Layout = ({ children }) => {
           loadAnimate ? "fixed" : "hidden"
         }`}
       >
-        <div className="text-center flex justify-center">
-          <div className="w-full loding-Text text-3xl sm:text-4xl lg:text-6xl font-bold drop-shadow-[1px_5px_1px] shadow-accent text-accent sm:tracking-widest">
-            <h1 className="text-grow">ASSALAMU ALAIKUM</h1>
-          </div>
-        </div>
+        <SplitText
+          text="ASSALAMU ALAIKUM"
+          className="text-4xl sm:text-4xl xl:text-6xl font-semibold text-center text-grow"
+          delay={100}
+          duration={0.6}
+          ease="power3.out"
+          splitType="chars"
+          from={{ opacity: 0, y: 40 }}
+          to={{ opacity: 1, y: 0 }}
+          threshold={0.1}
+          rootMargin="-100px"
+          textAlign="center"
+          onLetterAnimationComplete={handleAnimationComplete}
+        />
       </div>
 
       <Navbar isDark={isDark} setIsDark={setIsDark} />
       <Sidebar isTrue={isTrue} setIsTrue={setIsTrue} />
-      <main className="px-10 pt-25 sm:px-20 lg:px-30 w-full min-h-screen  bg-back  text-grow p-6 transition-all duration-300">
+      <main className="px-10 pt-25 sm:px-20 lg:px-30 w-full min-h-screen  bg-back  text-grow p-6 trans">
         {/* {children} */}
         <Outlet />
       </main>

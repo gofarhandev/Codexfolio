@@ -3,7 +3,7 @@ import gif from "../assets/gif.png";
 const Hero = () => {
   return (
     <div className="flex items-center justify-center mb-30 sm:mb-35 z-10">
-      <div className="drop-shadow-[1px_5px_1px] bg-back text-accent overflow-hidden rounded relative w-full">
+      <div className="drop-shadow-[1px_5px_1px]  text-accent overflow-hidden rounded relative w-full">
         {/* effect */}
         <div className="absolute -bottom-15 -right-20 h-30 w-20 rounded-full bg-primary shadow-[0px_10px_10vw] shadow-primary"></div>
 

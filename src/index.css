@@ -9,37 +9,13 @@
   /* light */
 }
 .light {
-  --color-back: hsl(0, 0%, 100%);
+  --color-back: hwb(0 100% 0%);
   --color-grow: #000000;
   --color-primary: #1919fe;
-  --color-accent: #cacaca;
+  --color-accent: #a3b7c5;
 }
-
-/* loading */
-@keyframes typing {
-  0% {
-    width: 0;
-    opacity: 0;
-  }
-  50% {
-    opacity: 1;
-    width: 100%;
-  }
-  90% {
-    opacity: 1;
-    width: 100%;
-  }
-  100% {
-    width: 0;
-  }
-}
-
-/* Page Lodding */
-.loding-Text {
-  overflow: hidden;
-  white-space: nowrap;
-  width: 0;
-  animation: typing 3s steps(100, end) forwards;
+.trans{
+  transition: all .3s linear;
 }
 
 /* skill marque */

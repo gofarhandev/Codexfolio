@@ -4,9 +4,9 @@ import { IoMdCloudDownload } from "react-icons/io";
 const About = () => {
   return (
     <div className="mt-5 mb-20">
-      <div className="h-full w-full drop-shadow-[1px_5px_1px] bg-back text-accent overflow-hidden rounded relative">
+      <div className="h-full w-full drop-shadow-[1px_5px_1px]  text-accent overflow-hidden rounded relative">
         {/* effect */}
-        <div className="absolute -top-15 -left-20 h-30 w-20 rounded-full bg-primary shadow-[0px_10px_20vw] shadow-primary"></div>
+        <div className="absolute -top-15 -left-20 h-30 w-20 rounded-full bg-primary shadow-[0px_10px_10vw] shadow-primary"></div>
 
         {/* content */}
         <div className="grid gap-10 grid-cols-2 sm:grid-cols-4  ">
@@ -17,7 +17,7 @@ const About = () => {
               </span>
             </p>
           </div>
-          <div className="bg-accent/10 order-2 sm:order-1 col-span-2 text-grow p-5 w-full rounded backdrop-blur-2xl">
+          <div className="bg-accent/10 backdrop-blur-2xl order-2 sm:order-1 col-span-2 text-grow p-5 w-full rounded">
             <p className="drop-shadow-[1px_5px_1px] text-accent text:sm  sm:text-medium font-medium">
               <span className="text-grow">
                 <b>👋 Introduction</b> I’m MD Farhan Sadik, a passionate

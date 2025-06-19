@@ -1,10 +1,10 @@
-import React from "react";
-
 const AfterProjects = () => {
   return (
     <div>
-      <div className="p-10 h-full w-full drop-shadow-[1px_5px_1px] bg-back text-accent overflow-hidden rounded relative">
-        <div className="absolute -bottom-15 -right-20 h-30 w-20 rounded-full bg-primary shadow-[0px_10px_20vw] shadow-primary"></div>
+      <div className="text-grow p-5 w-full rounded">
+        <h2 className="drop-shadow-[1px_5px_1px] text-accent text-xl sm:text-2xl font-bold pb-5">
+          <span className="text-grow">✨ Dive Into My Code World</span>
+        </h2>
       </div>
     </div>
   );
