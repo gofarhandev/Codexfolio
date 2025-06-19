@@ -1,5 +1,7 @@
 import { useEffect, useState, useRef } from "react";
+import PortImg from "../assets/port.png";
 import { motion, useMotionValue, useTransform } from "framer-motion";
+
 import {
   FiCircle,
   FiCode,
@@ -10,34 +12,28 @@ import {
 
 const DEFAULT_ITEMS = [
   {
-    title: "Text Animations",
+    title: "Code & Cook",
     description: "Cool text animations for your projects.",
-    id: 1,
     icon: <FiFileText className="h-[16px] w-[16px] text-grow" />,
+    live: "",
+    github: "",
+    img: "https://images.unsplash.com/photo-1488085061387-422e29b40080?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8cGxhbmUlMjB0cmF2ZWx8ZW58MHx8MHx8fDA%3D",
   },
   {
     title: "Animations",
     description: "Smooth animations for your projects.",
-    id: 2,
     icon: <FiCircle className="h-[16px] w-[16px] text-grow" />,
+    live: "https://master-farhan.github.io/studio/",
+    github: "https://github.com/master-farhan/studio",
+    img: PortImg,
   },
   {
     title: "Components",
     description: "Reusable components for your projects.",
-    id: 3,
     icon: <FiLayers className="h-[16px] w-[16px] text-grow" />,
-  },
-  {
-    title: "Backgrounds",
-    description: "Beautiful backgrounds and patterns for your projects.",
-    id: 4,
-    icon: <FiLayout className="h-[16px] w-[16px] text-grow" />,
-  },
-  {
-    title: "Common UI",
-    description: "Common UI components are coming soon!",
-    id: 5,
-    icon: <FiCode className="h-[16px] w-[16px] text-grow" />,
+    live: "https://master-farhan.github.io/recipe/",
+    github: "https://github.com/master-farhan/recipe",
+    img: "https://media.istockphoto.com/id/1128915783/photo/delicious-appetizing-classic-spaghetti-pasta-with-tomato-sauce-parmesan-cheese-and-fresh.webp?a=1&b=1&s=612x612&w=0&k=20&c=0Lh4CyHtR7aZHMVgI34YzK-i94ZLTQge-pDzTQZNhd4=",
   },
 ];
 
@@ -180,66 +176,66 @@ export default function Carousel({
           transition={effectiveTransition}
           onAnimationComplete={handleAnimationComplete}
         >
-          {carouselItems.map((item, index) => {
-            const range = [
-              -(index + 1) * trackItemOffset,
-              -index * trackItemOffset,
-              -(index - 1) * trackItemOffset,
-            ];
-            const outputRange = [90, 0, -90];
-            const rotateY = useTransform(x, range, outputRange, {
-              clamp: false,
-            });
+          {carouselItems.map(
+            ({ title, img, live, github, icon, description }, index) => {
+              const range = [
+                -(index + 1) * trackItemOffset,
+                -index * trackItemOffset,
+                -(index - 1) * trackItemOffset,
+              ];
+              const outputRange = [90, 0, -90];
+              const rotateY = useTransform(x, range, outputRange, {
+                clamp: false,
+              });
 
-            return (
-              <motion.div
-                key={index}
-                className={`relative shrink-0 flex flex-col ${
-                  round
-                    ? "items-center justify-center text-center bg-back border-0"
-                    : "items-start justify-between bg-back border border-primary/20 rounded"
-                } overflow-hidden cursor-grab active:cursor-grabbing`}
-                style={{
-                  width: itemWidth,
-                  height: round ? itemWidth : baseHeight,
-                  rotateY: rotateY,
-                  ...(round && { borderRadius: "50%" }),
-                }}
-                transition={effectiveTransition}
-              >
-                {/* img------------------------------------------- */}
-                <div className="bg-accent h-full w-full absolute hover:scale-110 trans">
-                  <div className="hover:bg-back bg-back/20 trans h-full w-full absolute">
-                    <div className="p-5 z-10 h-full w-full opacity-0 hover:opacity-100 hover:scale-90 trans">
-                      <div className="mb-1 font-black text-2xl text-grow">
-                        {item.title}
+              return (
+                <motion.div
+                  key={index}
+                  className={`relative shrink-0 flex flex-col ${
+                    round
+                      ? "items-center justify-center text-center bg-back border-0"
+                      : "items-start justify-between bg-back border border-primary/20 rounded"
+                  } overflow-hidden cursor-grab active:cursor-grabbing`}
+                  style={{
+                    width: itemWidth,
+                    height: round ? itemWidth : baseHeight,
+                    rotateY: rotateY,
+                    ...(round && { borderRadius: "50%" }),
+                  }}
+                  transition={effectiveTransition}
+                >
+                  {/* content ------------------------------------------- */}
+                  <div className="bg-accent h-full w-full absolute hover:scale-110 trans">
+                    <div className="hover:bg-back bg-back/20 trans h-full w-full absolute">
+                      <div className="p-5 z-10 h-full w-full opacity-0 hover:opacity-100 hover:scale-90 trans">
+                        <div className="mb-1 font-black text-2xl text-grow">
+                          {title}
+                        </div>
+                        <p className="text-lg font-medium text-grow">
+                          {description}
+                        </p>{" "}
+                        <a
+                          href={live}
+                          target="_blank"
+                          className="absolute bottom-5 left-5 text-grow py-1 px-5 hover:bg-accent/50 trans bg-accent rounded-2xl"
+                        >
+                          Live
+                        </a>
+                        <a
+                          href={github}
+                          target="_blank"
+                          className="absolute bottom-5 right-5 text-grow py-1 px-5 hover:bg-accent/50 trans bg-accent rounded-2xl"
+                        >
+                          Github
+                        </a>
                       </div>
-                      <p className="text-lg font-medium text-grow">
-                        {item.description}
-                      </p>{" "}
-                      <a
-                        href="#"
-                        className="absolute bottom-5 left-5 text-grow py-1 px-5 hover:bg-accent/50 trans bg-accent rounded-2xl"
-                      >
-                        Live
-                      </a>
-                      <a
-                        href="#"
-                        className="absolute bottom-5 right-5 text-grow py-1 px-5 hover:bg-accent/50 trans bg-accent rounded-2xl"
-                      >
-                        Github
-                      </a>
                     </div>
+                    <img className="w-full h-full object-cover" src={img} alt={title} />
                   </div>
-                  <img
-                    className="w-full h-full object-cover"
-                    src="https://img.freepik.com/free-vector/recipe-book-concept-illustration_114360-7481.jpg?semt=ais_hybrid&w=740"
-                    alt={item.title}
-                  />
-                </div>
-              </motion.div>
-            );
-          })}
+                </motion.div>
+              );
+            }
+          )}
         </motion.div>
 
         <div

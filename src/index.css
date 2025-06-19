@@ -10,9 +10,9 @@
 }
 .light {
   --color-back: #d8d8d8;
-  --color-grow: #555555;
-  --color-primary: #cd4202;
-  --color-accent: #00000016;
+  --color-grow: #220101;
+  --color-primary: #e05d1f;
+  --color-accent: #0000002a;
 }
 .trans{
   transition: all .3s linear;

@@ -48,10 +48,10 @@ const CarouselWrapper = () => {
           </div>
         </div>
 
-        <div className="relative overflow-hidden w-full p-5 border rounded border-primary/20 drop-shadow-[1px_5px_1px]  text-accent mt-5">
+        <div className="relative overflow-hidden w-full -mb-2 py-6 tracking-wide px-5 border rounded border-primary/20 drop-shadow-[1px_5px_1px]  text-accent mt-5">
           <div className="absolute -bottom-15 -right-20 h-30 w-20 rounded-full bg-primary shadow-[0px_10px_10vw] shadow-primary"></div>
 
-          <div className="text-grow font-medium ">
+          <div className="text-grow font-medium">
             <p>
               <span className="text-xl font-bold">🚀 Projects that Brought Ideas to Life</span><br /><br /> I build
               responsive, accessible, and performance-driven websites using
