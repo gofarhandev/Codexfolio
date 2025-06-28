@@ -1,5 +1,6 @@
 import { ImUser } from "react-icons/im";
 import { IoMdCloudDownload } from "react-icons/io";
+import CV from "../../public/CV.pdf"
 
 const About = () => {
   return (
@@ -39,9 +40,13 @@ const About = () => {
                 build responsive, user-focused interfaces with clean,
                 maintainable code. Trained at Sheriyans Coding School and
                 committed to staying current with modern frontend trends.
-                <span className="leading-8 text-xl pt-2 px-5  sm:text-2xl font-bold text-grow flex justify-end items-center gap-2  whitespace-nowrap hover:text-primary cursor-pointer transition-all duration-300">
+                <a
+                  href={CV}
+                  download
+                  className="leading-8 text-xl pt-2 px-5 sm:text-2xl font-bold text-grow flex justify-end items-center gap-2 whitespace-nowrap hover:text-primary cursor-pointer transition-all duration-300"
+                >
                   <IoMdCloudDownload /> Resume
-                </span>
+                </a>
               </span>
             </p>
           </div>
