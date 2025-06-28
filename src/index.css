@@ -2,17 +2,17 @@
 
 @theme {
   --color-back: #242424;
-  --color-grow: #bbb;
+  --color-grow: #fff;
   --color-primary: #ffa500;
   --color-accent: #111;
 
   /* light */
 }
 .light {
-  --color-back: #d8d8d8;
-  --color-grow: #220101;
-  --color-primary: #e05d1f;
-  --color-accent: #0000002a;
+  --color-back: #8a7543;
+  --color-grow: #ffffff;
+  --color-primary: #ffe893;
+  --color-accent: #00000033;
 }
 .trans{
   transition: all .3s linear;

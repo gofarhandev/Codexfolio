@@ -3,7 +3,7 @@ import gif from "../assets/gif.png";
 const Hero = () => {
   return (
     <div className="flex items-center justify-center mb-30 sm:mb-35 z-10">
-      <div className="drop-shadow-[1px_5px_1px]  text-accent overflow-hidden rounded relative w-full">
+      <div className="text-accent overflow-hidden rounded relative w-full">
         {/* effect */}
         <div className="absolute -bottom-15 -right-20 h-30 w-20 rounded-full bg-primary shadow-[0px_10px_10vw] shadow-primary"></div>
 
@@ -16,7 +16,7 @@ const Hero = () => {
               alt=""
               className="drop-shadow-[1px_4px_2px] bg-back text-primary/20 rounded-full h-30 w-30"
             />
-            <h1 className="drop-shadow-[1px_5px_1px]  text-accent text-2xl sm:text-4xl font-medium">
+            <h1 className="drop-shadow-[1px_5px_1px]  text-accent text-3xl sm:text-5xl font-medium">
               <span className="text-grow">MD FARHAN SADIK</span>
             </h1>
             <h2 className="drop-shadow-[1px_5px_1px] text-accent text-xl sm:text-2xl font-medium pb-5">
@@ -25,9 +25,9 @@ const Hero = () => {
           </div>
 
           {/* right */}
-          <div className="flex flex-col gap-10 w-full">
-            <div className="bg-accent/10 border border-primary/20 text-grow p-5 w-full rounded backdrop-blur-2xl">
-              <p className="drop-shadow-[1px_5px_1px] text-accent text:sm  sm:text-medium font-bold">
+          <div className="flex flex-col justify-between gap-10 sm:gap-13 w-full">
+            <div className="bg-accent/10   text-grow p-5 w-full rounded backdrop-blur-2xl">
+              <p className="text:sm  sm:text-lg leading-8">
                 <span className="text-grow">
                   I design and develop beautiful web experiences with a focus on
                   performance, usability, and clean code. Let's turn your ideas
@@ -35,8 +35,8 @@ const Hero = () => {
                 </span>
               </p>
             </div>
-            <div className="bg-accent/10 text-grow p-5 w-full border rounded border-primary/20 backdrop-blur-2xl">
-              <p className="drop-shadow-[1px_5px_1px] text-accent text:sm  sm:text-medium font-bold">
+            <div className="bg-accent/10  text-grow p-5 w-full rounded  backdrop-blur-2xl">
+              <p className="text:sm  sm:text-lg leading-8">
                 <span className="text-grow">
                   Passionate about crafting responsive and interactive user
                   interfaces with React and Tailwind. Always learning. Always

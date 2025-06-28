@@ -1,39 +1,62 @@
 import { useEffect, useState, useRef } from "react";
-import PortImg from "../assets/port.png";
-import { motion, useMotionValue, useTransform } from "framer-motion";
+import Cook from "../assets/Cook.png";
+import Travel from "../assets/Travel.png";
+import Port from "../assets/Port.png";
+import Gadget from "../assets/Gadget.png";
+import Bubble from "../assets/Bubble.png";
+import Hotel from "../assets/Hotel.png";
 
-import {
-  FiCircle,
-  FiCode,
-  FiFileText,
-  FiLayers,
-  FiLayout,
-} from "react-icons/fi";
+import { motion, useMotionValue, useTransform } from "framer-motion";
+import { FiCircle, FiFileText, FiLayers } from "react-icons/fi";
 
 const DEFAULT_ITEMS = [
   {
     title: "Code & Cook",
-    description: "Cool text animations for your projects.",
+    description: "React.js, Tailwind CSS",
     icon: <FiFileText className="h-[16px] w-[16px] text-grow" />,
-    live: "",
-    github: "",
-    img: "https://images.unsplash.com/photo-1488085061387-422e29b40080?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8cGxhbmUlMjB0cmF2ZWx8ZW58MHx8MHx8fDA%3D",
-  },
-  {
-    title: "Animations",
-    description: "Smooth animations for your projects.",
-    icon: <FiCircle className="h-[16px] w-[16px] text-grow" />,
-    live: "https://master-farhan.github.io/studio/",
-    github: "https://github.com/master-farhan/studio",
-    img: PortImg,
-  },
-  {
-    title: "Components",
-    description: "Reusable components for your projects.",
-    icon: <FiLayers className="h-[16px] w-[16px] text-grow" />,
     live: "https://master-farhan.github.io/recipe/",
     github: "https://github.com/master-farhan/recipe",
-    img: "https://media.istockphoto.com/id/1128915783/photo/delicious-appetizing-classic-spaghetti-pasta-with-tomato-sauce-parmesan-cheese-and-fresh.webp?a=1&b=1&s=612x612&w=0&k=20&c=0Lh4CyHtR7aZHMVgI34YzK-i94ZLTQge-pDzTQZNhd4=",
+    img: Cook,
+  },
+  {
+    title: "My Gadget Bd",
+    description: "React.js, Redux, Tailwind CSS",
+    icon: <FiCircle className="h-[16px] w-[16px] text-grow" />,
+    live: "https://my-gadget-bd.netlify.app/",
+    github: "https://github.com/master-farhan/My-Gadget",
+    img: Gadget,
+  },
+  {
+    title: "Travel Website",
+    description: "React.js, Tailwind CSS",
+    icon: <FiLayers className="h-[16px] w-[16px] text-grow" />,
+    live: "https://travel-web-go.netlify.app/",
+    github: "https://github.com/master-farhan/Travel",
+    img: Travel,
+  },
+  {
+    title: "Portfolio",
+    description: "HTML, CSS, JavaScript",
+    icon: <FiLayers className="h-[16px] w-[16px] text-grow" />,
+    live: "https://farhan-studio.netlify.app/",
+    github: "https://github.com/master-farhan/studio",
+    img: Port,
+  },
+  {
+    title: "Hotel Booking",
+    description: "React.js, Tailwind CSS",
+    icon: <FiLayers className="h-[16px] w-[16px] text-grow" />,
+    live: "https://hotel-booking-002.netlify.app/",
+    github: "https://github.com/master-farhan/hotel-booking",
+    img: Hotel,
+  },
+  {
+    title: "Bubble Game",
+    description: "HTML, CSS, JavaScript",
+    icon: <FiLayers className="h-[16px] w-[16px] text-grow" />,
+    live: "https://master-farhan.github.io/Bubble-Game/",
+    github: "https://github.com/master-farhan/Bubble-Game",
+    img: Bubble,
   },
 ];
 
@@ -81,12 +104,8 @@ export default function Carousel({
     if (autoplay && (!pauseOnHover || !isHovered)) {
       const timer = setInterval(() => {
         setCurrentIndex((prev) => {
-          if (prev === items.length - 1 && loop) {
-            return prev + 1;
-          }
-          if (prev === carouselItems.length - 1) {
-            return loop ? 0 : prev;
-          }
+          if (prev === items.length - 1 && loop) return prev + 1;
+          if (prev === carouselItems.length - 1) return loop ? 0 : prev;
           return prev + 1;
         });
       }, autoplayDelay);
@@ -140,23 +159,11 @@ export default function Carousel({
         },
       };
 
-  //   ${
-  //   round
-  //     ? "rounded-full border border-grow"
-  //     : "rounded-[24px] border border-grow"
-  // }
   return (
-    <div className="overflow-hidden rounded h-[310px] flex items-baseline justify-center">
+    <div className=" rounded w-full flex items-center justify-center">
       <div
         ref={containerRef}
-        className={`relative p-4 
-      `}
-        style={{
-          width: `${baseWidth}px`,
-          ...(round
-            ? { height: `${baseWidth}px` }
-            : { height: `${baseHeight}px` }),
-        }}
+        className="relative w-full flex items-center justify-center flex-col"
       >
         <motion.div
           className="flex"
@@ -165,7 +172,7 @@ export default function Carousel({
           style={{
             width: itemWidth,
             gap: `${GAP}px`,
-            perspective: 1000,
+            perspective: 400,
             perspectiveOrigin: `${
               currentIndex * trackItemOffset + itemWidth / 2
             }px 50%`,
@@ -191,46 +198,54 @@ export default function Carousel({
               return (
                 <motion.div
                   key={index}
-                  className={`relative shrink-0 flex flex-col ${
+                  className={`relative shrink-0 flex flex-col justify-center items-center ${
                     round
-                      ? "items-center justify-center text-center bg-back border-0"
-                      : "items-start justify-between bg-back border border-primary/20 rounded"
+                      ? "items-center justify-center text-center bg-transparent border-0"
+                      : "flex items-center justify-center bg-transparent w-full"
                   } overflow-hidden cursor-grab active:cursor-grabbing`}
                   style={{
                     width: itemWidth,
-                    height: round ? itemWidth : baseHeight,
-                    rotateY: rotateY,
+                    height: "auto",
+                    rotateY,
                     ...(round && { borderRadius: "50%" }),
                   }}
                   transition={effectiveTransition}
                 >
-                  {/* content ------------------------------------------- */}
-                  <div className="bg-accent h-full w-full absolute hover:scale-110 trans">
-                    <div className="hover:bg-back bg-back/20 trans h-full w-full absolute">
-                      <div className="p-5 z-10 h-full w-full opacity-0 hover:opacity-100 hover:scale-90 trans">
-                        <div className="mb-1 font-black text-2xl text-grow">
-                          {title}
+                  {/* --------------------------- */}
+                  <div className="relative w-full border border-primary/20 rounded group overflow-hidden lg:w-3/5">
+                    <img
+                      className="w-full h-auto object-cover transition-transform duration-300 group-hover:scale-110"
+                      src={img}
+                      alt={title}
+                    />
+                    <div className="absolute inset-0 bg-back/40 backdrop-blur-sm opacity-0 group-hover:opacity-100 transition duration-300">
+                      <div className="p-5 flex flex-col justify-between h-full">
+                        <div>
+                          <div className="mb-1 font-black text-2xl text-grow">
+                            {title}
+                          </div>
+                          <p className="text-lg font-medium text-grow">
+                            {description}
+                          </p>
                         </div>
-                        <p className="text-lg font-medium text-grow">
-                          {description}
-                        </p>{" "}
-                        <a
-                          href={live}
-                          target="_blank"
-                          className="absolute bottom-5 left-5 text-grow py-1 px-5 hover:bg-accent/50 trans bg-accent rounded-2xl"
-                        >
-                          Live
-                        </a>
-                        <a
-                          href={github}
-                          target="_blank"
-                          className="absolute bottom-5 right-5 text-grow py-1 px-5 hover:bg-accent/50 trans bg-accent rounded-2xl"
-                        >
-                          Github
-                        </a>
+                        <div className="flex justify-between">
+                          <a
+                            href={live}
+                            target="_blank"
+                            className="text-grow py-1 px-5 bg-accent rounded-2xl hover:bg-accent/50 transition"
+                          >
+                            Live
+                          </a>
+                          <a
+                            href={github}
+                            target="_blank"
+                            className="text-grow py-1 px-5 bg-accent rounded-2xl hover:bg-accent/50 transition"
+                          >
+                            Github
+                          </a>
+                        </div>
                       </div>
                     </div>
-                    <img className="w-full h-full object-cover" src={img} alt={title} />
                   </div>
                 </motion.div>
               );
@@ -238,6 +253,7 @@ export default function Carousel({
           )}
         </motion.div>
 
+        {/* Dot Indicators */}
         <div
           className={`flex w-full justify-center ${
             round ? "absolute z-20 bottom-12 left-1/2 -translate-x-1/2" : ""
@@ -249,11 +265,7 @@ export default function Carousel({
                 key={index}
                 className={`h-2 w-2 rounded-full cursor-pointer transition-colors duration-150 ${
                   currentIndex % items.length === index
-                    ? round
-                      ? "bg-grow"
-                      : "bg-grow"
-                    : round
-                    ? "bg-grow/20"
+                    ? "bg-grow"
                     : "bg-grow/20"
                 }`}
                 animate={{

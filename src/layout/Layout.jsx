@@ -12,7 +12,7 @@ const Layout = ({ children }) => {
     console.log("All letters have animated!");
   };
 
-  let [isTrue, setIsTrue] = useState(false);
+  let [isTrue, setIsTrue] = useState(true);
   let [isDark, setIsDark] = useState(true);
   if (!isDark) {
     document.body.classList.add("light");
@@ -59,7 +59,7 @@ const Layout = ({ children }) => {
 
       <Navbar isDark={isDark} setIsDark={setIsDark} />
       <Sidebar isTrue={isTrue} setIsTrue={setIsTrue} />
-      <main className="px-5 pt-25 sm:px-20 lg:px-30 w-full min-h-screen  bg-back  text-grow p-6 trans">
+      <main className="px-5 overflow-hidden pt-25 sm:px-20 lg:px-30 w-full min-h-screen  bg-back  text-grow p-6 trans">
         {/* {children} */}
         <Outlet />
       <Footer />

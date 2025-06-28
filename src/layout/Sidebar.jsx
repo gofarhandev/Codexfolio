@@ -44,7 +44,7 @@ const Sidebar = ({ isTrue, setIsTrue }) => {
     <aside
       className={`z-111 h-screen bg-back text-grow flex flex-col items-center py-24 gap-1 shadow-[5px_1px_1px] shadow-accent fixed top-0 ${
         isTrue ? "-left-20 border-none" : "left-0"
-      } trans`}
+      } transition-all duration-200`}
     >
       {navLinks.map(({ id, icon, route }) => {
         return (
@@ -62,7 +62,7 @@ const Sidebar = ({ isTrue, setIsTrue }) => {
       })}
       <div
         className={`absolute hover:bg-grow/1 rounded-full drop-shadow-[1px_5px_1px] text-accent top-1/2 -translate-y-1/2 trans ${
-          isTrue ? "rotate-180 -right-13 sm:-right-15" : "-right-5"
+          isTrue ? "rotate-180 -right-14 sm:-right-15" : "-right-5"
         }`}
       >
         <IoIosArrowForward
