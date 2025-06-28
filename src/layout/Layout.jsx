@@ -34,36 +34,38 @@ const Layout = ({ children }) => {
   }, []);
 
   return (
-    // Loading
-    <div className="relative flex overflow-x-hidden">
-      <div
-        className={`loadier z-111111111111 top-0 left-0 h-screen w-screen bg-back flex items-center justify-center ${
-          loadAnimate ? "fixed" : "hidden"
-        }`}
-      >
-        <SplitText
-          text="ASSALAMU ALAIKUM"
-          className="text-3xl sm:text-4xl xl:text-6xl font-semibold text-center text-grow"
-          delay={100}
-          duration={0.6}
-          ease="power3.out"
-          splitType="chars"
-          from={{ opacity: 0, y: 40 }}
-          to={{ opacity: 1, y: 0 }}
-          threshold={0.1}
-          rootMargin="-100px"
-          textAlign="center"
-          onLetterAnimationComplete={handleAnimationComplete}
-        />
-      </div>
+    // Loading.
+    <div className="flex items-center justify-center bg-back">
+      <div className="relative flex overflow-x-hidden max-w-[3000px]">
+        <div
+          className={`loadier z-111111111111 top-0 left-0 h-screen w-screen bg-back flex items-center justify-center ${
+            loadAnimate ? "fixed" : "hidden"
+          }`}
+        >
+          <SplitText
+            text="ASSALAMU ALAIKUM"
+            className="text-3xl sm:text-4xl xl:text-6xl font-semibold text-center text-grow"
+            delay={100}
+            duration={0.6}
+            ease="power3.out"
+            splitType="chars"
+            from={{ opacity: 0, y: 40 }}
+            to={{ opacity: 1, y: 0 }}
+            threshold={0.1}
+            rootMargin="-100px"
+            textAlign="center"
+            onLetterAnimationComplete={handleAnimationComplete}
+          />
+        </div>
 
-      <Navbar isDark={isDark} setIsDark={setIsDark} />
-      <Sidebar isTrue={isTrue} setIsTrue={setIsTrue} />
-      <main className="px-5 overflow-hidden pt-25 sm:px-20 lg:px-30 w-full min-h-screen  bg-back  text-grow p-6 trans">
-        {/* {children} */}
-        <Outlet />
-      <Footer />
-      </main>
+        <Navbar isDark={isDark} setIsDark={setIsDark} />
+        <Sidebar isTrue={isTrue} setIsTrue={setIsTrue} />
+        <main className="px-5 overflow-hidden pt-25 sm:px-20 lg:px-30 w-full min-h-screen  bg-back  text-grow p-6 trans">
+          {/* {children} */}
+          <Outlet />
+          <Footer />
+        </main>
+      </div>
     </div>
   );
 };

@@ -212,7 +212,7 @@ export default function Carousel({
                   transition={effectiveTransition}
                 >
                   {/* --------------------------- */}
-                  <div className="relative w-full border border-primary/20 rounded group overflow-hidden lg:w-3/5">
+                  <div className="relative w-full border border-primary/20 rounded group overflow-hidden lg:w-3/5 max-w-[1000px]">
                     <img
                       className="w-full h-auto object-cover transition-transform duration-300 group-hover:scale-110"
                       src={img}
