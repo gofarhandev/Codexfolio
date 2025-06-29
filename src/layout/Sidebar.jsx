@@ -38,6 +38,7 @@ const navLinks = [
 const Sidebar = ({ isTrue, setIsTrue }) => {
   const slideBarHandler = () => {
     setIsTrue(!isTrue);
+    window.scrollTo({ top: 0, behavior: "smooth" }); // This ensures scroll to top on navigation
   };
 
   return (

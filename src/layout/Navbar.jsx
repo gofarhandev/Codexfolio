@@ -11,9 +11,9 @@ const Navbar = ({ isDark, setIsDark }) => {
     <div className="fixed  top-0 left-0 w-full h-16 z-999 shadow-[1px_4px_1px] shadow-accent bg-back trans">
       <div className="w-full h-full flex justify-between items-center pl-4 pr-10">
         <h2 className="drop-shadow-[1px_5px_1px] shadow-accent text-accent text-2xl">
-          <Link to="/" className="text-primary font-bold">
+          <a href="/" className="text-primary font-bold">
             {"<Hi/>"}
-          </Link>
+          </a>
         </h2>
 
         {/* DarkMoodHandler */}

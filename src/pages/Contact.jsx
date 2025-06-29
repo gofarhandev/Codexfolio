@@ -39,82 +39,99 @@ const Contact = () => {
   };
 
   return (
-    <div className="pt-10 min-h-[70vh] flex items-center justify-center w-full">
+    <div className="min-h-[70vh] pt-5 flex items-center justify-center w-full">
       <div className="text-accent overflow-hidden rounded relative w-full max-w-150 flex justify-center items-center">
-        {/* effect */}
-        <div className="absolute -bottom-15 -right-20 h-30 w-20 rounded-full bg-primary shadow-[0px_10px_10vw] shadow-primary"></div>
-
         {/* content */}
         <form
           onSubmit={handleSubmit(onSubmit)}
-          className="grid w-full gap-10 grid-cols-2 sm:grid-cols-6"
+          className="grid w-full gap-5 grid-cols-2 sm:grid-cols-6"
         >
-          <div className="text-grow order-1 w-full sm:col-span-6 col-span-4 text-center px-5 rounded flex items-center justify-center">
-            <p className="w-full  text-xl  sm:text-2xl font-bold">
-              <span className="text-grow flex items-center gap-2 whitespace-nowrap">
-                Say Hello 👋
-              </span>
+          <div className="text-grow order-1 w-full sm:col-span-6 col-span-4 text-center rounded flex flex-col items-center justify-center py-5">
+            <h2 className="text-2xl sm:text-4xl font-bold drop-shadow-[1px_5px_1px] text-accent">
+              <span className="text-grow">Let’s Work Together</span>
+            </h2>
+            <p className="text-sm sm:text-base text-white/80 mt-5 max-w-xl mx-auto">
+              Whether you have a question, a project idea, or just want to
+              connect — feel free to reach out. I’ll get back to you as soon as
+              possible!
             </p>
           </div>
-          <div className="relative bg-accent/10 backdrop-blur-2xl order-2 col-span-4  sm:col-span-2 text-grow w-full rounded">
-            <p className=" text:sm  sm:text-medium font-medium">
-              {/* name */}
+
+          {/* Name Field */}
+          <div className="relative bg-accent/10 shadow-accent/50 shadow-lg backdrop-blur-2xl order-2 col-span-4 sm:col-span-2 text-grow w-full rounded">
+            <div className="text-sm sm:text-medium font-medium">
               <input
                 placeholder="Your Name"
                 {...register("name", { required: true })}
                 type="text"
                 name="name"
                 id="name"
-                className="p-5 outline-0  rounded border-grow/50 focus:border-grow w-full h-full text-grow"
+                className="px-5 py-4 outline-0 rounded border-grow/50 focus:border-grow w-full h-full text-grow"
               />
-            </p>
+            </div>
             {errors.name && (
-              <p className="text-red-500 absolute">Please enter your name.</p>
+              <p className="text-red-700 absolute">Please enter your name.</p>
             )}
           </div>
 
-          <div className="bg-accent/10 relative col-span-4 order-2 sm:col-span-4 sm:order-2 text-grow w-full rounded backdrop-blur-2xl">
-            <p className=" text:sm  sm:text-medium font-medium">
-              {/* email */}
+          {/* Email Field */}
+          <div className="bg-accent/10 shadow-accent/50 shadow-lg relative col-span-4 order-3 sm:col-span-4 sm:order-3 text-grow w-full rounded backdrop-blur-2xl">
+            <div className="text-sm sm:text-medium font-medium">
               <input
                 placeholder="Your Email Address"
                 {...register("email", { required: true })}
                 type="email"
                 name="email"
                 id="email"
-                className="p-5  outline-0 rounded border-grow/50 focus:border-grow w-full h-full bg-transparent text-grow"
+                className="px-5 py-4 outline-0 rounded border-grow/50 focus:border-grow w-full h-full bg-transparent text-grow"
               />
-            </p>
+            </div>
             {errors.email && (
-              <p className="text-red-500 absolute">Please enter your email.</p>
+              <p className="text-red-700 absolute">Please enter your email.</p>
             )}
           </div>
-          <div className="bg-accent/10 order-4 sm:order-3 col-span-4 sm:col-span-6 text-grow relative w-full rounded backdrop-blur-2xl">
-            <p className=" text:sm  sm:text-medium font-medium">
-              <span className="text-grow">
-                {/* message */}
-                <textarea
-                  placeholder="Write Your Messege Here"
-                  {...register("message", { required: true })}
-                  name="message"
-                  className="p-5 outline-0  rounded border-grow/50 focus:border-grow w-full h-full text-grow"
-                  id="message"
-                ></textarea>
-              </span>
-            </p>
+
+          {/* Subject Field */}
+          <div className="bg-accent/10 shadow-accent/50 shadow-lg relative col-span-4 order-4 sm:col-span-6 sm:order-4 text-grow w-full rounded backdrop-blur-2xl">
+            <div className="text-sm sm:text-medium font-medium">
+              <input
+                placeholder="Subject"
+                {...register("subject", { required: true })}
+                type="text"
+                name="subject"
+                id="subject"
+                className="px-5 py-4 outline-0 rounded border-grow/50 focus:border-grow w-full h-full bg-transparent text-grow"
+              />
+            </div>
+            {errors.subject && (
+              <p className="text-red-700 absolute">Please enter a subject.</p>
+            )}
+          </div>
+
+          {/* Message Field */}
+          <div className="bg-accent/10 shadow-accent/50 shadow-lg order-5 sm:order-5 col-span-4 sm:col-span-6 text-grow relative w-full rounded backdrop-blur-2xl">
+            <div className="text-sm sm:text-medium font-medium">
+              <textarea
+                placeholder="Write Your Message Here"
+                {...register("message", { required: true })}
+                name="message"
+                id="message"
+                className="px-5 py-4 outline-0 rounded border-grow/50 focus:border-grow w-full h-full text-grow"
+              ></textarea>
+            </div>
             {errors.message && (
-              <p className="text-red-500 absolute">
+              <p className="text-red-700 absolute">
                 Please enter your message.
               </p>
             )}
           </div>
-          <button className="text-grow rounded border-grow/50 order-5 col-span-4 sm:col-span-6 p-5 w-full flex items-center backdrop-blur-2xl bg-accent/10 justify-center">
-            <p className="w-full  text-xl  sm:text-2xl font-bold">
-              <span className="text-grow flex justify-center items-center gap-2 whitespace-nowrap hover:text-primary cursor-pointer transition-all duration-300">
-                Send Message
-              </span>
-            </p>
-          </button>
+
+          {/* Submit Button */}
+          <div className="order-6 col-span-4 sm:col-span-6 flex justify-center w-full">
+            <button className="flex items-center justify-center h-10 w-35 gap-1 font-medium text-sm rounded hover:bg-primary border border-primary hover:text-back text-primary trans hover:shadow-accent/50 shadow-primary hover:text-xl cursor-pointer">
+              Send
+            </button>
+          </div>
         </form>
       </div>
     </div>

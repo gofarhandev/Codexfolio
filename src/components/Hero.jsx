@@ -1,15 +1,15 @@
+import { Link } from "react-router-dom";
+import CV from "../../public/CV.pdf";
 import gif from "../assets/gif.png";
+import { IoMdCloudDownload } from "react-icons/io";
+import { FaArrowDown } from "react-icons/fa6";
 
 const Hero = () => {
   return (
     <div className="flex items-center justify-center mb-30 sm:mb-35 z-10">
       <div className="text-accent overflow-hidden rounded relative w-full">
-        {/* effect */}
-        <div className="absolute -bottom-15 -right-20 h-30 w-20 rounded-full bg-primary shadow-[0px_10px_10vw] shadow-primary"></div>
-
         {/* box */}
-        <div className="flex flex-col items-center md:flex-row justify-between gap-5">
-          {/* left */}
+        <div className="flex flex-col items-center justify-between">
           <div className="flex flex-col gap-5 items-center w-full">
             <img
               src={gif}
@@ -24,25 +24,30 @@ const Hero = () => {
             </h2>
           </div>
 
-          {/* right */}
-          <div className="flex flex-col justify-between gap-10 sm:gap-13 w-full">
-            <div className="bg-accent/10   text-grow p-5 w-full rounded backdrop-blur-2xl">
+          <div className="flex flex-col text-center gap-5 w-full">
+            <div className="text-grow w-full rounded backdrop-blur-2xl">
               <p className="text:sm  sm:text-lg leading-8">
-                <span className="text-grow">
-                  I design and develop beautiful web experiences with a focus on
-                  performance, usability, and clean code. Let's turn your ideas
-                  into reality.
-                </span>
+                I design & develop stunning web experiences — focused on
+                performance, usability, and clean code.
               </p>
             </div>
-            <div className="bg-accent/10  text-grow p-5 w-full rounded  backdrop-blur-2xl">
-              <p className="text:sm  sm:text-lg leading-8">
-                <span className="text-grow">
-                  Passionate about crafting responsive and interactive user
-                  interfaces with React and Tailwind. Always learning. Always
-                  building.
-                </span>
-              </p>
+            <div className="flex justify-center items-end gap-5">
+              <Link
+                to="/contact"
+                download
+                className="flex items-center justify-center h-10 w-40 gap-1 text-sm font-medium rounded hover:bg-primary border border-primary hover:text-back text-primary trans hover:shadow-accent shadow-primary hover:text-lg"
+              >
+                Contact Me
+                <FaArrowDown className="text-base mt-1  animate-bounce " />
+              </Link>
+              <a
+                href={CV}
+                download
+                className="flex items-center justify-center h-10 w-40 gap-1 text-sm font-medium rounded hover:bg-primary border border-primary hover:text-back text-primary trans hover:shadow-accent shadow-primary hover:text-lg"
+              >
+                Resume{" "}
+                <IoMdCloudDownload className="text-xl mt-1  animate-bounce " />
+              </a>
             </div>
           </div>
         </div>

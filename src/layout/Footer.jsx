@@ -3,9 +3,9 @@ import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
 const Footer = () => {
   return (
     <footer className="pt-20 w-screen -mb-5 -ml-5 sm:-ml-20 lg:-ml-30">
-      <div className="drop-shadow-[1px_5px_1px] w-full h-full text-accent relative overflow-hidden p-5 sm:px-20 lg:px-30">
+      <div className="w-full h-full text-accent relative overflow-hidden p-5 sm:px-20 lg:px-30">
         {/* effect */}
-        <div className="absolute -bottom-10 -right-17 h-30 w-20 rounded-full bg-primary shadow-[0px_10px_10vw] shadow-primary"></div>
+        <div className="absolute -bottom-25 -right-15 h-30 w-20 rounded-full bg-primary shadow-[0px_10px_10vw] shadow-primary"></div>
 
         {/* Name & Role */}
         <div className="flex gap-5 justify-between items-center">
