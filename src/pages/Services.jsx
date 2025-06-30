@@ -43,7 +43,7 @@ const Services = () => {
           </h2>
         </div>
       </div>
-      <div className="w-full grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-2">
+      <div className="w-full grid grid-cols-1 gap-5 sm:grid-cols-2 xl:grid-cols-2">
         {servicesData.map((service, idx) => (
           <ServicesCard
             key={idx}

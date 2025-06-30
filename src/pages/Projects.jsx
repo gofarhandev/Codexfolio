@@ -84,11 +84,11 @@ const Projects = () => {
           <div
             key={index}
             onClick={() => setActiveCategory(category)}
-            className={`py-2 px-10 rounded cursor-pointer whitespace-nowrap
+            className={`py-1 px-10 font-playfair rounded-full cursor-pointer text-lg whitespace-nowrap
               ${
                 activeCategory === category
-                  ? "bg-accent text-white"
-                  : "bg-accent/20 hover:bg-accent text-white/80"
+                  ? "bg-accent/50 text-grow"
+                  : "bg-accent/10 hover:bg-accent text-grow/80"
               } transition duration-300`}
           >
             <p>{category}</p>

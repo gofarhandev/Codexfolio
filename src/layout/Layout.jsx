@@ -35,8 +35,8 @@ const Layout = ({ children }) => {
 
   return (
     // Loading.
-    <div className="flex items-center justify-center bg-back">
-      <div className="relative flex overflow-x-hidden max-w-[3000px]">
+    <div className="flex items-center justify-center bg-back font-montserrat">
+      <div className="relative flex overflow-x-hidden max-w-[2000px]">
         <div
           className={`loadier z-111111111111 top-0 left-0 h-screen w-screen bg-back flex items-center justify-center ${
             loadAnimate ? "fixed" : "hidden"

@@ -39,7 +39,7 @@ const Contact = () => {
   };
 
   return (
-    <div className="min-h-[70vh] pt-5 flex items-center justify-center w-full">
+    <div className="flex items-center justify-center w-full">
       <div className="text-accent overflow-hidden rounded relative w-full max-w-150 flex justify-center items-center">
         {/* content */}
         <form
@@ -50,7 +50,7 @@ const Contact = () => {
             <h2 className="text-2xl sm:text-4xl font-bold drop-shadow-[1px_5px_1px] text-accent">
               <span className="text-grow">Let’s Work Together</span>
             </h2>
-            <p className="text-sm sm:text-base text-white/80 mt-5 max-w-xl mx-auto">
+            <p className="text-sm sm:text-base text-grow mt-5 max-w-xl mx-auto">
               Whether you have a question, a project idea, or just want to
               connect — feel free to reach out. I’ll get back to you as soon as
               possible!
@@ -58,7 +58,7 @@ const Contact = () => {
           </div>
 
           {/* Name Field */}
-          <div className="relative bg-accent/10 shadow-accent/50 shadow-lg backdrop-blur-2xl order-2 col-span-4 sm:col-span-2 text-grow w-full rounded">
+          <div className="relative bg-accent/10 shadow-accent shadow-lg backdrop-blur-2xl order-2 col-span-4 sm:col-span-2 text-grow w-full rounded">
             <div className="text-sm sm:text-medium font-medium">
               <input
                 placeholder="Your Name"
@@ -70,12 +70,12 @@ const Contact = () => {
               />
             </div>
             {errors.name && (
-              <p className="text-red-700 absolute">Please enter your name.</p>
+              <p className="text-red-700 absolute text-xs">Please enter your name.</p>
             )}
           </div>
 
           {/* Email Field */}
-          <div className="bg-accent/10 shadow-accent/50 shadow-lg relative col-span-4 order-3 sm:col-span-4 sm:order-3 text-grow w-full rounded backdrop-blur-2xl">
+          <div className="bg-accent/10 shadow-accent shadow-lg relative col-span-4 order-3 sm:col-span-4 sm:order-3 text-grow w-full rounded backdrop-blur-2xl">
             <div className="text-sm sm:text-medium font-medium">
               <input
                 placeholder="Your Email Address"
@@ -87,12 +87,12 @@ const Contact = () => {
               />
             </div>
             {errors.email && (
-              <p className="text-red-700 absolute">Please enter your email.</p>
+              <p className="text-red-700 absolute text-xs">Please enter your email.</p>
             )}
           </div>
 
           {/* Subject Field */}
-          <div className="bg-accent/10 shadow-accent/50 shadow-lg relative col-span-4 order-4 sm:col-span-6 sm:order-4 text-grow w-full rounded backdrop-blur-2xl">
+          <div className="bg-accent/10 shadow-accent shadow-lg relative col-span-4 order-4 sm:col-span-6 sm:order-4 text-grow w-full rounded backdrop-blur-2xl">
             <div className="text-sm sm:text-medium font-medium">
               <input
                 placeholder="Subject"
@@ -104,12 +104,12 @@ const Contact = () => {
               />
             </div>
             {errors.subject && (
-              <p className="text-red-700 absolute">Please enter a subject.</p>
+              <p className="text-red-700 absolute text-xs">Please enter a subject.</p>
             )}
           </div>
 
           {/* Message Field */}
-          <div className="bg-accent/10 shadow-accent/50 shadow-lg order-5 sm:order-5 col-span-4 sm:col-span-6 text-grow relative w-full rounded backdrop-blur-2xl">
+          <div className="bg-accent/10 shadow-accent shadow-lg order-5 sm:order-5 col-span-4 sm:col-span-6 text-grow relative w-full rounded backdrop-blur-2xl">
             <div className="text-sm sm:text-medium font-medium">
               <textarea
                 placeholder="Write Your Message Here"
@@ -120,7 +120,7 @@ const Contact = () => {
               ></textarea>
             </div>
             {errors.message && (
-              <p className="text-red-700 absolute">
+              <p className="text-red-700 absolute text-xs">
                 Please enter your message.
               </p>
             )}
@@ -128,7 +128,7 @@ const Contact = () => {
 
           {/* Submit Button */}
           <div className="order-6 col-span-4 sm:col-span-6 flex justify-center w-full">
-            <button className="flex items-center justify-center h-10 w-35 gap-1 font-medium text-sm rounded hover:bg-primary border border-primary hover:text-back text-primary trans hover:shadow-accent/50 shadow-primary hover:text-xl cursor-pointer">
+            <button className="flex items-center justify-center h-10 w-35 gap-1 font-medium text-sm rounded-full hover:bg-primary border border-primary hover:text-back text-primary trans hover:shadow-accent/50 shadow-primary hover:text-xl cursor-pointer">
               Send
             </button>
           </div>

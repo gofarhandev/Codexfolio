@@ -10,7 +10,7 @@ const Hero = () => {
       <div className="text-accent overflow-hidden rounded relative w-full">
         {/* box */}
         <div className="flex flex-col items-center justify-between">
-          <div className="flex flex-col gap-5 items-center w-full">
+          <div className="flex flex-col gap-3 items-center w-full">
             <img
               src={gif}
               alt=""
@@ -19,12 +19,12 @@ const Hero = () => {
             <h1 className="drop-shadow-[1px_5px_1px]  text-accent text-3xl sm:text-5xl font-medium">
               <span className="text-grow">MD FARHAN SADIK</span>
             </h1>
-            <h2 className="drop-shadow-[1px_5px_1px] text-accent text-xl sm:text-2xl font-medium pb-5">
-              <span className="text-grow">Frontend Developer</span>
+            <h2 className="drop-shadow-[1px_5px_1px] text-accent font-medium pb-5">
+              <span className="text-primary text-2xl sm:text-3xl">Frontend Developer</span>
             </h2>
           </div>
 
-          <div className="flex flex-col text-center gap-5 w-full">
+          <div className="flex flex-col text-center gap-3 w-full">
             <div className="text-grow w-full rounded backdrop-blur-2xl">
               <p className="text:sm  sm:text-lg leading-8">
                 I design & develop stunning web experiences — focused on
@@ -35,7 +35,7 @@ const Hero = () => {
               <Link
                 to="/contact"
                 download
-                className="flex items-center justify-center h-10 w-40 gap-1 text-sm font-medium rounded hover:bg-primary border border-primary hover:text-back text-primary trans hover:shadow-accent shadow-primary hover:text-lg"
+                className="flex items-center justify-center h-10 w-40 gap-1 text-sm font-medium rounded-full hover:bg-primary border border-primary hover:text-back text-primary trans hover:shadow-accent shadow-primary hover:text-lg"
               >
                 Contact Me
                 <FaArrowDown className="text-base mt-1  animate-bounce " />
@@ -43,7 +43,7 @@ const Hero = () => {
               <a
                 href={CV}
                 download
-                className="flex items-center justify-center h-10 w-40 gap-1 text-sm font-medium rounded hover:bg-primary border border-primary hover:text-back text-primary trans hover:shadow-accent shadow-primary hover:text-lg"
+                className="flex items-center justify-center h-10 w-40 gap-1 text-sm font-medium rounded-full hover:bg-primary border border-primary hover:text-back text-primary trans hover:shadow-accent shadow-primary hover:text-lg"
               >
                 Resume{" "}
                 <IoMdCloudDownload className="text-xl mt-1  animate-bounce " />

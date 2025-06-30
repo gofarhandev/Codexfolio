@@ -59,7 +59,7 @@ const skill = [
 const Skills = () => {
   return (
     <div className="mb-30 sm:mb:40">
-      <div className="flex gap-0">
+      <div className="flex gap-0  font-playfair">
         <div className="marquee flex ">
           {skill.map(({ id, icon, name }) => {
             return (
