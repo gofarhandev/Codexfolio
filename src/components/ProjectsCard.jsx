@@ -7,22 +7,34 @@ const ProjectsCard = ({ ProjectArray }) => {
         <div
           key={index}
           id={item.category}
-          className="relative group [perspective:2000px] overflow-hidden shadow-[5px_3px_10px] shadow-accent/20"
+          className="relative group [perspective:2000px] overflow-hidden"
         >
           {/* 👉 Large Devices: Hover Flip */}
           <div className="hidden md:block overflow-hidden rounded">
             {/* ✅ Fixed Blur overlay */}
             <div className="absolute -left-full -bottom-full group-hover:left-0 group-hover:bottom-0 rounded-r-full rounded-t-full group-hover:rounded-xs w-full h-full z-10 backdrop-blur-sm bg-back trans px-5 py-3 font-medium trans flex flex-col gap-5 justify-between">
-              <div className="pb-5">
+              <div className="">
                 <h2 className="text-3xl">{item.title}</h2>
-                <p className="p-1 text-lg font-playfair tracking-wide">{item.skills}</p>
+                <p className="p-1 text-lg font-playfair tracking-wide">
+                  {item.description}
+                </p>
+                <div className="flex gap-2 pt-1">
+                  {item.skills.map((skill, i) => (
+                    <span
+                      key={i}
+                      className="text-sm bg-accent/20 px-3 py-1 rounded-full"
+                    >
+                      {skill}
+                    </span>
+                  ))}
+                </div>
               </div>
               <div className="flex justify-between w-full">
                 <a
                   href={item.live}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="bg-accent border border-accent text-grow h-8 w-25 transition-colors flex items-center justify-center rounded hover:text-lg text-sm trans"
+                  className="bg-accent border border-accent text-grow h-8 w-25 transition-colors flex items-center justify-center rounded-full hover:text-lg text-sm trans"
                 >
                   Live
                 </a>
@@ -30,7 +42,7 @@ const ProjectsCard = ({ ProjectArray }) => {
                   href={item.github}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="bg-accent border border-accent text-grow h-8 w-25 transition-colors flex items-center justify-center rounded hover:text-lg text-sm trans"
+                  className="bg-accent border border-accent text-grow h-8 w-25 transition-colors flex items-center justify-center rounded-full hover:text-lg text-sm trans"
                 >
                   Github
                 </a>
@@ -54,12 +66,24 @@ const ProjectsCard = ({ ProjectArray }) => {
               alt={item.title}
               className="w-full object-cover rounded"
             />
-            <div className="flex justify-between items-center gap-5 my-2">
-              <h2 className="text-xl font-semibold whitespace-nowrap">
-                {item.title}
-              </h2>
-              <p className="text-sm font-semibold font-playfair">
-                {item.skills}
+            <div className="flex flex-col items-center gap-3 my-2">
+              <div className="flex w-full justify-between gap-5">
+                <h2 className="text-xl font-semibold whitespace-nowrap">
+                  {item.title}
+                </h2>
+                <div className="flex gap-2 flex-wrap justify-end">
+                  {item.skills.map((skill, i) => (
+                    <span
+                      key={i}
+                      className="text-sm bg-accent/20 px-3 py-1 rounded-full"
+                    >
+                      {skill}
+                    </span>
+                  ))}
+                </div>
+              </div>
+              <p className="p-1 text-lg font-playfair tracking-wide">
+                {item.description}
               </p>
             </div>
             <div className="flex justify-between">
@@ -67,7 +91,7 @@ const ProjectsCard = ({ ProjectArray }) => {
                 href={item.live}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-accent border border-accent text-grow h-8 w-30 flex items-center justify-center rounded trans hover:text-lg text-sm"
+                className="bg-accent border border-accent text-grow h-8 w-30 flex items-center justify-center rounded-full trans hover:text-lg text-sm"
               >
                 Live
               </a>
@@ -75,7 +99,7 @@ const ProjectsCard = ({ ProjectArray }) => {
                 href={item.github}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-accent border border-accent text-grow h-8 w-30 flex items-center justify-center rounded trans hover:text-lg text-sm"
+                className="bg-accent border border-accent text-grow h-8 w-30 flex items-center justify-center rounded-full trans hover:text-lg text-sm"
               >
                 Github
               </a>

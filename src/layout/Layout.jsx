@@ -1,6 +1,5 @@
 import SplitText from "../components/SplitText";
 import Navbar from "./Navbar";
-import Sidebar from "./Sidebar";
 import { useEffect, useState } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
@@ -59,7 +58,6 @@ const Layout = ({ children }) => {
         </div>
 
         <Navbar isDark={isDark} setIsDark={setIsDark} />
-        <Sidebar isTrue={isTrue} setIsTrue={setIsTrue} />
         <main className="px-5 overflow-hidden pt-25 sm:px-20 lg:px-30 w-full min-h-screen  bg-back  text-grow p-6 trans">
           {/* {children} */}
           <Outlet />
