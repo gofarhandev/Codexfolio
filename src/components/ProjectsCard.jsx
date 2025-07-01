@@ -12,17 +12,15 @@ const ProjectsCard = ({ ProjectArray }) => {
           {/* 👉 Large Devices: Hover Flip */}
           <div className="hidden md:block overflow-hidden rounded">
             {/* ✅ Fixed Blur overlay */}
-            <div className="absolute -left-full -bottom-full group-hover:left-0 group-hover:bottom-0 rounded-r-full rounded-t-full group-hover:rounded-xs w-full h-full z-10 backdrop-blur-sm bg-back trans px-5 py-3 font-medium trans flex flex-col gap-5 justify-between">
+            <div className="absolute -left-full -bottom-full group-hover:left-0 group-hover:bottom-0 rounded-r-full rounded-t-full group-hover:rounded-xs w-full h-full z-10 backdrop-blur-sm bg-back trans px-5 py-3 font-medium trans flex flex-col gap-10 sm:gap-5 justify-between">
               <div className="">
                 <h2 className="text-3xl">{item.title}</h2>
-                <p className="p-1 text-lg font-playfair tracking-wide">
-                  {item.description}
-                </p>
+                <p className="p-1 text-sm tracking-wide">{item.description}</p>
                 <div className="flex gap-2 pt-1">
                   {item.skills.map((skill, i) => (
                     <span
                       key={i}
-                      className="text-sm bg-accent/20 px-3 py-1 rounded-full"
+                      className="text-sm bg-accent/20 px-3 py-1 rounded-full font-playfair"
                     >
                       {skill}
                     </span>
@@ -75,16 +73,14 @@ const ProjectsCard = ({ ProjectArray }) => {
                   {item.skills.map((skill, i) => (
                     <span
                       key={i}
-                      className="text-sm bg-accent/20 px-3 py-1 rounded-full"
+                      className="text-sm font-playfair bg-accent/20 px-3 py-1 rounded-full"
                     >
                       {skill}
                     </span>
                   ))}
                 </div>
               </div>
-              <p className="p-1 text-lg font-playfair tracking-wide">
-                {item.description}
-              </p>
+              <p className="p-1 text-sm tracking-wide">{item.description}</p>
             </div>
             <div className="flex justify-between">
               <a

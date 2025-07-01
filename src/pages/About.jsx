@@ -36,8 +36,6 @@ const About = () => {
             scalable code and deliver seamless user experiences. I take pride in
             transforming ideas into engaging, functional digital products that
             not only look great but also perform efficiently across devices.
-            kotha emoni thakbe shudhu ektu short kore likhbe ar jeno bojha na
-            jai je ai diye lekha
           </p>
 
           <div className="flex gap-5 w-full justify-center">
