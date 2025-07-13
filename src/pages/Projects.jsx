@@ -7,18 +7,33 @@ import Port from "../assets/Port.png";
 import Gadget from "../assets/Gadget.png";
 import Bubble from "../assets/Bubble.png";
 import Hotel from "../assets/Hotel.png";
+import DripNest from "../assets/DripNest.png";
+import SplinePort from "../assets/SplinePort.png";
+import AiPort from "../assets/AiPort.png";
+import port01 from "../assets/port01.png";
+import port02 from "../assets/port02.png";
 import Gemini from "../assets/gemini-clone.png";
 
 const ProjectArray = [
   {
-    title: "Code & Cook",
+    title: "Clothing Store",
     skills: ["React.js", "Tailwind CSS"],
-    live: "https://master-farhan.github.io/recipe/",
-    github: "https://github.com/master-farhan/recipe",
-    img: Cook,
-    category: "Recipe / Food",
+    live: "https://clothes-store-002.netlify.app/",
+    github: "https://github.com/master-farhan/clothes-shop",
+    img: DripNest,
+    category: "E-Commerce",
     description:
-      "A recipe website where users can explore and cook various meals with modern UI and responsive design.",
+      "Responsive fashion store with clean UI, product filtering, and modern design using React & Tailwind.",
+  },
+  {
+    title: "3D Portfolio",
+    skills: ["React.js", "Tailwind CSS", "Spline"],
+    live: "https://spline-with-animation.netlify.app/",
+    github: "https://github.com/master-farhan/Hero-Section-with-Spline",
+    img: SplinePort,
+    category: "Portfolio",
+    description:
+      "3D portfolio with Spline, React & Tailwind showcasing skills with smooth animations and visuals.",
   },
   {
     title: "My Gadget Bd",
@@ -31,6 +46,46 @@ const ProjectArray = [
       "An eCommerce platform for showcasing and buying the latest gadgets with category filtering and live search.",
   },
   {
+    title: "My Portfolio 01",
+    skills: ["HTML", "CSS", "JavaScript"],
+    live: "https://master-farhan.github.io/portfolio-01/",
+    github: "https://github.com/master-farhan/portfolio-01",
+    img: port01,
+    category: "Portfolio",
+    description:
+      "My first portfolio website created using HTML, CSS, and JavaScript to showcase early frontend work.",
+  },
+  {
+    title: "My Portfolio 02",
+    skills: ["HTML", "CSS", "JavaScript"],
+    live: "https://master-farhan.github.io/portfolio-02/",
+    github: "https://github.com/master-farhan/portfolio-02",
+    img: port02,
+    category: "Portfolio",
+    description:
+      "Personal portfolio website built with HTML, CSS, and JavaScript to showcase my skills and projects.",
+  },
+  {
+    title: "AI Created Portfolio",
+    skills: ["React.js", "TypeScript", "Tailwind CSS"],
+    live: "https://ai-created-00.netlify.app/",
+    github: "https://github.com/master-farhan/luminous-farhan-portfolio",
+    img: AiPort,
+    category: "Portfolio",
+    description:
+      "AI image generator using React, TypeScript & Tailwind with prompt input and responsive UI.",
+  },
+  {
+    title: "Code & Cook",
+    skills: ["React.js", "Tailwind CSS"],
+    live: "https://master-farhan.github.io/recipe/",
+    github: "https://github.com/master-farhan/recipe",
+    img: Cook,
+    category: "Recipe / Food",
+    description:
+      "A recipe website where users can explore and cook various meals with modern UI and responsive design.",
+  },
+  {
     title: "Travel Website",
     skills: ["React.js", "Tailwind CSS"],
     live: "https://travel-web-go.netlify.app/",
@@ -41,7 +96,7 @@ const ProjectArray = [
       "A modern travel booking website featuring scenic destinations, smooth navigation, and a responsive layout.",
   },
   {
-    title: "Portfolio",
+    title: "My Portfolio 03",
     skills: ["HTML", "CSS", "JavaScript"],
     live: "https://farhan-studio.netlify.app/",
     github: "https://github.com/master-farhan/studio",
