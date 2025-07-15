@@ -2,25 +2,27 @@ import React from "react";
 
 const ProjectsCard = ({ ProjectArray }) => {
   return (
-    <div className="grid pt-10 grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-5">
+    <div className="grid pt-10 lg:pt-[2.8vw] grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-5 lg:gap-[1.5vw]">
       {ProjectArray.map((item, index) => (
         <div
           key={index}
           id={item.category}
-          className="relative group [perspective:2000px] overflow-hidden"
+          className="relative group overflow-hidden"
         >
           {/* 👉 Large Devices: Hover Flip */}
           <div className="hidden md:block overflow-hidden rounded">
             {/* ✅ Fixed Blur overlay */}
-            <div className="absolute -left-full -bottom-full group-hover:left-0 group-hover:bottom-0 rounded-r-full rounded-t-full group-hover:rounded-xs w-full h-full z-10 backdrop-blur-sm bg-back trans px-5 py-3 font-medium trans flex flex-col gap-10 sm:gap-5 justify-between">
+            <div className="absolute -left-full -bottom-full group-hover:left-0 group-hover:bottom-0 rounded-r-full rounded-t-full group-hover:rounded-xs w-full h-full z-10 backdrop-blur-sm bg-back trans px-5 lg:px-[1.6vw]  py-3 lg:py-[.5vw] font-medium trans flex flex-col gap-10 lg:gap-2.8vw sm:gap-5 justify-between">
               <div className="">
-                <h2 className="text-3xl">{item.title}</h2>
-                <p className="p-1 text-sm tracking-wide">{item.description}</p>
-                <div className="flex gap-2 pt-1">
+                <h2 className="text-xl lg:text-[1.55vw]">{item.title}</h2>
+                <p className="py-1.5 lg:py-[.5vw] text-md lg:text-[1.17vw] tracking-wide">
+                  {item.description}
+                </p>
+                <div className="flex gap-2 lg:gap-[.5vw] pt-1 lg:pt-[.5vw]">
                   {item.skills.map((skill, i) => (
                     <span
                       key={i}
-                      className="text-sm bg-accent/20 px-3 py-1 rounded-full font-playfair"
+                      className="text-xs lg:text-[1vw] bg-accent/20 px-3 py-1 lg:px-[1vw] lg:py-[.2vw] rounded-full"
                     >
                       {skill}
                     </span>
@@ -32,7 +34,8 @@ const ProjectsCard = ({ ProjectArray }) => {
                   href={item.live}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="bg-accent border border-accent text-grow h-8 w-25 transition-colors flex items-center justify-center rounded-full hover:text-lg text-sm trans"
+                  className="bg-accent border border-accent text-grow transition-colors flex items-center justify-center rounded-full text-sm hover:text-lg trans
+                  px-3 pt-0.5 pb-1 lg:pb-[.2vw] lg:pt-[.1vw] lg:px-[1vw] lg:text-[1vw] lg:hover:text-[1.2vw]"
                 >
                   Live
                 </a>
@@ -40,7 +43,8 @@ const ProjectsCard = ({ ProjectArray }) => {
                   href={item.github}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="bg-accent border border-accent text-grow h-8 w-25 transition-colors flex items-center justify-center rounded-full hover:text-lg text-sm trans"
+                  className="bg-accent border border-accent text-grow transition-colors flex items-center justify-center rounded-full text-sm hover:text-lg trans
+                  px-3 pt-0.5 pb-1 lg:pb-[.2vw] lg:pt-[.1vw] lg:px-[1vw] lg:text-[1vw] lg:hover:text-[1.2vw]"
                 >
                   Github
                 </a>
@@ -73,7 +77,7 @@ const ProjectsCard = ({ ProjectArray }) => {
                   {item.skills.map((skill, i) => (
                     <span
                       key={i}
-                      className="text-sm font-playfair bg-accent/20 px-3 py-1 rounded-full"
+                      className="text-sm bg-accent/20 px-3 py-1 rounded-full"
                     >
                       {skill}
                     </span>

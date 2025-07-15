@@ -7,7 +7,7 @@ import Services from "./Services";
 
 const Home = () => {
   return (
-    <div className="bg-back pt-10 trans">
+    <div className="bg-back pt-8 lg:pt-[2vw] trans">
       <Hero />
       <Skills />
       <About />

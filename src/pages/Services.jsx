@@ -35,15 +35,15 @@ const servicesData = [
 
 const Services = () => {
   return (
-    <div className="pb-30 pt-10">
+    <div className="pt-10 pb-30 lg:pb-[8.5vw]">
       <div>
-        <div className="text-grow px-5 w-full rounded flex justify-center pb-5">
-          <h2 className="drop-shadow-[1px_5px_1px] text-accent text-2xl sm:text-4xl font-bold pb-5">
+        <div className="text-grow px-5 lg:px-[1.5vw] w-full rounded flex justify-center pb-5 lg:pb-1.5vw">
+          <h2 className="drop-shadow-[1px_5px_1px] text-accent text-2xl sm:text-4xl lg:text-[2.5vw] font-bold pb-5 lg:pb-[1.5vw]">
             <span className="text-grow">How I Can Help</span>
           </h2>
         </div>
       </div>
-      <div className="w-full grid grid-cols-1 gap-5 sm:grid-cols-2 xl:grid-cols-2">
+      <div className="w-full grid grid-cols-1 gap-5 lg:gap-[2vw] sm:grid-cols-2 xl:grid-cols-2">
         {servicesData.map((service, idx) => (
           <ServicesCard
             key={idx}

@@ -11,13 +11,9 @@ const navLinks = [
   { name: "Hire Me", route: "/contact" },
 ];
 
-const Navbar = ({ isDark, setIsDark }) => {
+const Navbar = () => {
   const location = useLocation();
   const [isOpen, setIsOpen] = useState(false);
-
-  const DarkMoodHandler = () => {
-    setIsDark(!isDark);
-  };
 
   const handleMobileNav = () => {
     setIsOpen(!isOpen);
@@ -25,16 +21,16 @@ const Navbar = ({ isDark, setIsDark }) => {
   };
 
   return (
-    <div className="fixed top-0 left-0 w-full h-16 z-[999] bg-back/30 backdrop-blur-2xl trans">
-      <div className="w-full h-full flex justify-between items-center px-4 sm:px-20 lg:px-30">
+    <div className="fixed top-0 left-0 w-full py-5 lg:py-[1vw] z-[999] bg-back/30 backdrop-blur-2xl trans">
+      <div className="w-full h-full flex justify-between items-center px-4 sm:px-20 lg:px-[5vw]">
         {/* Logo */}
-        <h2 className="text-accent text-2xl drop-shadow-[1px_5px_1px]">
+        <h2 className="text-accent text-2xl lg:text-[2vw] drop-shadow-[1px_5px_1px]">
           <a href="/" className="text-primary font-bold">
             {"<Hi/>"}
           </a>
         </h2>
 
-        <div className="flex items-center gap-5 md:gap-10 relative">
+        <div className="flex items-center gap-5 lg:gap-[2vw] md:gap-10 relative">
           {/* Desktop Nav */}
           {navLinks.map((item, index) => {
             const isActive = location.pathname === item.route;
@@ -42,7 +38,7 @@ const Navbar = ({ isDark, setIsDark }) => {
               <Link
                 key={index}
                 to={item.route}
-                className={`text-grow font-playfair text-lg hidden md:flex transition-all duration-300 ${
+                className={`text-grow font-playfair text-lg lg:text-[1.2vw] hidden md:flex transition-all duration-300 ${
                   isActive ? "text-primary" : "text-accent hover:text-primary"
                 }`}
               >
@@ -50,14 +46,6 @@ const Navbar = ({ isDark, setIsDark }) => {
               </Link>
             );
           })}
-
-          {/* Theme Toggle */}
-          <div
-            onClick={DarkMoodHandler}
-            className="cursor-pointer text-xl text-grow hover:text-primary transition duration-300"
-          >
-            {isDark ? <MdSunny /> : <IoMdMoon />}
-          </div>
 
           {/* Hamburger */}
           <button

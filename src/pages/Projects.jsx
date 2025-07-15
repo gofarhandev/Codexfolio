@@ -1,5 +1,4 @@
 import { useState } from "react";
-import AfterProjects from "../components/AfterProjects";
 import ProjectsCard from "../components/ProjectsCard";
 import Cook from "../assets/Cook.png";
 import Travel from "../assets/Travel.png";
@@ -153,16 +152,20 @@ const Projects = () => {
       : ProjectArray.filter((p) => p.category === activeCategory);
 
   return (
-    <div className="relative pb-30">
-      <AfterProjects />
+    <div className="relative pt-10 pb-30 lg:pb-[8.5vw]">
+      <div className="text-grow w-full rounded">
+        <h2 className="drop-shadow-[1px_5px_1px] text-accent text-3xl sm:text-4xl lg:text-[2.5vw] flex justify-center">
+          <span className="text-grow">Dive Into My Code World</span>
+        </h2>
+      </div>
 
       {/* Category Buttons */}
-      <div className="mt-5 gap-5 flex flex-nowrap overflow-auto scrollbar-hide">
+      <div className="mt-10 lg:mt-[3vw] gap-5 lg:gap-[1.5vw] flex flex-nowrap overflow-auto scrollbar-hide">
         {allCategories.map((category, index) => (
           <div
             key={index}
             onClick={() => setActiveCategory(category)}
-            className={`py-1 px-10 font-playfair rounded-full cursor-pointer text-base whitespace-nowrap
+            className={`py-1 lg:py-[.5vw] px-10 lg:px-[3vw] font-Michroma rounded-full cursor-pointer text-md lg:text-[1.1vw] whitespace-nowrap
               ${
                 activeCategory === category
                   ? "bg-accent/50 text-grow"

@@ -1,54 +1,40 @@
 import { Link } from "react-router-dom";
 // import gif from "../assets/gif.png";
 import Profile from "../assets/ppp.png";
-import { FaArrowDown } from "react-icons/fa6";
+import LinkButton from "./LinkButton";
 
 const Hero = () => {
   return (
-    <div className="flex items-center justify-center mb-30 sm:mb-35 z-10">
-      <div className="text-accent overflow-hidden rounded relative w-full">
+    <div className="flex items-center justify-center  z-10 mb-20 lg:mb-0">
+      <div className="text-grow overflow-hidden rounded relative lg:h-[77vh] w-full">
         {/* box */}
         <div className="flex flex-col items-center justify-between">
-          <div className="flex flex-col gap-3 items-center w-full">
+          <div className="flex flex-col gap-3 lg:gap-[1vw] items-center w-full text-center">
             <img
               src={Profile}
               alt=""
-              className="drop-shadow-[1px_4px_2px] bg-back text-primary/20 rounded-full h-30 w-30"
+              className="drop-shadow-[1px_4px_2px] bg-back text-primary/20 rounded-full h-30 w-30 lg:w-[10vw] lg:h-[10vw]"
             />
-            <h1 className="drop-shadow-[1px_5px_1px]  text-accent text-4xl sm:text-5xl font-medium">
+            <h1 className="drop-shadow-[1px_5px_1px]  text-accent text-2xl sm:text-4xl lg:text-[4vw] font-medium">
               <span className="text-grow">MD FARHAN SADIK</span>
             </h1>
-            <h2 className="drop-shadow-[1px_5px_1px] text-accent font-medium pb-3">
-              <span className="text-primary text-2xl sm:text-3xl">
+            <h2 className="drop-shadow-[1px_5px_1px] text-accent font-medium pb-4 lg:pb-[1.5vw]">
+              <span className="text-primary text-xl sm:text-2xl lg:text-[3vw]">
                 Frontend Developer
               </span>
             </h2>
           </div>
 
-          <div className="flex flex-col text-center gap-5 w-full">
+          <div className="flex flex-col text-center gap-5 lg:gap-[2vw] w-full">
             <div className="text-grow w-full rounded backdrop-blur-2xl">
-              <p className="text:lg  sm:text-xl leading-8">
+              <p className="text:lg sm:text-xl lg:text-[1.7vw]">
                 I design & develop stunning web experiences — focused on
                 performance, usability, and clean code.
               </p>
             </div>
-            <div className="flex justify-center items-end gap-5">
-              <Link
-                to="/projects"
-                download
-                className="flex items-center justify-center h-10 w-40 gap-1 text-base font-medium rounded-full hover:bg-primary border border-primary hover:text-back text-primary trans hover:shadow-accent shadow-primary hover:text-xl"
-              >
-                View Work
-                <FaArrowDown className="mt-1  animate-bounce " />
-              </Link>
-              <Link
-                to="/contact"
-                download
-                className="flex items-center justify-center h-10 w-40 gap-1 text-base font-medium rounded-full hover:bg-primary border border-primary hover:text-back text-primary trans hover:shadow-accent shadow-primary hover:text-xl"
-              >
-                Hire Me
-                <FaArrowDown className="mt-1  animate-bounce " />
-              </Link>
+            <div className="flex justify-center items-end gap-5 lg:gap-[1.5vw]">
+              <LinkButton to="/projects" label="View Work" />
+              <LinkButton to="/contact" label="Hire Me" />
             </div>
           </div>
         </div>

@@ -58,18 +58,18 @@ const skill = [
 
 const Skills = () => {
   return (
-    <div className="mb-30 sm:mb:40">
+    <div className="pt-10 mb-20 lg:mb-[5.5vw]">
       <div className="flex gap-0  font-playfair">
-        <div className="marquee flex ">
+        <div className="marquee flex">
           {skill.map(({ id, icon, name }) => {
             return (
               <div
                 key={id}
-                className="drop-shadow-[1px_5px_2px] text-accent text-3xl sm:text-5xl font-bold mr-20"
+                className="drop-shadow-[1px_5px_2px] text-accent text-3xl sm:text-5xl font-bold mr-20 lg:mr-[3vw]"
               >
-                <span className="text-primary flex gap-1 items-center">
+                <span className="text-primary flex gap-1  lg:gap-[.5vw] items-center lg:text-[2vw]">
                   {icon}
-                  <p className="text-xl sm:text-2xl">{name}</p>
+                  <p className="text-xl sm:text-2xl lg:text-[2vw]">{name}</p>
                 </span>
               </div>
             );
@@ -80,11 +80,11 @@ const Skills = () => {
             return (
               <div
                 key={id}
-                className="drop-shadow-[1px_5px_2px] text-accent text-3xl sm:text-5xl font-bold mr-20"
+                className="drop-shadow-[1px_5px_2px] text-accent text-3xl sm:text-5xl font-bold mr-20 lg:mr-[3vw]"
               >
-                <span className="text-primary flex gap-1 items-center">
+                <span className="text-primary flex gap-1  lg:gap-[.5vw] items-center lg:text-[2vw]">
                   {icon}
-                  <p className="text-xl sm:text-2xl">{name}</p>
+                  <p className="text-xl sm:text-2xl lg:text-[2vw]">{name}</p>
                 </span>
               </div>
             );
