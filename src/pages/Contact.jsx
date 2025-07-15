@@ -41,7 +41,7 @@ const Contact = () => {
 
   return (
     <div className="pt-10 pb-30 lg:pb-[8.5vw] flex items-center justify-center w-full">
-      <div className="text-accent overflow-hidden rounded relative w-full max-w-2/3 flex justify-center items-center">
+      <div className="text-accent overflow-hidden rounded relative w-full sm:w-2/3 lg:max-w-2/3 flex justify-center items-center">
         {/* content */}
         <form
           onSubmit={handleSubmit(onSubmit)}

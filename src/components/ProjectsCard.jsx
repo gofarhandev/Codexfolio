@@ -35,7 +35,7 @@ const ProjectsCard = ({ ProjectArray }) => {
                   target="_blank"
                   rel="noopener noreferrer"
                   className="bg-accent border border-accent text-grow transition-colors flex items-center justify-center rounded-full text-sm hover:text-lg trans
-                  px-3 pt-0.5 pb-1 lg:pb-[.2vw] lg:pt-[.1vw] lg:px-[1vw] lg:text-[1vw] lg:hover:text-[1.2vw]"
+                  w-15 h-7 lg:text-[.8vw] lg:hover:text-[1vw]"
                 >
                   Live
                 </a>
@@ -44,14 +44,13 @@ const ProjectsCard = ({ ProjectArray }) => {
                   target="_blank"
                   rel="noopener noreferrer"
                   className="bg-accent border border-accent text-grow transition-colors flex items-center justify-center rounded-full text-sm hover:text-lg trans
-                  px-3 pt-0.5 pb-1 lg:pb-[.2vw] lg:pt-[.1vw] lg:px-[1vw] lg:text-[1vw] lg:hover:text-[1.2vw]"
+                  w-22 h-7 lg:text-[.8vw] lg:hover:text-[1vw]"
                 >
                   Github
                 </a>
               </div>
             </div>
 
-            {/* Rotating image */}
             <div className="h-full w-full transition-transform duration-700 transform">
               <img
                 src={item.img}

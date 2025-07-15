@@ -159,7 +159,6 @@ const Projects = () => {
         </h2>
       </div>
 
-      {/* Category Buttons */}
       <div className="mt-10 lg:mt-[3vw] gap-5 lg:gap-[1.5vw] flex flex-nowrap overflow-auto scrollbar-hide">
         {allCategories.map((category, index) => (
           <div

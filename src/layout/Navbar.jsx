@@ -38,7 +38,7 @@ const Navbar = () => {
               <Link
                 key={index}
                 to={item.route}
-                className={`text-grow font-playfair text-lg lg:text-[1.2vw] hidden md:flex transition-all duration-300 ${
+                className={`text-grow font-Michroma text-lg lg:text-[1.2vw] hidden lg:flex transition-all duration-300 ${
                   isActive ? "text-primary" : "text-accent hover:text-primary"
                 }`}
               >
@@ -50,7 +50,7 @@ const Navbar = () => {
           {/* Hamburger */}
           <button
             onClick={handleMobileNav}
-            className="md:hidden w-8 h-8 flex items-center justify-center cursor-pointer"
+            className="lg:hidden w-8 h-8 flex items-center justify-center cursor-pointer"
           >
             <svg
               viewBox="0 0 24 24"
@@ -79,7 +79,7 @@ const Navbar = () => {
 
           {/* Mobile Nav */}
           <div
-            className={`absolute top-16 -right-4 rounded-b-lg w-[200px] flex flex-col items-center gap-2 overflow-hidden transition-all duration-500 md:hidden ${
+            className={`absolute top-10 -right-4 rounded-b-lg w-[200px] flex flex-col items-center gap-3 overflow-hidden transition-all duration-700 lg:hidden ${
               isOpen ? "max-h-[500px] p-4" : "max-h-0 p-0"
             }`}
           >
@@ -90,9 +90,9 @@ const Navbar = () => {
                   key={index}
                   to={item.route}
                   onClick={() => setIsOpen(false)}
-                  className={`font-playfair text-sm h-10 w-full bg-accent flex items-center justify-center rounded-full border trans hover:text-xl ${
+                  className={`font-Michroma text-xs h-10 w-full bg-accent flex items-center justify-center rounded-full border trans hover:text-base ${
                     isActive
-                      ? "bg-primary text-xl text-back border-primary"
+                      ? "bg-primary text-back border-primary"
                       : "text-primary bg-back border-primary"
                   }`}
                 >

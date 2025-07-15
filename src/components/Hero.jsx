@@ -1,6 +1,5 @@
-import { Link } from "react-router-dom";
-// import gif from "../assets/gif.png";
-import Profile from "../assets/ppp.png";
+import gif from "../assets/gif.png";
+// import Profile from "../assets/ppp.png";
 import LinkButton from "./LinkButton";
 
 const Hero = () => {
@@ -11,9 +10,9 @@ const Hero = () => {
         <div className="flex flex-col items-center justify-between">
           <div className="flex flex-col gap-3 lg:gap-[1vw] items-center w-full text-center">
             <img
-              src={Profile}
+              src={gif}
               alt=""
-              className="drop-shadow-[1px_4px_2px] bg-back text-primary/20 rounded-full h-30 w-30 lg:w-[10vw] lg:h-[10vw]"
+              className="rounded-full shadow-2xl shadow-primary/20 bg-back h-30 w-30 lg:w-[10vw] lg:h-[10vw]"
             />
             <h1 className="drop-shadow-[1px_5px_1px]  text-accent text-2xl sm:text-4xl lg:text-[4vw] font-medium">
               <span className="text-grow">MD FARHAN SADIK</span>

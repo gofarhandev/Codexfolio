@@ -3,6 +3,8 @@ import { FaReact, FaHtml5, FaCss3Alt, FaNodeJs } from "react-icons/fa";
 import { FaRegFilePdf } from "react-icons/fa6";
 import { SiRedux, SiTailwindcss, SiJavascript, SiSass } from "react-icons/si";
 import CV from "../../public/CV.pdf";
+import { FaLinkedinIn } from "react-icons/fa6";
+import { FiGithub } from "react-icons/fi";
 import AnchorButton from "../components/AnchorButton";
 
 const skills = [
@@ -39,7 +41,15 @@ const About = () => {
             not only look great but also perform efficiently across devices.
           </p>
 
-          <div className="flex w-full justify-center">
+          <div className="flex w-full items-center gap-5 justify-center">
+            <AnchorButton
+              href="https://github.com/master-farhan"
+              label="Github"
+              icon={
+                <FiGithub className="transition-transform duration-300 group-hover:text-sm lg:text-[1vw] lg:group-hover:text-[1.2vw] group-hover:-rotate-12" />
+              }
+            />
+
             <AnchorButton
               href="/CV"
               download={true}
@@ -48,13 +58,21 @@ const About = () => {
                 <FaRegFilePdf className="transition-transform duration-300 group-hover:text-sm lg:text-[1vw] lg:group-hover:text-[1.2vw] group-hover:-rotate-12" />
               }
             />
+
+            <AnchorButton
+              href="https://www.linkedin.com/in/md-farhan-sadik-467340316/"
+              label="LinkedIn"
+              icon={
+                <FaLinkedinIn className="transition-transform duration-300 group-hover:text-sm lg:text-[1vw] lg:group-hover:text-[1.2vw] group-hover:-rotate-12" />
+              }
+            />
           </div>
 
           <div className="flex flex-wrap gap-3 sm:gap-5 lg:gap-[1.5vw] pt-2 lg:pt-[.5vw] justify-center">
             {skills.map((skill, index) => (
               <span
                 key={index}
-                className="flex items-center justify-center gap-2 lg:gap-[.5vw] px-3 sm:px-5 lg:px-[1.5vw] py-1 lg:py-[.2vw] text-xl sm:text-2xl lg:text-[1.8vw] font-playfair text-primary rounded-full trans"
+                className="flex items-center justify-center gap-2 lg:gap-[.5vw] px-3 sm:px-5 lg:px-[1.5vw] py-1 lg:py-[.2vw] text-sm sm:text-xl lg:text-[1.8vw] font-playfair text-primary rounded-full trans"
               >
                 {skill.icon}
                 {skill.name}
