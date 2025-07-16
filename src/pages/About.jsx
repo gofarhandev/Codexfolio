@@ -55,7 +55,7 @@ const About = () => {
               <span className="text-grow">Who I Am</span>
             </h2>
           </div>
-          <p className="about-p text-xl sm:text-2xl lg:text-[1.5vw] text-center tracking-widest leading-10 lg:leading-[3vw]">
+          <p className="about-p text-xl sm:text-2xl lg:text-[1.5vw] text-center tracking-wide leading-10 lg:leading-[3vw]">
             I’m MD Farhan Sadik, a Frontend Web Developer from Bangladesh with
             over one year of experience creating responsive, accessible, and
             high-performance web applications. At 21, I specialize in

@@ -87,7 +87,7 @@ const Contact = () => {
           </div>
 
           {/* Name */}
-          <div className="animate-contact relative bg-accent/20 shadow-accent/50 shadow-sm backdrop-blur-2xl order-2 col-span-4 sm:col-span-2 text-grow w-full rounded">
+          <div className="animate-contact relative bg-accent/60 shadow-accent/50 shadow-sm backdrop-blur-2xl order-2 col-span-4 sm:col-span-2 text-grow w-full rounded">
             <div className="flex items-center w-full">
               <span className="px-4 text-grow text-xl lg:text-[1.5vw]">
                 <FaUser />
@@ -102,14 +102,14 @@ const Contact = () => {
               />
             </div>
             {errors.name && (
-              <p className="text-red-500 absolute text-xs lg:text-[1vw] py-1 lg:py-[.2vw] bg-accent/20 rounded-full px-5 lg:px-[2.5vw]">
+              <p className="text-red-500 absolute text-xs lg:text-[1vw] py-1 lg:py-[.2vw] bg-accent/60 rounded-full px-5 lg:px-[2.5vw]">
                 Please enter your name.
               </p>
             )}
           </div>
 
           {/* Email */}
-          <div className="animate-contact bg-accent/20 shadow-accent/50 shadow-sm relative col-span-4 order-3 sm:col-span-4 sm:order-3 text-grow w-full rounded backdrop-blur-2xl">
+          <div className="animate-contact bg-accent/60 shadow-accent/50 shadow-sm relative col-span-4 order-3 sm:col-span-4 sm:order-3 text-grow w-full rounded backdrop-blur-2xl">
             <div className="flex items-center w-full">
               <span className="px-4 text-grow text-xl lg:text-[1.5vw]">
                 <FaEnvelope />
@@ -124,14 +124,14 @@ const Contact = () => {
               />
             </div>
             {errors.email && (
-              <p className="text-red-500 absolute text-xs lg:text-[1vw] py-1 lg:py-[.2vw] bg-accent/20 rounded-full px-5 lg:px-[2.5vw]">
+              <p className="text-red-500 absolute text-xs lg:text-[1vw] py-1 lg:py-[.2vw] bg-accent/60 rounded-full px-5 lg:px-[2.5vw]">
                 Please enter your email.
               </p>
             )}
           </div>
 
           {/* Subject */}
-          <div className="animate-contact bg-accent/20 shadow-accent/50 shadow-sm relative col-span-4 order-4 sm:col-span-6 sm:order-4 text-grow w-full rounded backdrop-blur-2xl">
+          <div className="animate-contact bg-accent/60 shadow-accent/50 shadow-sm relative col-span-4 order-4 sm:col-span-6 sm:order-4 text-grow w-full rounded backdrop-blur-2xl">
             <div className="flex items-center w-full">
               <span className="px-4 text-grow text-xl lg:text-[1.5vw]">
                 <FaTag />
@@ -146,14 +146,14 @@ const Contact = () => {
               />
             </div>
             {errors.subject && (
-              <p className="text-red-500 absolute text-xs lg:text-[1vw] py-1 lg:py-[.2vw] bg-accent/20 rounded-full px-5 lg:px-[2.5vw]">
+              <p className="text-red-500 absolute text-xs lg:text-[1vw] py-1 lg:py-[.2vw] bg-accent/60 rounded-full px-5 lg:px-[2.5vw]">
                 Please enter a subject.
               </p>
             )}
           </div>
 
           {/* Message */}
-          <div className="animate-contact bg-accent/20 shadow-accent/50 shadow-sm order-5 sm:order-5 col-span-4 sm:col-span-6 text-grow relative w-full rounded backdrop-blur-2xl">
+          <div className="animate-contact bg-accent/60 shadow-accent/50 shadow-sm order-5 sm:order-5 col-span-4 sm:col-span-6 text-grow relative w-full rounded backdrop-blur-2xl">
             <div className="flex items-start w-full">
               <span className="px-4 pt-3 text-grow text-xl lg:text-[1.5vw]">
                 <FaCommentDots />
@@ -167,7 +167,7 @@ const Contact = () => {
               ></textarea>
             </div>
             {errors.message && (
-              <p className="text-red-500 absolute text-xs lg:text-[1vw] py-1 lg:py-[.2vw] bg-accent/20 rounded-full px-5 lg:px-[2.5vw]">
+              <p className="text-red-500 absolute text-xs lg:text-[1vw] py-1 lg:py-[.2vw] bg-accent/60 rounded-full px-5 lg:px-[2.5vw]">
                 Please enter your message.
               </p>
             )}

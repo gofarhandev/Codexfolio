@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Michroma&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Michroma&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
 @import "tailwindcss";
 
 @theme {
@@ -7,10 +7,10 @@
   --color-primary: #ff6a6a;
   --color-accent: #111;
   --font-Michroma: "Michroma", serif;
-  --font-montserrat: "Urbanist", sans-serif;
+  --font-montserrat: "Ubuntu", sans-serif;
 }
 
-body{
+body {
   background: var(--color-back);
 }
 
@@ -58,7 +58,7 @@ textarea:-webkit-autofill:focus,
 select:-webkit-autofill,
 select:-webkit-autofill:hover,
 select:-webkit-autofill:focus {
-  -webkit-text-fill-color: white !important;
+  -webkit-text-fill-color: #aaa !important;
   transition: background-color 50000s ease-in-out 0s;
 }
 /* Hide scrollbar for Chrome, Safari, and Opera */
@@ -87,4 +87,30 @@ select:-webkit-autofill:focus {
       transform: translateY(0);
     }
   }
+}
+
+@keyframes gradientFlow {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.animate-bg-blend {
+  background: linear-gradient(
+    120deg,
+    var(--color-grow) 0%,
+    var(--color-back) 45%,
+    var(--color-primary) 55%,
+    var(--color-accent) 100%
+  );
+  background-size: 200% 200%;
+  animation: gradientFlow 6s ease-in-out infinite;
+  filter: blur(80px);
+  opacity: 0.3;
 }

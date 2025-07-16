@@ -90,11 +90,81 @@ const PageLoader = ({ onFinish }) => {
     return () => clearInterval(interval);
   }, [onFinish]);
 
+  const frontendRef = useRef(null);
+  const backendRef = useRef(null);
+  const fullstackRef = useRef(null);
+
+  useEffect(() => {
+    // Frontend + Backend Labels
+    gsap.set([frontendRef.current, backendRef.current], { opacity: 0, y: -20 });
+
+    gsap.to(frontendRef.current, {
+      opacity: 1,
+      y: 0,
+      duration: 0.8,
+      delay: 0.5,
+      ease: "power2.out",
+    });
+
+    gsap.to(backendRef.current, {
+      opacity: 1,
+      y: 0,
+      duration: 0.8,
+      delay: 0.5,
+      ease: "power2.out",
+    });
+
+    // Fade them out & show FULLSTACK
+    gsap.to([frontendRef.current, backendRef.current], {
+      opacity: 0,
+      y: -20,
+      delay: 2,
+      duration: 0.5,
+      ease: "power1.inOut",
+    });
+
+    gsap.set(fullstackRef.current, { opacity: 0, scale: 0.8 });
+
+    gsap.to(fullstackRef.current, {
+      opacity: 1,
+      scale: 1,
+      delay: 2.5,
+      duration: 0.8,
+      ease: "back.out(1.7)",
+    });
+  }, []);
+
   return (
     <div
       ref={containerRef}
-      className="fixed inset-0 z-50 bg-back text-grow flex flex-col items-center justify-center font-playfair overflow-hidden transition-opacity duration-500 w-full"
+      className="fixed inset-0 z-50 bg-back text-grow flex flex-col items-center justify-center font-Michroma overflow-hidden transition-opacity duration-500 w-full"
     >
+      {/* bg Animations */}
+      <div className="absolute inset-0 z-0">
+        <div className="w-full h-full animate-bg-blend " />
+
+        <h3
+          ref={frontendRef}
+          className="absolute top-5 left-5 lg:top-[2vw] lg:left-[3.5vw] text-grow text-base sm:text-lg lg:text-[2vw] z-10 font-semibold"
+        >
+          FRONTEND
+        </h3>
+
+        <h3
+          ref={fullstackRef}
+          className="absolute top-40 lg:top-[8vw] left-1/2 -translate-x-1/2 text-grow text-lg font-semibold sm:text-lg lg:text-[3vw] z-10 whitespace-nowrap"
+        >
+          FULLSTACK
+        </h3>
+
+        <h3
+          ref={backendRef}
+          className="absolute top-5 right-5 lg:top-[2vw] lg:right-[3.5vw] text-grow text-base font-semibold sm:text-lg lg:text-[2vw] z-10"
+        >
+          BACKEND
+        </h3>
+      </div>
+
       {/* Heading */}
       <h1 className="text-lg font-semibold sm:text-5xl lg:text-[4vw] mb-6 lg:mb-[2vw] text-grow flex gap-1 lg:gap-[.7vw]">
         {"ASSALAMU  ALAIKUM".split("").map((char, i) => (
