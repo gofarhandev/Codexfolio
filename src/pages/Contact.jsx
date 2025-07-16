@@ -1,6 +1,12 @@
+import { useEffect } from "react";
 import { useForm } from "react-hook-form";
 import Swal from "sweetalert2";
 import ActionButton from "../components/ActionButton";
+import gsap from "gsap";
+import ScrollTrigger from "gsap/ScrollTrigger";
+import { FaUser, FaEnvelope, FaTag, FaCommentDots } from "react-icons/fa";
+
+gsap.registerPlugin(ScrollTrigger);
 
 const Contact = () => {
   const {
@@ -39,16 +45,38 @@ const Contact = () => {
     }
   };
 
+  // 🔥 GSAP Animations
+  useEffect(() => {
+    const fields = gsap.utils.toArray(".animate-contact");
+
+    fields.forEach((el, index) => {
+      gsap.from(el, {
+        scrollTrigger: {
+          trigger: el,
+          start: "top 90%",
+          toggleActions: "play none none reverse",
+        },
+        opacity: 0,
+        y: 40,
+        duration: 0.6,
+        delay: index * 0.1,
+        ease: "power2.out",
+      });
+    });
+
+    ScrollTrigger.refresh();
+  }, []);
+
   return (
-    <div className="pt-10 pb-30 lg:pb-[8.5vw] flex items-center justify-center w-full">
+    <div className="pt-10 lg:pt-[2.5vw] pb-30 lg:pb-[8.5vw] flex items-center justify-center w-full">
       <div className="text-accent overflow-hidden rounded relative w-full sm:w-2/3 lg:max-w-2/3 flex justify-center items-center">
-        {/* content */}
         <form
           onSubmit={handleSubmit(onSubmit)}
-          className="grid w-full gap-5 lg:gap-[2vw] grid-cols-2 sm:grid-cols-6"
+          className="grid w-full gap-5 lg:gap-[1.5vw] grid-cols-2 sm:grid-cols-6"
         >
-          <div className="text-grow order-1 w-full sm:col-span-6 col-span-4 text-center rounded flex flex-col items-center justify-center py-5">
-            <h2 className="text-2xl sm:text-4xl lg:text-[2.5vw] font-bold drop-shadow-[1px_5px_1px] text-accent">
+          {/* Title */}
+          <div className="animate-contact text-grow order-1 w-full sm:col-span-6 col-span-4 text-center rounded flex flex-col items-center justify-center py-5 lg:py-1.5vw">
+            <h2 className="text-xl sm:text-3xl text-center lg:text-[2.5vw] font-bold drop-shadow-[1px_5px_1px] text-accent">
               <span className="text-grow">Let’s Work Together</span>
             </h2>
             <p className="text-sm sm:text-base lg:text-[1.5vw] text-grow mt-6 lg:mt-[2.5vw]">
@@ -58,83 +86,95 @@ const Contact = () => {
             </p>
           </div>
 
-          {/* Name Field */}
-          <div className="relative bg-accent/10 shadow-accent/50 shadow-lg backdrop-blur-2xl order-2 col-span-4 sm:col-span-2 text-grow w-full rounded">
-            <div className="text-sm sm:text-medium font-medium lg:text-[1.2vw]">
+          {/* Name */}
+          <div className="animate-contact relative bg-accent/20 shadow-accent/50 shadow-sm backdrop-blur-2xl order-2 col-span-4 sm:col-span-2 text-grow w-full rounded">
+            <div className="flex items-center w-full">
+              <span className="px-4 text-grow text-xl lg:text-[1.5vw]">
+                <FaUser />
+              </span>
               <input
                 placeholder="Your Name"
                 {...register("name", { required: true })}
                 type="text"
                 name="name"
                 id="name"
-                className="px-5 py-3 lg:px-[2vw] lg:py-[1vw] outline-0 rounded border-grow/50 focus:border-grow w-full h-full text-grow"
+                className="px-3 py-3 lg:px-[1vw] lg:py-[1vw] outline-0 w-full text-base lg:text-[1.2vw] h-full text-grow"
               />
             </div>
             {errors.name && (
-              <p className="text-red-500 absolute text-xs lg:text-[1vw] py-1 lg:py-[.2vw] bg-accent/10 rounded-full px-5 lg:px-[2.5vw]">
+              <p className="text-red-500 absolute text-xs lg:text-[1vw] py-1 lg:py-[.2vw] bg-accent/20 rounded-full px-5 lg:px-[2.5vw]">
                 Please enter your name.
               </p>
             )}
           </div>
 
-          {/* Email Field */}
-          <div className="bg-accent/10 shadow-accent/50 shadow-lg relative col-span-4 order-3 sm:col-span-4 sm:order-3 text-grow w-full rounded backdrop-blur-2xl">
-            <div className="text-sm sm:text-medium font-medium lg:text-[1.2vw]">
+          {/* Email */}
+          <div className="animate-contact bg-accent/20 shadow-accent/50 shadow-sm relative col-span-4 order-3 sm:col-span-4 sm:order-3 text-grow w-full rounded backdrop-blur-2xl">
+            <div className="flex items-center w-full">
+              <span className="px-4 text-grow text-xl lg:text-[1.5vw]">
+                <FaEnvelope />
+              </span>
               <input
                 placeholder="Your Email Address"
                 {...register("email", { required: true })}
                 type="email"
                 name="email"
                 id="email"
-                className="px-5 py-3 lg:px-[2vw] lg:py-[1vw] outline-0 rounded border-grow/50 focus:border-grow w-full h-full bg-transparent text-grow"
+                className="px-3 py-3 lg:px-[1vw] lg:py-[1vw] outline-0 w-full text-base lg:text-[1.2vw] h-full bg-transparent text-grow"
               />
             </div>
             {errors.email && (
-              <p className="text-red-500 absolute text-xs lg:text-[1vw] py-1 lg:py-[.2vw] bg-accent/10 rounded-full px-5 lg:px-[2.5vw]">
+              <p className="text-red-500 absolute text-xs lg:text-[1vw] py-1 lg:py-[.2vw] bg-accent/20 rounded-full px-5 lg:px-[2.5vw]">
                 Please enter your email.
               </p>
             )}
           </div>
 
-          {/* Subject Field */}
-          <div className="bg-accent/10 shadow-accent/50 shadow-lg relative col-span-4 order-4 sm:col-span-6 sm:order-4 text-grow w-full rounded backdrop-blur-2xl">
-            <div className="text-sm sm:text-medium font-medium lg:text-[1.2vw]">
+          {/* Subject */}
+          <div className="animate-contact bg-accent/20 shadow-accent/50 shadow-sm relative col-span-4 order-4 sm:col-span-6 sm:order-4 text-grow w-full rounded backdrop-blur-2xl">
+            <div className="flex items-center w-full">
+              <span className="px-4 text-grow text-xl lg:text-[1.5vw]">
+                <FaTag />
+              </span>
               <input
                 placeholder="Subject"
                 {...register("subject", { required: true })}
                 type="text"
                 name="subject"
                 id="subject"
-                className="px-5 py-3 lg:px-[2vw] lg:py-[1vw] outline-0 rounded border-grow/50 focus:border-grow w-full h-full bg-transparent text-grow"
+                className="px-3 py-3 lg:px-[1vw] lg:py-[1vw] outline-0 w-full text-base lg:text-[1.2vw] h-full bg-transparent text-grow"
               />
             </div>
             {errors.subject && (
-              <p className="text-red-500 absolute text-xs lg:text-[1vw] py-1 lg:py-[.2vw] bg-accent/10 rounded-full px-5 lg:px-[2.5vw]">
+              <p className="text-red-500 absolute text-xs lg:text-[1vw] py-1 lg:py-[.2vw] bg-accent/20 rounded-full px-5 lg:px-[2.5vw]">
                 Please enter a subject.
               </p>
             )}
           </div>
 
-          {/* Message Field */}
-          <div className="bg-accent/10 shadow-accent/50 shadow-lg order-5 sm:order-5 col-span-4 sm:col-span-6 text-grow relative w-full rounded backdrop-blur-2xl">
-            <div className="text-sm sm:text-medium font-medium lg:text-[1.2vw]">
+          {/* Message */}
+          <div className="animate-contact bg-accent/20 shadow-accent/50 shadow-sm order-5 sm:order-5 col-span-4 sm:col-span-6 text-grow relative w-full rounded backdrop-blur-2xl">
+            <div className="flex items-start w-full">
+              <span className="px-4 pt-3 text-grow text-xl lg:text-[1.5vw]">
+                <FaCommentDots />
+              </span>
               <textarea
                 placeholder="Write Your Message Here"
                 {...register("message", { required: true })}
                 name="message"
                 id="message"
-                className="px-5 py-3 lg:px-[2vw] lg:py-[1vw] outline-0 rounded border-grow/50 focus:border-grow w-full h-full text-grow"
+                className="px-3 py-3 lg:px-[1vw] lg:py-[1vw] outline-0 w-full text-base lg:text-[1.2vw] h-full text-grow"
               ></textarea>
             </div>
             {errors.message && (
-              <p className="text-red-500 absolute text-xs lg:text-[1vw] py-1 lg:py-[.2vw] bg-accent/10 rounded-full px-5 lg:px-[2.5vw]">
+              <p className="text-red-500 absolute text-xs lg:text-[1vw] py-1 lg:py-[.2vw] bg-accent/20 rounded-full px-5 lg:px-[2.5vw]">
                 Please enter your message.
               </p>
             )}
           </div>
 
           {/* Submit Button */}
-          <div className="order-6 col-span-4 sm:col-span-6 flex justify-center w-full">
+          <div className="animate-contact order-6 col-span-4 sm:col-span-6 flex justify-center w-full">
             <ActionButton label="Send" type="submit" />
           </div>
         </form>

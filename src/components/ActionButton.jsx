@@ -13,7 +13,7 @@ const ActionButton = ({
     <button
       type={type}
       onClick={onClick}
-      className={`group flex items-center justify-center h-10 w-50 lg:h-[3vw] lg:w-[15vw] gap-1 lg:gap-[.5vw] text-base lg:text-[1vw] font-medium rounded-full border border-primary text-primary hover:bg-primary hover:text-back hover:shadow-accent shadow-primary transition-all duration-300 ease-in-out hover:text-xl lg:hover:text-[1.2vw] cursor-pointer ${className}`}
+      className={`group flex items-center justify-center h-10 w-50 lg:h-[3vw] lg:w-[15vw] gap-1 lg:gap-[.5vw] text-sm lg:text-[1vw] font-medium rounded-full border-2 lg:border-[.2vw]  border-primary text-primary hover:bg-primary hover:text-back hover:shadow-accent shadow-primary transition-all duration-300 ease-in-out hover:text-xl lg:hover:text-[1.2vw] cursor-pointer ${className}`}
     >
       {label}
       {icon}

@@ -1,7 +1,6 @@
-import { MdSunny } from "react-icons/md";
-import { IoMdMoon } from "react-icons/io";
+import { useEffect, useState, useRef } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { useState } from "react";
+import gsap from "gsap";
 
 const navLinks = [
   { name: "Home", route: "/" },
@@ -14,6 +13,34 @@ const navLinks = [
 const Navbar = () => {
   const location = useLocation();
   const [isOpen, setIsOpen] = useState(false);
+  const navRef = useRef(null);
+
+  useEffect(() => {
+    // Animate navbar fade-in and slide down on mount
+    gsap.fromTo(
+      navRef.current,
+      { y: -100, opacity: 0 },
+      { y: 0, opacity: 1, duration: 1, ease: "power3.out" }
+    );
+
+    let lastScrollY = window.pageYOffset;
+
+    const handleScroll = () => {
+      const currentScrollY = window.pageYOffset;
+      if (currentScrollY > lastScrollY && currentScrollY > 50) {
+        // Scrolling down - slide navbar up (hide)
+        gsap.to(navRef.current, { y: "-100%", duration: 0.5, ease: "power3.out" });
+      } else if (currentScrollY < lastScrollY) {
+        // Scrolling up - slide navbar down (show)
+        gsap.to(navRef.current, { y: 0, duration: 0.5, ease: "power3.out" });
+      }
+      lastScrollY = currentScrollY;
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   const handleMobileNav = () => {
     setIsOpen(!isOpen);
@@ -21,12 +48,15 @@ const Navbar = () => {
   };
 
   return (
-    <div className="fixed top-0 left-0 w-full py-5 lg:py-[1vw] z-[999] bg-back/30 backdrop-blur-2xl trans">
+    <div
+      ref={navRef}
+      className="fixed top-0 left-0 w-full py-5 lg:py-[1vw] z-[999] bg-back/30 backdrop-blur-2xl trans"
+    >
       <div className="w-full h-full flex justify-between items-center px-4 sm:px-20 lg:px-[5vw]">
         {/* Logo */}
         <h2 className="text-accent text-2xl lg:text-[2vw] drop-shadow-[1px_5px_1px]">
           <a href="/" className="text-primary font-bold">
-            {"<Hi/>"}
+            {".Dev"}
           </a>
         </h2>
 

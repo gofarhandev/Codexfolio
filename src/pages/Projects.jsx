@@ -12,6 +12,10 @@ import AiPort from "../assets/AiPort.png";
 import port01 from "../assets/port01.png";
 import port02 from "../assets/port02.png";
 import Gemini from "../assets/gemini-clone.png";
+import { useEffect } from "react";
+import gsap from "gsap";
+import ScrollTrigger from "gsap/ScrollTrigger";
+gsap.registerPlugin(ScrollTrigger);
 
 const ProjectArray = [
   {
@@ -151,20 +155,41 @@ const Projects = () => {
       ? ProjectArray.slice(0, 3) // latest 3 projects
       : ProjectArray.filter((p) => p.category === activeCategory);
 
+        // gsap
+      useEffect(() => {
+        gsap.registerPlugin(ScrollTrigger);
+      
+        gsap.utils.toArray([".project-heading", ".project-category"]).forEach((className, index) => {
+          gsap.from(className, {
+            scrollTrigger: {
+              trigger: className,
+              start: "top 85%",
+              toggleActions: "play none none reverse",
+            },
+            opacity: 0,
+            y: 50,
+            duration: 0.6,
+            delay: index * 0.2,
+            ease: "power2.out",
+          });
+        });
+      }, []);
+      
+
   return (
     <div className="relative pt-10 pb-30 lg:pb-[8.5vw]">
       <div className="text-grow w-full rounded">
-        <h2 className="drop-shadow-[1px_5px_1px] text-accent text-3xl sm:text-4xl lg:text-[2.5vw] flex justify-center">
-          <span className="text-grow">Dive Into My Code World</span>
+        <h2 className="project-heading drop-shadow-[1px_5px_1px] text-accent text-xl sm:text-3xl lg:text-[2.5vw] flex justify-center">
+          <span className="text-grow text-center">Dive Into My Code World</span>
         </h2>
       </div>
 
-      <div className="mt-10 lg:mt-[3vw] gap-5 lg:gap-[1.5vw] flex flex-nowrap overflow-auto scrollbar-hide">
+      <div className="project-category mt-10 lg:mt-[3vw] gap-5 lg:gap-[1.5vw] flex flex-nowrap overflow-auto scrollbar-hide">
         {allCategories.map((category, index) => (
           <div
             key={index}
             onClick={() => setActiveCategory(category)}
-            className={`py-1 lg:py-[.5vw] px-10 lg:px-[3vw] font-Michroma rounded-full cursor-pointer text-md lg:text-[1.1vw] whitespace-nowrap
+            className={`py-1 lg:py-[.5vw] px-10 lg:px-[3vw] font-Michroma rounded-full cursor-pointer text-base lg:text-[1.1vw] whitespace-nowrap
               ${
                 activeCategory === category
                   ? "bg-accent/50 text-grow"
