@@ -1,6 +1,8 @@
 import { useState } from "react";
 import ProjectsCard from "../components/ProjectsCard";
 import Cook from "/Cook.png";
+import GTA from "/GTA.png";
+import Havmor from "/Havmor.png";
 import Travel from "/Travel.png";
 import Port from "/Port.png";
 import Gadget from "/Gadget.png";
@@ -18,6 +20,26 @@ import ScrollTrigger from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
 const ProjectArray = [
+  {
+    title: "Clothing Store",
+    skills: ["React.js", "Tailwind CSS"],
+    live: "https://clothes-store-002.netlify.app/",
+    github: "https://github.com/master-farhan/clothes-shop",
+    img: Havmor,
+    category: "E-Commerce",
+    description:
+      "Responsive fashion store with clean UI, product filtering, and modern design using React & Tailwind.",
+  },
+  {
+    title: "Clothing Store",
+    skills: ["React.js", "Tailwind CSS"],
+    live: "https://clothes-store-002.netlify.app/",
+    github: "https://github.com/master-farhan/clothes-shop",
+    img: GTA,
+    category: "E-Commerce",
+    description:
+      "Responsive fashion store with clean UI, product filtering, and modern design using React & Tailwind.",
+  },
   {
     title: "Clothing Store",
     skills: ["React.js", "Tailwind CSS"],
@@ -155,26 +177,27 @@ const Projects = () => {
       ? ProjectArray.slice(0, 3) // latest 3 projects
       : ProjectArray.filter((p) => p.category === activeCategory);
 
-        // gsap
-      useEffect(() => {
-        gsap.registerPlugin(ScrollTrigger);
-      
-        gsap.utils.toArray([".project-heading", ".project-category"]).forEach((className, index) => {
-          gsap.from(className, {
-            scrollTrigger: {
-              trigger: className,
-              start: "top 85%",
-              toggleActions: "play none none reverse",
-            },
-            opacity: 0,
-            y: 50,
-            duration: 0.6,
-            delay: index * 0.2,
-            ease: "power2.out",
-          });
+  // gsap
+  useEffect(() => {
+    gsap.registerPlugin(ScrollTrigger);
+
+    gsap.utils
+      .toArray([".project-heading", ".project-category"])
+      .forEach((className, index) => {
+        gsap.from(className, {
+          scrollTrigger: {
+            trigger: className,
+            start: "top 85%",
+            toggleActions: "play none none reverse",
+          },
+          opacity: 0,
+          y: 50,
+          duration: 0.6,
+          delay: index * 0.2,
+          ease: "power2.out",
         });
-      }, []);
-      
+      });
+  }, []);
 
   return (
     <div className="relative pt-10 pb-30 lg:pb-[8.5vw]">
