@@ -1,7 +1,6 @@
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
-import gif from "../assets/gif.png";
-// import Profile from "../assets/ppp.png";
+import gif from "/gif.png";
 import LinkButton from "./LinkButton";
 
 const Hero = () => {
