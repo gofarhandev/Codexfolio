@@ -54,7 +54,7 @@ const ProjectsCard = ({ ProjectArray }) => {
   }, [ProjectArray]); // re-run animation on filter change
 
   return (
-    <div className="grid pt-10 lg:pt-[2.8vw] grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-5 lg:gap-[1.5vw]">
+    <div className="grid pt-10 lg:pt-[2.8vw] grid-cols-1 md:grid-cols-2 xl:grid-cols-2 gap-5 lg:gap-[1.5vw]">
       {ProjectArray.map((item, index) => (
         <div
           key={index}
@@ -62,14 +62,14 @@ const ProjectsCard = ({ ProjectArray }) => {
           className="animate-project-card relative group overflow-hidden"
         >
           {/* 👉 Large Devices: Hover Flip */}
-          <div className="hidden md:block overflow-hidden rounded">
+          <div className="hidden lg:block overflow-hidden rounded">
             <div className="absolute -left-full -bottom-full group-hover:left-0 group-hover:bottom-0 rounded-r-full rounded-t-full group-hover:rounded-xs w-full h-full z-10 backdrop-blur-sm bg-back trans px-5 lg:px-[1.6vw] py-3 lg:py-[.5vw] font-medium trans flex flex-col gap-10 lg:gap-2.8vw sm:gap-5 justify-between">
               <div>
                 <h2 className="text-xl lg:text-[1.55vw]">{item.title}</h2>
                 <p className="py-1.5 lg:py-[.5vw] text-md lg:text-[1.17vw] tracking-wide">
                   {item.description}
                 </p>
-                <div className="flex gap-2 lg:gap-[.5vw] pt-1 lg:pt-[.5vw]">
+                <div className="flex flex-wrap gap-2 lg:gap-[.5vw] pt-1 lg:pt-[.5vw]">
                   {item.skills.map((skill, i) => (
                     <span
                       key={i}
@@ -109,7 +109,7 @@ const ProjectsCard = ({ ProjectArray }) => {
           </div>
 
           {/* 👉 Small Devices: Static Card */}
-          <div className="block md:hidden bg-back rounded">
+          <div className="block lg:hidden bg-back rounded">
             <img
               src={item.img}
               alt={item.title}

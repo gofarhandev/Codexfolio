@@ -1,8 +1,9 @@
 import { useState } from "react";
 import ProjectsCard from "../components/ProjectsCard";
-import Cook from "/Cook.png";
-import GTA from "/GTA.png";
 import Havmor from "/Havmor.png";
+import GTA from "/GTA.png";
+import Cocktails from "/Cocktails.png";
+import Cook from "/Cook.png";
 import Travel from "/Travel.png";
 import Port from "/Port.png";
 import Gadget from "/Gadget.png";
@@ -21,24 +22,32 @@ gsap.registerPlugin(ScrollTrigger);
 
 const ProjectArray = [
   {
-    title: "Clothing Store",
-    skills: ["React.js", "Tailwind CSS"],
-    live: "https://clothes-store-002.netlify.app/",
-    github: "https://github.com/master-farhan/clothes-shop",
+    title: "Havmor Ice-Cream",
+    skills: [
+      "React.js",
+      "Tailwind CSS",
+      "GSAP",
+      "MongoDB",
+      "Express",
+      "Node",
+      "JWT",
+    ],
+    live: "https://havmor.vercel.app/",
+    github: "https://github.com/master-farhan/hackathon-frontend",
     img: Havmor,
     category: "E-Commerce",
     description:
-      "Responsive fashion store with clean UI, product filtering, and modern design using React & Tailwind.",
+      "Built for Sheriyans Hackathon — a full-stack web app with modern UI, animations, and real-world features.",
   },
   {
-    title: "Clothing Store",
-    skills: ["React.js", "Tailwind CSS"],
-    live: "https://clothes-store-002.netlify.app/",
-    github: "https://github.com/master-farhan/clothes-shop",
+    title: "GTA 6",
+    skills: ["React.js", "Tailwind CSS", "GSAP"],
+    live: "https://gta-6-02.vercel.app/",
+    github: "https://github.com/master-farhan/GTA-6",
     img: GTA,
-    category: "E-Commerce",
+    category: "Game",
     description:
-      "Responsive fashion store with clean UI, product filtering, and modern design using React & Tailwind.",
+      "GTA 6 fan site built with React, GSAP, and Tailwind. Smooth parallax effects and sleek UI animations.",
   },
   {
     title: "Clothing Store",
@@ -49,6 +58,16 @@ const ProjectArray = [
     category: "E-Commerce",
     description:
       "Responsive fashion store with clean UI, product filtering, and modern design using React & Tailwind.",
+  },
+  {
+    title: "Clothing Store",
+    skills: ["React.js", "Tailwind CSS", "GSAP"],
+    live: "https://cocktails-02.vercel.app/",
+    github: "https://github.com/master-farhan/gsap-cocktails",
+    img: Cocktails,
+    category: "E-Commerce",
+    description:
+      "Crafted with React, GSAP & Tailwind — a smooth, animated cocktails site to explore stylish drink recipes.",
   },
   {
     title: "3D Portfolio",
@@ -174,7 +193,7 @@ const Projects = () => {
     activeCategory === "All"
       ? ProjectArray
       : activeCategory === "Recent"
-      ? ProjectArray.slice(0, 3) // latest 3 projects
+      ? ProjectArray.slice(0, 4)
       : ProjectArray.filter((p) => p.category === activeCategory);
 
   // gsap
