@@ -16,7 +16,6 @@ const Navbar = () => {
   const navRef = useRef(null);
 
   useEffect(() => {
-    // Animate navbar fade-in and slide down on mount
     gsap.fromTo(
       navRef.current,
       { y: "-100%", opacity: 0 },

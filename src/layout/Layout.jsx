@@ -34,10 +34,8 @@ const Layout = () => {
     };
     requestAnimationFrame(raf);
 
-    // Sync with GSAP ScrollTrigger
     lenis.on("scroll", ScrollTrigger.update);
 
-    // Clean up
     return () => lenis.destroy();
   }, []);
 
@@ -46,7 +44,6 @@ const Layout = () => {
       {!loadingDone ? (
         <PageLoader
           onFinish={() => {
-            // Delay to avoid flicker
             setTimeout(() => setLoadingDone(true), 200);
           }}
         />
