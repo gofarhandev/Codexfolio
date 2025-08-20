@@ -47,7 +47,7 @@ const Skills = () => {
 
         // Faster scroll movement
         gsap.to(el, {
-          x: `+=${direction * 8}`, // speed increased
+          x: `+=${direction * 2}`, // speed increased
           ease: "none",
           duration: 0.05, // smoother + faster update
         });

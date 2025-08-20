@@ -7,33 +7,6 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
 
-const servicesData = [
-  {
-    icon: <FaLaptopCode />,
-    title: "Landing Page",
-    description:
-      "Build modern, fast, and fully responsive websites using React.js and Tailwind CSS. Clean code and performance optimized.",
-  },
-  {
-    icon: <FaMobileAlt />,
-    title: "Responsive Website",
-    description:
-      "Develop mobile-friendly layouts that work smoothly across all screen sizes. Pixel-perfect implementation from any design.",
-  },
-  {
-    icon: <FaGlobe />,
-    title: "Portfolio Website",
-    description:
-      "Design and develop personal portfolios, agency sites, or product landing pages that are clean, attractive, and fast-loading.",
-  },
-  {
-    icon: <FaBolt />,
-    title: "E-Commerce Website",
-    description:
-      "Fix layout issues, performance problems, or JavaScript bugs in your frontend codebase to improve UX and loading speed.",
-  },
-];
-
 const Services = () => {
   const cardsRef = useRef([]);
 
@@ -80,16 +53,8 @@ const Services = () => {
       </div>
 
       {/* Cards Grid */}
-      <div className="w-full grid grid-cols-1 gap-5 lg:gap-[2vw] sm:grid-cols-2 xl:grid-cols-2">
-        {servicesData.map((service, idx) => (
-          <ServicesCard
-            key={idx}
-            refEl={(el) => (cardsRef.current[idx] = el)}
-            icon={service.icon}
-            title={service.title}
-            description={service.description}
-          />
-        ))}
+      <div className="w-full grid grid-cols-1 gap-5 lg:gap-[2vw] sm:grid-cols-2">
+        <ServicesCard />
       </div>
     </div>
   );

@@ -63,7 +63,7 @@ const ProjectsCard = ({ ProjectArray }) => {
         >
           {/* 👉 Large Devices: Hover Flip */}
           <div className="hidden lg:block overflow-hidden rounded">
-            <div className="absolute -left-full -bottom-full group-hover:left-0 group-hover:bottom-0 rounded-r-full rounded-t-full group-hover:rounded-xs w-full h-full z-10 backdrop-blur-sm bg-back trans px-5 lg:px-[1.6vw] py-3 lg:py-[.5vw] font-medium trans flex flex-col gap-10 lg:gap-2.8vw sm:gap-5 justify-between">
+            <div className="absolute top-0 left-0 h-full w-full overflow-hidden opacity-0 group-hover:opacity-100 z-10 backdrop-blur-sm bg-back trans px-5 lg:px-[1.6vw] py-3 lg:py-[.5vw] font-medium trans flex flex-col gap-10 lg:gap-2.8vw sm:gap-5 justify-between">
               <div>
                 <h2 className="text-xl lg:text-[1.55vw]">{item.title}</h2>
                 <p className="py-1.5 lg:py-[.5vw] text-md lg:text-[1.17vw] tracking-wide">
