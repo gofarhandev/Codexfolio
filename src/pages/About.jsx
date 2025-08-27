@@ -1,14 +1,21 @@
-// import Profile from "../assets/ppp.png";
-import { FaReact, FaHtml5, FaCss3Alt, FaNodeJs } from "react-icons/fa";
-import { FaRegFilePdf } from "react-icons/fa6";
+import {
+  FaReact,
+  FaHtml5,
+  FaCss3Alt,
+  FaNodeJs,
+  FaDatabase,
+  FaLock,
+  FaGitAlt,
+  FaNpm,
+} from "react-icons/fa";
+import { FaRegFilePdf, FaLinkedinIn } from "react-icons/fa6";
 import { SiRedux, SiTailwindcss, SiJavascript, SiSass } from "react-icons/si";
-import CV from "../../public/CV.pdf";
-import { FaLinkedinIn } from "react-icons/fa6";
 import { FiGithub } from "react-icons/fi";
 import AnchorButton from "../components/AnchorButton";
 import { useEffect } from "react";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
+
 gsap.registerPlugin(ScrollTrigger);
 
 const skills = [
@@ -20,6 +27,11 @@ const skills = [
   { name: "JavaScript", icon: <SiJavascript className="text-yellow-400" /> },
   { name: "SCSS", icon: <SiSass className="text-pink-400" /> },
   { name: "Node.js", icon: <FaNodeJs className="text-green-600" /> },
+  { name: "Express", icon: <FaNodeJs className="text-gray-700" /> }, // reused Node icon
+  { name: "MongoDB", icon: <FaDatabase className="text-green-500" /> },
+  { name: "JWT", icon: <FaLock className="text-yellow-600" /> },
+  { name: "Git", icon: <FaGitAlt className="text-red-500" /> },
+  { name: "NPM", icon: <FaNpm className="text-red-600" /> },
 ];
 
 const About = () => {
@@ -46,15 +58,14 @@ const About = () => {
   }, []);
 
   return (
-    <div className="pt-10 pb-30 lg:pb-[8.5vw]">
+    <section className="relative pt-[4vw] pb-20 lg:pb-[5.5vw]">
+      <h2 className="project-heading text-grow text-xl sm:text-3xl lg:text-[2.5vw] flex justify-center">
+        Who I Am
+      </h2>
       {/* content */}
-      <div className="flex flex-col md:flex-row gap-10 md:gap-15 xl:gap-20 items-center justify-center w-full relative">
-        <div className="flex flex-col gap-5 lg:gap-[1.5vw]">
-          <div className="about-heading text-grow w-full rounded">
-            <h2 className="drop-shadow-[1px_5px_1px] text-accent text-xl sm:text-3xl lg:text-[2.5vw] flex justify-center">
-              <span className="text-grow">Who I Am</span>
-            </h2>
-          </div>
+      <div className="flex flex-col md:flex-row gap-5 md:gap-10 lg:gap-[2vw] items-center justify-center w-full relative">
+        <div className="flex flex-col gap-5 lg:gap-[2vw]">
+          <div className="about-heading text-grow w-full rounded"></div>
           <p className="about-p text-xl sm:text-2xl lg:text-[1.5vw] text-center tracking-wide leading-10 lg:leading-[3vw]">
             I’m MD Farhan Sadik, a Frontend Web Developer from Bangladesh with
             over one year of experience creating responsive, accessible, and
@@ -105,7 +116,7 @@ const About = () => {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

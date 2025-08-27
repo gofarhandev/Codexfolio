@@ -1,7 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import { Outlet } from "react-router-dom";
 import Navbar from "./Navbar";
-import Footer from "./Footer";
 import Lenis from "@studio-freight/lenis";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
@@ -54,7 +53,6 @@ const Layout = () => {
             <main className="relative px-5 overflow-hidden pt-25 lg:pt-[6vw] sm:px-20 lg:px-[5vw] w-full min-h-screen bg-back text-grow p-5 pb-10 lg:pb-[2.5vw] trans">
               <Outlet />
             </main>
-            <Footer />
           </div>
         </div>
       )}

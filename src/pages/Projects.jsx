@@ -193,7 +193,7 @@ const Projects = () => {
     activeCategory === "All"
       ? ProjectArray
       : activeCategory === "Recent"
-      ? ProjectArray.slice(0, 4)
+      ? ProjectArray.slice(0, 6)
       : ProjectArray.filter((p) => p.category === activeCategory);
 
   // gsap
@@ -219,10 +219,10 @@ const Projects = () => {
   }, []);
 
   return (
-    <div className="relative pt-10 pb-30 lg:pb-[8.5vw]">
+    <section className="relative pt-10 pb-30 lg:pb-[8.5vw]">
       <div className="text-grow w-full rounded">
-        <h2 className="project-heading drop-shadow-[1px_5px_1px] text-accent text-xl sm:text-3xl lg:text-[2.5vw] flex justify-center">
-          <span className="text-grow text-center">Dive Into My Code World</span>
+        <h2 className="project-heading text-grow text-xl sm:text-3xl lg:text-[2.5vw] flex justify-center">
+          Dive Into My Code World
         </h2>
       </div>
 
@@ -231,7 +231,7 @@ const Projects = () => {
           <div
             key={index}
             onClick={() => setActiveCategory(category)}
-            className={`py-1 lg:py-[.5vw] px-10 lg:px-[3vw] font-Michroma rounded-full cursor-pointer text-base lg:text-[1.1vw] whitespace-nowrap
+            className={`py-1 lg:py-[.5vw] px-10 lg:px-[3vw] font-Michroma rounded-full cursor-pointer text-sm lg:text-[1vw] whitespace-nowrap
               ${
                 activeCategory === category
                   ? "bg-accent/50 text-grow"
@@ -245,7 +245,7 @@ const Projects = () => {
 
       {/* Filtered Projects */}
       <ProjectsCard ProjectArray={filteredProjects} />
-    </div>
+    </section>
   );
 };
 

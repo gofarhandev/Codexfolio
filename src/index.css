@@ -114,3 +114,12 @@ select:-webkit-autofill:focus {
   filter: blur(80px);
   opacity: 0.3;
 }
+
+/* In your global.css */
+.scroll-hidden::-webkit-scrollbar {
+  display: none;
+}
+.scroll-hidden {
+  -ms-overflow-style: none; /* IE/Edge */
+  scrollbar-width: none; /* Firefox */
+}

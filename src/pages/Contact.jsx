@@ -68,26 +68,17 @@ const Contact = () => {
   }, []);
 
   return (
-    <div className="pt-10 lg:pt-[2.5vw] pb-30 lg:pb-[8.5vw] flex items-center justify-center w-full">
-      <div className="text-accent overflow-hidden rounded relative w-full sm:w-2/3 lg:max-w-2/3 flex justify-center items-center">
+    <section className="relative pb-15 lg:pb-[5vw] flex items-center justify-center w-full mb-[1vw]">
+      <div className="text-accent overflow-hidden rounded relative w-full sm:w-2/3 lg:max-w-2/3 flex flex-col gap-[3vw] justify-center items-center pt-30">
+        <h2 className="text-xl sm:text-3xl lg:text-[2.5vw] font-bold text-grow">
+          Let's Work Together
+        </h2>
         <form
           onSubmit={handleSubmit(onSubmit)}
-          className="grid w-full gap-5 lg:gap-[1.5vw] grid-cols-2 sm:grid-cols-6"
+          className="grid w-full gap-5 lg:gap-[2.5vw] grid-cols-2 sm:grid-cols-6"
         >
-          {/* Title */}
-          <div className="animate-contact text-grow order-1 w-full sm:col-span-6 col-span-4 text-center rounded flex flex-col items-center justify-center py-5 lg:py-1.5vw">
-            <h2 className="text-xl sm:text-3xl text-center lg:text-[2.5vw] font-bold drop-shadow-[1px_5px_1px] text-accent">
-              <span className="text-grow">Let’s Work Together</span>
-            </h2>
-            <p className="text-sm sm:text-base lg:text-[1.5vw] text-grow mt-6 lg:mt-[2.5vw]">
-              Whether you have a question, a project idea, or just want to
-              connect — feel free to reach out. I’ll get back to you as soon as
-              possible!
-            </p>
-          </div>
-
           {/* Name */}
-          <div className="animate-contact relative bg-accent/60 shadow-accent/50 shadow-sm backdrop-blur-2xl order-2 col-span-4 sm:col-span-2 text-grow w-full rounded">
+          <div className="animate-contact relative bg-accent/30 shadow-accent/50 shadow-sm backdrop-blur-2xl order-2 col-span-4 sm:col-span-2 text-grow w-full rounded">
             <div className="flex items-center w-full">
               <span className="px-4 text-grow text-xl lg:text-[1.5vw]">
                 <FaUser />
@@ -109,7 +100,7 @@ const Contact = () => {
           </div>
 
           {/* Email */}
-          <div className="animate-contact bg-accent/60 shadow-accent/50 shadow-sm relative col-span-4 order-3 sm:col-span-4 sm:order-3 text-grow w-full rounded backdrop-blur-2xl">
+          <div className="animate-contact bg-accent/30 shadow-accent/50 shadow-sm relative col-span-4 order-3 sm:col-span-4 sm:order-3 text-grow w-full rounded backdrop-blur-2xl">
             <div className="flex items-center w-full">
               <span className="px-4 text-grow text-xl lg:text-[1.5vw]">
                 <FaEnvelope />
@@ -131,7 +122,7 @@ const Contact = () => {
           </div>
 
           {/* Subject */}
-          <div className="animate-contact bg-accent/60 shadow-accent/50 shadow-sm relative col-span-4 order-4 sm:col-span-6 sm:order-4 text-grow w-full rounded backdrop-blur-2xl">
+          <div className="animate-contact bg-accent/30 shadow-accent/50 shadow-sm relative col-span-4 order-4 sm:col-span-6 sm:order-4 text-grow w-full rounded backdrop-blur-2xl">
             <div className="flex items-center w-full">
               <span className="px-4 text-grow text-xl lg:text-[1.5vw]">
                 <FaTag />
@@ -153,7 +144,7 @@ const Contact = () => {
           </div>
 
           {/* Message */}
-          <div className="animate-contact bg-accent/60 shadow-accent/50 shadow-sm order-5 sm:order-5 col-span-4 sm:col-span-6 text-grow relative w-full rounded backdrop-blur-2xl">
+          <div className="animate-contact bg-accent/30 shadow-accent/50 shadow-sm order-5 sm:order-5 col-span-4 sm:col-span-6 text-grow relative w-full rounded backdrop-blur-2xl">
             <div className="flex items-start w-full">
               <span className="px-4 pt-3 text-grow text-xl lg:text-[1.5vw]">
                 <FaCommentDots />
@@ -179,7 +170,7 @@ const Contact = () => {
           </div>
         </form>
       </div>
-    </div>
+    </section>
   );
 };
 

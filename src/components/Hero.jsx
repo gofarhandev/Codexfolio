@@ -63,28 +63,32 @@ const Hero = () => {
             />
             <h1
               ref={nameRef}
-              className="drop-shadow-[1px_5px_1px] text-accent text-xl sm:text-4xl lg:text-[4vw] font-medium"
+              className="text-xl text-grow sm:text-3xl lg:text-[3.5vw] font-medium"
             >
-              <span className="text-grow">MD FARHAN SADIK</span>
+              MD FARHAN SADIK
             </h1>
             <h2
               ref={subtitleRef}
-              className="drop-shadow-[1px_5px_1px] text-accent font-medium pb-4 lg:pb-[1.5vw]"
+              className="font-medium text-grow text-lg sm:text-2xl lg:text-[2.5vw] pb-4 lg:pb-[1.5vw]"
             >
-              <span className="text-grow text-[18px] sm:text-2xl lg:text-[3vw]">
-                Frontend Developer
-              </span>
+              Frontend Developer
             </h2>
           </div>
 
           <div className="flex flex-col text-center gap-5 lg:gap-[2vw] w-full">
-            <div ref={descRef} className="text-grow w-full rounded backdrop-blur-2xl">
+            <div
+              ref={descRef}
+              className="text-grow w-full rounded backdrop-blur-2xl"
+            >
               <p className="text:lg sm:text-xl lg:text-[1.7vw]">
                 I design & develop stunning web experiences — focused on
                 performance, usability, and clean code.
               </p>
             </div>
-            <div ref={buttonsRef} className="flex justify-center items-end gap-5 lg:gap-[1.5vw]">
+            <div
+              ref={buttonsRef}
+              className="flex justify-center items-end gap-5 lg:gap-[1.5vw]"
+            >
               <LinkButton to="/projects" label="View Work" />
               <LinkButton to="/contact" label="Hire Me" />
             </div>
