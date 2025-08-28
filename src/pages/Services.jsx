@@ -8,6 +8,11 @@ import {
   FaCogs,
   FaRocket,
 } from "react-icons/fa";
+import { useEffect } from "react";
+import gsap from "gsap";
+import ScrollTrigger from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
 
 export const workProcess = [
   {
@@ -55,14 +60,37 @@ export const workProcess = [
 ];
 
 const Services = () => {
+  // gsap
+  useEffect(() => {
+    gsap.registerPlugin(ScrollTrigger);
+
+    gsap.utils
+      .toArray([".service-heading", ".service-category"])
+      .forEach((className, index) => {
+        gsap.from(className, {
+          scrollTrigger: {
+            trigger: className,
+            start: "top 85%",
+            toggleActions: "play none none reverse",
+          },
+          opacity: 0,
+          y: 50,
+          duration: 0.6,
+          delay: index * 0.2,
+          scrub: true,
+          ease: "power2.out",
+        });
+      });
+  }, []);
+
   return (
-    <section className="relative pt-10 pb-10 lg:pt-[3vw] lg:pb-[3vw]">
+    <section className="service relative pt-10 pb-10 lg:pt-[3vw] lg:pb-[3vw]">
       {/* Section Title */}
       <div className="relative text-center mb-12 lg:mb-[3.2vw]">
-        <h2 className="project-heading text-grow text-xl sm:text-3xl lg:text-[2.5vw] flex justify-center font-bold">
+        <h2 className="service-heading text-grow text-xl sm:text-3xl lg:text-[2.5vw] flex justify-center font-bold">
           How I Can Help
         </h2>
-        <p className="project-heading mt-4 lg:mt-[1.3vw] text-lg sm:text-xl lg:text-[1.5vw] text-grow text-center">
+        <p className="service-heading mt-4 lg:mt-[1.3vw] text-lg sm:text-xl lg:text-[1.5vw] text-grow text-center">
           Delivering modern web solutions tailored to your needs
         </p>
       </div>

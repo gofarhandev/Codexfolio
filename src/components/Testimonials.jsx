@@ -2,6 +2,10 @@
 import React, { useEffect, useRef } from "react";
 import useEmblaCarousel from "embla-carousel-react";
 import Autoplay from "embla-carousel-autoplay";
+import gsap from "gsap";
+import ScrollTrigger from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
 
 const Testimonials = () => {
   const testimonials = [
@@ -41,13 +45,36 @@ const Testimonials = () => {
   const autoplay = useRef(Autoplay({ delay: 3000, stopOnInteraction: false }));
   const [emblaRef] = useEmblaCarousel({ loop: true }, [autoplay.current]);
 
+  // gsap
+  useEffect(() => {
+    gsap.registerPlugin(ScrollTrigger);
+
+    gsap.utils
+      .toArray([".testimonial-heading", ".testimonial-category"])
+      .forEach((className, index) => {
+        gsap.from(className, {
+          scrollTrigger: {
+            trigger: className,
+            start: "top 85%",
+            toggleActions: "play none none reverse",
+          },
+          opacity: 0,
+          y: 50,
+          duration: 0.6,
+          delay: index * 0.2,
+          scrub: true,
+          ease: "power2.out",
+        });
+      });
+  }, []);
+
   return (
     <div className="my-20 lg:my-[8vw]">
       {/* Heading */}
-      <h2 className="project-heading text-center text-xl sm:text-3xl lg:text-[2.5vw] font-bold">
+      <h2 className="testimonial-heading text-center text-xl sm:text-3xl lg:text-[2.5vw] font-bold">
         What My Clients Say
       </h2>
-      <p className="project-heading mt-4 lg:mt-[1.3vw] text-lg sm:text-xl lg:text-[1.5vw] text-center text-gray-400">
+      <p className="testimonial-heading mt-4 lg:mt-[1.3vw] text-lg sm:text-xl lg:text-[1.5vw] text-center text-gray-400">
         I’ve had the privilege to work with amazing clients across different
         industries. Here’s what they say about working with me.
       </p>

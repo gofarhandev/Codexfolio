@@ -212,7 +212,7 @@ const Projects = () => {
           opacity: 0,
           y: 50,
           duration: 0.6,
-          // delay: index * 0.2,
+          delay: index * 0.2,
           ease: "power2.out",
         });
       });
@@ -230,7 +230,7 @@ const Projects = () => {
         </p>
       </div>
 
-      <div className="project-category mt-10 lg:mt-[3vw] gap-5 lg:gap-[1.5vw] flex flex-nowrap overflow-auto scrollbar-hide">
+      <div className="project-heading mt-10 lg:mt-[3vw] gap-5 lg:gap-[1.5vw] flex flex-nowrap overflow-auto scrollbar-hide">
         {allCategories.map((category, index) => (
           <div
             key={index}

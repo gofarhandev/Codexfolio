@@ -1,8 +1,4 @@
-import React, { useEffect, useState } from "react";
-import gsap from "gsap";
-import ScrollTrigger from "gsap/ScrollTrigger";
-
-gsap.registerPlugin(ScrollTrigger);
+import React, { useState } from "react";
 
 const ProjectsCard = ({ ProjectArray }) => {
   const [showMoreArray, setShowMoreArray] = useState(
@@ -16,7 +12,7 @@ const ProjectsCard = ({ ProjectArray }) => {
   };
 
   return (
-    <div className="grid py-5 lg:py-[1.5vw] grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 lg:gap-[3vw]">
+    <div className="grid grid-cols-1 pt-10 lg:pt-[3vw] md:grid-cols-2 lg:grid-cols-3 gap-5 lg:gap-[1.5vw]">
       {ProjectArray.map((item, index) => {
         const limit = 200;
         const isLong = item.description.length > limit;
@@ -28,7 +24,7 @@ const ProjectsCard = ({ ProjectArray }) => {
           <div
             key={index}
             id={item.category}
-            className="project-heading relative group py-3 lg:py-[1vw] hover:-translate-y-[2vh] trans"
+            className="project-category relative group sm:px-5 lg:px-[1vw] hover:-translate-y-[2vh] trans"
           >
             <div className="block rounded-lg lg:rounded-[1vw] overflow-hidden hover:-translate-y-[2vh] trans hover:bg-accent/30">
               <img
@@ -74,7 +70,7 @@ const ProjectsCard = ({ ProjectArray }) => {
                     href={item.live}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="bg-accent/40 text-primary hover:bg-accent font-montserrat h-6 w-25 lg:h-[2vw] lg:w-[7vw] flex items-center justify-center rounded-full trans text-xs lg:text-[.8vw]"
+                    className="bg-accent/40 text-grow hover:bg-accent font-montserrat h-6 w-25 lg:h-[2vw] lg:w-[7vw] flex items-center justify-center rounded-full trans text-xs lg:text-[.8vw]"
                   >
                     Live
                   </a>
@@ -82,7 +78,7 @@ const ProjectsCard = ({ ProjectArray }) => {
                     href={item.github}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="bg-accent/40 text-primary hover:bg-accent font-montserrat h-6 w-25 lg:h-[2vw] lg:w-[7vw] flex items-center justify-center rounded-full trans text-xs lg:text-[.8vw]"
+                    className="bg-accent/40 text-grow hover:bg-accent font-montserrat h-6 w-25 lg:h-[2vw] lg:w-[7vw] flex items-center justify-center rounded-full trans text-xs lg:text-[.8vw]"
                   >
                     Github
                   </a>

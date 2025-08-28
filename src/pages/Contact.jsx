@@ -3,6 +3,10 @@ import { useForm } from "react-hook-form";
 import Swal from "sweetalert2";
 import ActionButton from "../components/ActionButton";
 import { FaUser, FaEnvelope, FaTag, FaCommentDots } from "react-icons/fa";
+import gsap from "gsap";
+import ScrollTrigger from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
 
 const Contact = () => {
   const {
@@ -41,10 +45,32 @@ const Contact = () => {
     }
   };
 
+  // gsap
+  useEffect(() => {
+    gsap.registerPlugin(ScrollTrigger);
+
+    gsap.utils
+      .toArray([".contact-heading", ".contact-category"])
+      .forEach((className, index) => {
+        gsap.from(className, {
+          scrollTrigger: {
+            trigger: className,
+            start: "top 85%",
+            toggleActions: "play none none reverse",
+          },
+          opacity: 0,
+          y: 50,
+          duration: 0.6,
+          delay: index * 0.2,
+          ease: "power2.out",
+        });
+      });
+  }, []);
+
   return (
     <section className="relative pb-15 lg:pb-[5vw] flex items-center justify-center w-full mb-[1vw]">
       <div className="text-accent overflow-hidden rounded relative w-full sm:w-2/3 lg:max-w-2/3 flex flex-col gap-5 lg:gap-[3vw] justify-center items-center pt-10 lg:pt-[3vw]">
-        <h2 className="project-heading text-xl sm:text-3xl lg:text-[2.5vw] text-grow font-bold">
+        <h2 className="contact-heading text-xl sm:text-3xl lg:text-[2.5vw] text-grow font-bold">
           Let's Work Together
         </h2>
         <form
@@ -52,7 +78,7 @@ const Contact = () => {
           className="grid w-full gap-5 lg:gap-[2.5vw] grid-cols-2 sm:grid-cols-6"
         >
           {/* Name */}
-          <div className="project-heading relative bg-accent/30  backdrop-blur-2xl order-2 col-span-4 sm:col-span-2 text-grow w-full rounded">
+          <div className="contact-category relative bg-accent/30  backdrop-blur-2xl order-2 col-span-4 sm:col-span-2 text-grow w-full rounded">
             <div className="flex items-center w-full">
               <span className="px-4 lg:px-[1.2vw] text-grow text-xl lg:text-[1.5vw]">
                 <FaUser />
@@ -74,7 +100,7 @@ const Contact = () => {
           </div>
 
           {/* Email */}
-          <div className="project-heading bg-accent/30  relative col-span-4 order-3 sm:col-span-4 sm:order-3 text-grow w-full rounded backdrop-blur-2xl">
+          <div className="contact-category bg-accent/30  relative col-span-4 order-3 sm:col-span-4 sm:order-3 text-grow w-full rounded backdrop-blur-2xl">
             <div className="flex items-center w-full">
               <span className="px-4 lg:px-[1.2vw] text-grow text-xl lg:text-[1.5vw]">
                 <FaEnvelope />
@@ -96,7 +122,7 @@ const Contact = () => {
           </div>
 
           {/* Subject */}
-          <div className="project-heading bg-accent/30  relative col-span-4 order-4 sm:col-span-6 sm:order-4 text-grow w-full rounded backdrop-blur-2xl">
+          <div className="contact-category bg-accent/30  relative col-span-4 order-4 sm:col-span-6 sm:order-4 text-grow w-full rounded backdrop-blur-2xl">
             <div className="flex items-center w-full">
               <span className="px-4 lg:px-[1.2vw] text-grow text-xl lg:text-[1.5vw]">
                 <FaTag />
@@ -118,7 +144,7 @@ const Contact = () => {
           </div>
 
           {/* Message */}
-          <div className="project-heading bg-accent/30  order-5 sm:order-5 col-span-4 sm:col-span-6 text-grow relative w-full rounded backdrop-blur-2xl">
+          <div className="contact-category bg-accent/30  order-5 sm:order-5 col-span-4 sm:col-span-6 text-grow relative w-full rounded backdrop-blur-2xl">
             <div className="flex items-start w-full">
               <span className="px-4 lg:px-[1.2vw] pt-3 lg:pt-[1vw] text-grow text-xl lg:text-[1.5vw]">
                 <FaCommentDots />
@@ -139,7 +165,7 @@ const Contact = () => {
           </div>
 
           {/* Submit Button */}
-          <div className="project-heading order-6 col-span-4 sm:col-span-6 flex justify-center w-full mb-10">
+          <div className="contact-category order-6 col-span-4 sm:col-span-6 flex justify-center w-full mb-10">
             <ActionButton label="Send" type="submit" />
           </div>
         </form>
