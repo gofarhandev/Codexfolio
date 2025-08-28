@@ -2,14 +2,14 @@ import {
   FaReact,
   FaHtml5,
   FaCss3Alt,
-  FaNodeJs,
   FaDatabase,
+  FaNodeJs,
   FaLock,
   FaGitAlt,
   FaNpm,
 } from "react-icons/fa";
 import { FaRegFilePdf, FaLinkedinIn } from "react-icons/fa6";
-import { SiRedux, SiTailwindcss, SiJavascript, SiSass } from "react-icons/si";
+import { SiRedux, SiTailwindcss, SiJavascript, SiSass, SiExpress } from "react-icons/si";
 import { FiGithub } from "react-icons/fi";
 import AnchorButton from "../components/AnchorButton";
 import { useEffect } from "react";
@@ -27,7 +27,7 @@ const skills = [
   { name: "JavaScript", icon: <SiJavascript className="text-yellow-400" /> },
   { name: "SCSS", icon: <SiSass className="text-pink-400" /> },
   { name: "Node.js", icon: <FaNodeJs className="text-green-600" /> },
-  { name: "Express", icon: <FaNodeJs className="text-gray-700" /> }, // reused Node icon
+  { name: "Express", icon: <SiExpress className="text-gray-400" /> }, // reused Node icon
   { name: "MongoDB", icon: <FaDatabase className="text-green-500" /> },
   { name: "JWT", icon: <FaLock className="text-yellow-600" /> },
   { name: "Git", icon: <FaGitAlt className="text-red-500" /> },

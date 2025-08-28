@@ -69,8 +69,8 @@ const Contact = () => {
 
   return (
     <section className="relative pb-15 lg:pb-[5vw] flex items-center justify-center w-full mb-[1vw]">
-      <div className="text-accent overflow-hidden rounded relative w-full sm:w-2/3 lg:max-w-2/3 flex flex-col gap-[3vw] justify-center items-center pt-30">
-        <h2 className="text-xl sm:text-3xl lg:text-[2.5vw] font-bold text-grow">
+      <div className="text-accent overflow-hidden rounded relative w-full sm:w-2/3 lg:max-w-2/3 flex flex-col gap-5 lg:gap-[3vw] justify-center items-center pt-10 lg:pt-[3vw]">
+        <h2 className="text-xl sm:text-3xl lg:text-[2.5vw] text-grow">
           Let's Work Together
         </h2>
         <form
@@ -80,7 +80,7 @@ const Contact = () => {
           {/* Name */}
           <div className="animate-contact relative bg-accent/30 shadow-accent/50 shadow-sm backdrop-blur-2xl order-2 col-span-4 sm:col-span-2 text-grow w-full rounded">
             <div className="flex items-center w-full">
-              <span className="px-4 text-grow text-xl lg:text-[1.5vw]">
+              <span className="px-4 lg:px-[1.2vw] text-grow text-xl lg:text-[1.5vw]">
                 <FaUser />
               </span>
               <input
@@ -102,7 +102,7 @@ const Contact = () => {
           {/* Email */}
           <div className="animate-contact bg-accent/30 shadow-accent/50 shadow-sm relative col-span-4 order-3 sm:col-span-4 sm:order-3 text-grow w-full rounded backdrop-blur-2xl">
             <div className="flex items-center w-full">
-              <span className="px-4 text-grow text-xl lg:text-[1.5vw]">
+              <span className="px-4 lg:px-[1.2vw] text-grow text-xl lg:text-[1.5vw]">
                 <FaEnvelope />
               </span>
               <input
@@ -124,7 +124,7 @@ const Contact = () => {
           {/* Subject */}
           <div className="animate-contact bg-accent/30 shadow-accent/50 shadow-sm relative col-span-4 order-4 sm:col-span-6 sm:order-4 text-grow w-full rounded backdrop-blur-2xl">
             <div className="flex items-center w-full">
-              <span className="px-4 text-grow text-xl lg:text-[1.5vw]">
+              <span className="px-4 lg:px-[1.2vw] text-grow text-xl lg:text-[1.5vw]">
                 <FaTag />
               </span>
               <input
@@ -146,7 +146,7 @@ const Contact = () => {
           {/* Message */}
           <div className="animate-contact bg-accent/30 shadow-accent/50 shadow-sm order-5 sm:order-5 col-span-4 sm:col-span-6 text-grow relative w-full rounded backdrop-blur-2xl">
             <div className="flex items-start w-full">
-              <span className="px-4 pt-3 text-grow text-xl lg:text-[1.5vw]">
+              <span className="px-4 lg:px-[1.2vw] pt-3 lg:pt-[1vw] text-grow text-xl lg:text-[1.5vw]">
                 <FaCommentDots />
               </span>
               <textarea
@@ -154,7 +154,7 @@ const Contact = () => {
                 {...register("message", { required: true })}
                 name="message"
                 id="message"
-                className="px-3 py-3 lg:px-[1vw] lg:py-[1vw] outline-0 w-full text-base lg:text-[1.2vw] h-full text-grow"
+                className="px-4 py-3 lg:py-[1vw] outline-0 w-full text-base lg:text-[1.2vw] h-full text-grow"
               ></textarea>
             </div>
             {errors.message && (
@@ -165,7 +165,7 @@ const Contact = () => {
           </div>
 
           {/* Submit Button */}
-          <div className="animate-contact order-6 col-span-4 sm:col-span-6 flex justify-center w-full">
+          <div className="animate-contact order-6 col-span-4 sm:col-span-6 flex justify-center w-full mb-10">
             <ActionButton label="Send" type="submit" />
           </div>
         </form>

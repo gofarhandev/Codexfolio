@@ -1,40 +1,62 @@
 // Services.jsx
 import ServiceCards from "../components/ServiceCards";
+import {
+  FaLaptopCode,
+  FaFileAlt,
+  FaComments,
+  FaCreditCard,
+  FaCogs,
+  FaRocket,
+} from "react-icons/fa";
 
-const services = [
+export const workProcess = [
   {
     id: 1,
-    title: "Frontend Development",
+    title: "What I Build",
+    icon: <FaLaptopCode className="text-3xl text-blue-500" />,
     description:
-      "Building highly responsive and modern user interfaces using React, HTML, CSS, and JavaScript. I focus on creating pixel-perfect designs, smooth animations, and an intuitive user experience. Optimized for performance, accessibility, and cross-browser compatibility to ensure your application works flawlessly across all devices and screen sizes.",
-    icon: "💻",
+      "I build modern full stack websites including Portfolio, Business, E-commerce, Blogs, Dashboards, and SaaS apps with responsive UI and secure backend.",
   },
   {
     id: 2,
-    title: "Backend Development",
+    title: "Requirements",
+    icon: <FaFileAlt className="text-3xl text-green-500" />,
     description:
-      "Developing robust backend systems and APIs using Node.js, Express, and databases like MongoDB. I implement secure authentication, authorization (JWT), and data validation to ensure reliable and scalable server-side logic. The focus is on clean, maintainable code that can handle high traffic, integrate with third-party services, and support complex business logic efficiently.",
-    icon: "🛠️",
+      "You provide Figma/PSD/XD design and project details. If no design is available, I can use premium templates or suggest a designer.",
   },
   {
     id: 3,
-    title: "Fullstack Development",
+    title: "Discussion & Planning",
+    icon: <FaComments className="text-3xl text-yellow-500" />,
     description:
-      "Combining frontend and backend expertise to deliver complete web applications from scratch. I design the architecture, implement database schemas, create RESTful APIs, and develop a dynamic frontend. The goal is to provide end-to-end solutions that are secure, scalable, and user-friendly, ensuring smooth interaction between the client-side and server-side components.",
-    icon: "🌐",
+      "We discuss your requirements, features, budget, and deadline. Then I create a clear roadmap for the project.",
   },
   {
     id: 4,
-    title: "Landing Page Design",
+    title: "Payment",
+    icon: <FaCreditCard className="text-3xl text-purple-500" />,
     description:
-      "Creating high-converting landing pages with a focus on engaging UI and UX. I craft visually appealing layouts, persuasive content, and clear call-to-actions to increase user engagement and drive conversions. Each landing page is optimized for speed, mobile responsiveness, and SEO to ensure maximum reach and effectiveness for marketing campaigns.",
-    icon: "📄",
+      "I accept payments through Payoneer and Bkash. 50% advance before starting, and the remaining 50% after delivery.",
+  },
+  {
+    id: 5,
+    title: "Development & Updates",
+    icon: <FaCogs className="text-3xl text-red-500" />,
+    description:
+      "I start development (frontend + backend) and share regular updates with live previews. Feedback is applied during the process.",
+  },
+  {
+    id: 6,
+    title: "Delivery & Support",
+    icon: <FaRocket className="text-3xl text-indigo-500" />,
+    description:
+      "On-time delivery with clean, optimized code. Free bug-fix support for 1 month, and extra features available on request.",
   },
 ];
 
 const Services = () => {
   return (
-    <section className="relative pt-10 pb-15 lg:pt-[3vw] lg:pb-[4vw]">
+    <section className="relative pt-10 pb-30 lg:pt-[3vw] lg:pb-[8vw]">
       {/* Section Title */}
       <div className="relative text-center mb-12 lg:mb-[3.2vw]">
         <h2 className="text-grow text-xl sm:text-3xl lg:text-[2.5vw] flex justify-center">
@@ -47,7 +69,7 @@ const Services = () => {
 
       {/* Service Cards */}
       <div className="">
-        <ServiceCards services={services} />
+        <ServiceCards services={workProcess} />
       </div>
     </section>
   );

@@ -6,7 +6,7 @@ const ServiceCards = ({ services }) => {
       {services.map((service) => (
         <div
           key={service.id}
-          className="bg-accent/20 backdrop-blur-lg rounded-xl p-5 lg:p-[1.5vw] flex flex-col items-center text-center transition-transform transform hover:-translate-y-4 duration-300"
+          className="backdrop-blur-lg rounded-xl p-5 lg:p-[1.5vw] flex flex-col items-center text-center transition-transform transform hover:-translate-y-[.5vw] duration-300"
         >
           {/* Icon */}
           <div className="text-xl sm:text-3xl lg:text-[2.5vw] mb-4 lg:mb-[1vw]">

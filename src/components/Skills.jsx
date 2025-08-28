@@ -1,8 +1,18 @@
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { IoLogoHtml5 } from "react-icons/io";
-import { FaCss3, FaSquareJs, FaReact, FaNodeJs, FaGithub, FaDatabase, FaLock, FaGitAlt, FaNpm } from "react-icons/fa6";
-import { SiRedux, SiTailwindcss, SiSass } from "react-icons/si";
+import {
+  FaCss3,
+  FaSquareJs,
+  FaReact,
+  FaNodeJs,
+  FaGithub,
+  FaDatabase,
+  FaLock,
+  FaGitAlt,
+  FaNpm,
+} from "react-icons/fa6";
+import { SiRedux, SiTailwindcss, SiSass, SiExpress } from "react-icons/si";
 
 const skill = [
   { id: 1, icon: <IoLogoHtml5 />, name: "HTML" },
@@ -14,7 +24,7 @@ const skill = [
   { id: 7, icon: <SiTailwindcss />, name: "Tailwind" },
   { id: 8, icon: <SiSass />, name: "Sass" },
   { id: 9, icon: <FaGithub />, name: "Github" },
-  { id: 10, icon: <FaNodeJs />, name: "Express" },
+  { id: 10, icon: <SiExpress />, name: "Express" },
   { id: 11, icon: <FaDatabase />, name: "MongoDB" },
   { id: 12, icon: <FaLock />, name: "JWT" },
   { id: 13, icon: <FaGitAlt />, name: "Git" },
@@ -50,7 +60,9 @@ const Skills = () => {
               >
                 <span className="text-primary flex gap-1 lg:gap-[.5vw] items-center lg:text-[2.5vw]">
                   {icon}
-                  <h2 className="text-xl sm:text-2xl lg:text-[2.5vw]">{name}</h2>
+                  <h2 className="text-xl sm:text-2xl lg:text-[2.5vw]">
+                    {name}
+                  </h2>
                 </span>
               </div>
             ))}
