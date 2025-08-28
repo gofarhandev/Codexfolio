@@ -56,13 +56,13 @@ export const workProcess = [
 
 const Services = () => {
   return (
-    <section className="relative pt-10 pb-30 lg:pt-[3vw] lg:pb-[8vw]">
+    <section className="relative pt-10 pb-10 lg:pt-[3vw] lg:pb-[3vw]">
       {/* Section Title */}
       <div className="relative text-center mb-12 lg:mb-[3.2vw]">
-        <h2 className="text-grow text-xl sm:text-3xl lg:text-[2.5vw] flex justify-center">
+        <h2 className="project-heading text-grow text-xl sm:text-3xl lg:text-[2.5vw] flex justify-center font-bold">
           How I Can Help
         </h2>
-        <p className="mt-4 lg:mt-[1.3vw] text-lg sm:text-xl lg:text-[1.5vw] text-grow">
+        <p className="project-heading mt-4 lg:mt-[1.3vw] text-lg sm:text-xl lg:text-[1.5vw] text-grow text-center">
           Delivering modern web solutions tailored to your needs
         </p>
       </div>

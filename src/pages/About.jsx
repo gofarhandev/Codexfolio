@@ -59,7 +59,7 @@ const About = () => {
 
   return (
     <section className="relative pt-[4vw] pb-20 lg:pb-[5.5vw]">
-      <h2 className="project-heading text-grow text-xl sm:text-3xl lg:text-[2.5vw] flex justify-center">
+      <h2 className="project-heading text-grow text-xl sm:text-3xl lg:text-[2.5vw] flex justify-center font-bold">
         Who I Am
       </h2>
       {/* content */}

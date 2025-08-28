@@ -53,8 +53,8 @@ const Navbar = () => {
     >
       <div className="w-full h-full flex justify-between items-center px-4 sm:px-20 lg:px-[5vw]">
         {/* Logo */}
-        <h2 className="text-accent text-2xl lg:text-[2vw] drop-shadow-[1px_5px_1px]">
-          <a href="/" className="text-primary font-bold">
+        <h2 className="text-primary text-xl lg:text-[1.5vw] font-bold">
+          <a href="/">
             {".Dev"}
           </a>
         </h2>

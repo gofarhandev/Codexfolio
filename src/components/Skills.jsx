@@ -39,7 +39,7 @@ const Skills = () => {
     const totalWidth = el.scrollWidth / 2; // because we duplicate the content
     gsap.to(el, {
       x: -totalWidth,
-      duration: 13, // adjust speed
+      duration: 14, // adjust speed
       ease: "linear",
       repeat: -1,
     });
@@ -58,11 +58,9 @@ const Skills = () => {
                 key={`${id}-${loopIndex}`}
                 className="flex items-center text-3xl sm:text-5xl mr-5 lg:mr-[2vw] gap-2"
               >
-                <span className="text-primary flex gap-1 lg:gap-[.5vw] items-center lg:text-[2.5vw]">
+                <span className="text-primary flex gap-1 lg:gap-[.5vw] items-center text-xl lg:text-[2vw]">
                   {icon}
-                  <h2 className="text-xl sm:text-2xl lg:text-[2.5vw]">
-                    {name}
-                  </h2>
+                  <h2>{name}</h2>
                 </span>
               </div>
             ))}

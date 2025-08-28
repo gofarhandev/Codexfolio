@@ -212,7 +212,7 @@ const Projects = () => {
           opacity: 0,
           y: 50,
           duration: 0.6,
-          delay: index * 0.2,
+          // delay: index * 0.2,
           ease: "power2.out",
         });
       });
@@ -221,9 +221,13 @@ const Projects = () => {
   return (
     <section className="relative pt-10 pb-30 lg:pb-[8.5vw]">
       <div className="text-grow w-full rounded">
-        <h2 className="project-heading text-grow text-xl sm:text-3xl lg:text-[2.5vw] flex justify-center">
-          Dive Into My Code World
+        <h2 className="project-heading text-grow text-xl sm:text-3xl lg:text-[2.5vw] flex justify-center font-bold">
+          Featured Projects
         </h2>
+        <p className="project-heading mt-4 lg:mt-[1.3vw] text-lg sm:text-xl lg:text-[1.5vw] text-grow text-center">
+          A collection of my recent work, showcasing my skills in building
+          modern, responsive, and user-friendly web applications.
+        </p>
       </div>
 
       <div className="project-category mt-10 lg:mt-[3vw] gap-5 lg:gap-[1.5vw] flex flex-nowrap overflow-auto scrollbar-hide">

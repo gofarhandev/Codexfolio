@@ -6,7 +6,7 @@ const ServiceCards = ({ services }) => {
       {services.map((service) => (
         <div
           key={service.id}
-          className="backdrop-blur-lg rounded-xl p-5 lg:p-[1.5vw] flex flex-col items-center text-center transition-transform transform hover:-translate-y-[.5vw] duration-300"
+          className="project-heading hover:bg-accent/30 rounded-xl p-5 lg:p-[1.5vw] flex flex-col items-center text-center trans transform hover:-translate-y-[.5vw]"
         >
           {/* Icon */}
           <div className="text-xl sm:text-3xl lg:text-[2.5vw] mb-4 lg:mb-[1vw]">
@@ -17,7 +17,7 @@ const ServiceCards = ({ services }) => {
             {service.title}
           </h3>
           {/* Description */}
-          <p className="text-sm sm:text-base lg:text-[1.2vw] text-grow">
+          <p className="lg:text-[1.2vw] text-base tracking-wide text-grow">
             {service.description}
           </p>
         </div>

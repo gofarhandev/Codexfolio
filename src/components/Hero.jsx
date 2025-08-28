@@ -63,15 +63,15 @@ const Hero = () => {
             />
             <h1
               ref={nameRef}
-              className="text-xl text-grow sm:text-3xl lg:text-[3.5vw] font-medium"
+              className="text-xl text-grow sm:text-3xl lg:text-[3.5vw] font-bold"
             >
               MD FARHAN SADIK
             </h1>
             <h2
               ref={subtitleRef}
-              className="font-medium text-grow text-lg sm:text-2xl lg:text-[2.5vw] pb-4 lg:pb-[1.5vw]"
+              className="font-bold text-grow text-lg sm:text-2xl lg:text-[2.5vw] pb-4 lg:pb-[1.5vw]"
             >
-              Frontend Developer
+              Fullstack Developer
             </h2>
           </div>
 
@@ -81,8 +81,10 @@ const Hero = () => {
               className="text-grow w-full rounded backdrop-blur-2xl"
             >
               <p className="text:lg sm:text-xl lg:text-[1.7vw]">
-                I design & develop stunning web experiences — focused on
-                performance, usability, and clean code.
+                I’m a Fullstack Developer turning ideas into interactive,
+                scalable web applications. From designing intuitive interfaces
+                to crafting robust server-side logic, I bring visions to life
+                across the entire stack.
               </p>
             </div>
             <div
