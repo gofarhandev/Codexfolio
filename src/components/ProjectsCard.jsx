@@ -12,9 +12,9 @@ const ProjectsCard = ({ ProjectArray }) => {
   };
 
   return (
-    <div className="grid grid-cols-1 pt-10 lg:pt-[3vw] md:grid-cols-2 lg:grid-cols-3 gap-5 lg:gap-[1.5vw]">
+    <div className="grid grid-cols-1 pt-10 lg:pt-[3vw] md:grid-cols-2 lg:grid-cols-4 gap-5 lg:gap-[2.5vw]">
       {ProjectArray.map((item, index) => {
-        const limit = 200;
+        const limit = 100;
         const isLong = item.description.length > limit;
         const displayText = showMoreArray[index]
           ? item.description
@@ -24,13 +24,13 @@ const ProjectsCard = ({ ProjectArray }) => {
           <div
             key={index}
             id={item.category}
-            className="project-category relative group sm:px-5 lg:px-[1vw] hover:-translate-y-[2vh] trans"
+            className="project-category relative group"
           >
-            <div className="block rounded-lg lg:rounded-[1vw] overflow-hidden hover:-translate-y-[2vh] trans hover:bg-accent/30">
+            <div className="block rounded-lg lg:rounded-[1vw] overflow-hidden trans hover:bg-accent/20">
               <img
                 src={item.img}
                 alt={item.title}
-                className="w-full object-cover"
+                className="w-full object-cover rounded-lg lg:rounded-[1vw]"
               />
               <div className="px-3 lg:px-[1.2vw] py-2 lg:py-[1vw] flex flex-col justify-between">
                 <div className="flex flex-col items-center gap-3 lg:gap-[1vw] lg:my-[.5vw] my-2">

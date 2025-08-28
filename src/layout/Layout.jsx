@@ -43,7 +43,7 @@ const Layout = () => {
       {!loadingDone ? (
         <PageLoader
           onFinish={() => {
-            setTimeout(() => setLoadingDone(true), 100);
+            setTimeout(() => setLoadingDone(true), 50);
           }}
         />
       ) : (
