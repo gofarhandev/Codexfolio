@@ -86,7 +86,7 @@ const About = () => {
             />
 
             <AnchorButton
-              href="/CV"
+              href="https://drive.google.com/file/d/1TBnogM5kvkINjoo6vZw7KzIYzMzkidja/view?usp=sharing"
               download={true}
               label="Resume"
               icon={

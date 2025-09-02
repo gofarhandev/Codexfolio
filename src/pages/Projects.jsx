@@ -1,20 +1,5 @@
 import { useState } from "react";
 import ProjectsCard from "../components/ProjectsCard";
-import Havmor from "/Havmor.png";
-import GTA from "/GTA.png";
-import Cocktails from "/Cocktails.png";
-import Cook from "/Cook.png";
-import Travel from "/Travel.png";
-import Port from "/Port.png";
-import Gadget from "/Gadget.png";
-import Bubble from "/Bubble.png";
-import Hotel from "/Hotel.png";
-import DripNest from "/DripNest.png";
-import SplinePort from "/SplinePort.png";
-import AiPort from "/AiPort.png";
-import port01 from "/port01.png";
-import port02 from "/port02.png";
-import Gemini from "/gemini-clone.png";
 import { useEffect } from "react";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
@@ -34,7 +19,7 @@ const ProjectArray = [
     ],
     live: "https://havmor.vercel.app/",
     github: "https://github.com/master-farhan/hackathon-frontend",
-    img: Havmor,
+    img: "https://ik.imagekit.io/iura/Portfolio-project/Havmor.png?updatedAt=1756855023552",
     category: "Full-Stack",
     description:
       "Havmor Ice-Cream is a full-stack web application developed as part of the Sheriyans Hackathon. This project features a modern and responsive user interface built with React.js and styled using Tailwind CSS, ensuring smooth and visually appealing experiences across devices. GSAP animations are used to add engaging transitions and interactive elements throughout the app. On the backend, it utilizes Node.js and Express to handle server-side logic, while MongoDB provides a scalable database solution for storing and managing user and product data. Secure user authentication is implemented using JWT, enabling protected routes and personalized experiences. The application includes real-world features such as dynamic product listings, user account management, and seamless interactivity, making it a robust full-stack project showcasing practical web development skills from frontend design to backend functionality.",
@@ -44,7 +29,7 @@ const ProjectArray = [
     skills: ["React.js", "Tailwind CSS", "GSAP"],
     live: "https://gta-6-02.vercel.app/",
     github: "https://github.com/master-farhan/GTA-6",
-    img: GTA,
+    img: "https://ik.imagekit.io/iura/Portfolio-project/GTA-6.png?updatedAt=1756855026210",
     category: "Frontend",
     description:
       "GTA 6 is a fan-made frontend web project designed to showcase the excitement and style of the upcoming game. Built with React.js for dynamic and modular components, Tailwind CSS for a modern and responsive design, and GSAP for smooth animations and interactive effects. The site features parallax scrolling, animated transitions, and sleek UI interactions that create an immersive browsing experience. This project demonstrates advanced frontend development skills by combining performance, interactivity, and visual appeal, making it a showcase of modern web design techniques.",
@@ -54,7 +39,7 @@ const ProjectArray = [
     skills: ["React.js", "Tailwind CSS"],
     live: "https://clothes-store-002.netlify.app/",
     github: "https://github.com/master-farhan/clothes-shop",
-    img: DripNest,
+    img: "https://ik.imagekit.io/iura/Portfolio-project/DripNest-pro.png?updatedAt=1756855024647",
     category: "Frontend",
     description:
       "Clothing Store is a fully responsive fashion e-commerce frontend built with React.js and styled with Tailwind CSS. The site features a clean and modern user interface, intuitive navigation, and seamless product browsing experience. Users can easily filter products by category or search for specific items, enhancing usability and engagement. With a focus on modern design principles, responsive layouts, and smooth interactions, this project demonstrates proficiency in frontend development and UI/UX design, making it a polished showcase of a practical online store interface.",
@@ -64,7 +49,7 @@ const ProjectArray = [
     skills: ["React.js", "Tailwind CSS", "GSAP"],
     live: "https://cocktails-02.vercel.app/",
     github: "https://github.com/master-farhan/gsap-cocktails",
-    img: Cocktails,
+    img: "https://ik.imagekit.io/iura/Portfolio-project/Cocktails.png?updatedAt=1756855024827",
     category: "Frontend",
     description:
       "Cocktails is a stylish and interactive frontend web application built using React.js, Tailwind CSS, and GSAP for smooth animations. The site allows users to explore a variety of cocktail recipes with visually engaging transitions and animated elements that enhance the browsing experience. With a focus on modern UI design, responsive layouts, and fluid interactivity, this project showcases advanced frontend development skills and the ability to create dynamic, visually appealing web applications that are both functional and enjoyable to use.",
@@ -74,7 +59,7 @@ const ProjectArray = [
     skills: ["React.js", "Tailwind CSS", "Spline"],
     live: "https://spline-with-animation.netlify.app/",
     github: "https://github.com/master-farhan/Hero-Section-with-Spline",
-    img: SplinePort,
+    img: "https://ik.imagekit.io/iura/Portfolio-project/Spline-port.png?updatedAt=1756855032932",
     category: "Portfolio",
     description:
       "This 3D Portfolio project combines React.js, Tailwind CSS, and Spline to create an immersive and visually stunning showcase of skills and work. Using Spline, the site incorporates interactive 3D elements that respond to user interactions, making the experience engaging and modern. Tailwind CSS ensures a clean and responsive design, while React.js provides a dynamic and modular structure for seamless performance. Smooth animations and transitions throughout the site highlight attention to detail and advanced frontend capabilities, making this portfolio a unique demonstration of creativity, interactivity, and technical proficiency.",
@@ -84,7 +69,7 @@ const ProjectArray = [
     skills: ["React.js", "Redux", "Tailwind CSS"],
     live: "https://my-gadget-bd.netlify.app/",
     github: "https://github.com/master-farhan/My-Gadget",
-    img: Gadget,
+    img: "https://ik.imagekit.io/iura/Portfolio-project/Gadget.png?updatedAt=1756855024500",
     category: "Frontend",
     description:
       "My Gadget Bd is a modern eCommerce frontend platform built with React.js and Redux for state management, styled using Tailwind CSS. The website allows users to browse, filter, and search for the latest gadgets efficiently. With a focus on responsive design and user-friendly interface, it ensures seamless interaction across devices, providing an engaging shopping experience. This project highlights advanced frontend skills including dynamic rendering, live search functionality, and clean UI design.",
@@ -94,7 +79,7 @@ const ProjectArray = [
     skills: ["HTML", "CSS", "JavaScript"],
     live: "https://master-farhan.github.io/portfolio-01/",
     github: "https://github.com/master-farhan/portfolio-01",
-    img: port01,
+    img: "https://ik.imagekit.io/iura/Portfolio-project/port01.png?updatedAt=1756855031172",
     category: "Portfolio",
     description:
       "My Portfolio 01 is my first personal website built with HTML, CSS, and JavaScript. It was designed to showcase my early frontend projects and skills. With a clean and simple layout, it demonstrates the foundational knowledge of web development and my initial approach to UI design and responsive layouts.",
@@ -104,7 +89,7 @@ const ProjectArray = [
     skills: ["HTML", "CSS", "JavaScript"],
     live: "https://master-farhan.github.io/portfolio-02/",
     github: "https://github.com/master-farhan/portfolio-02",
-    img: port02,
+    img: "https://ik.imagekit.io/iura/Portfolio-project/port02.png?updatedAt=1756855030900",
     category: "Portfolio",
     description:
       "My Portfolio 02 is an enhanced personal portfolio website built to better showcase my skills, projects, and growth as a frontend developer. Using HTML, CSS, and JavaScript, the site features improved design elements and responsive layouts, reflecting a more polished and professional approach to web development.",
@@ -114,7 +99,7 @@ const ProjectArray = [
     skills: ["React.js", "TypeScript", "Tailwind CSS"],
     live: "https://ai-created-00.netlify.app/",
     github: "https://github.com/master-farhan/luminous-farhan-portfolio",
-    img: AiPort,
+    img: "https://ik.imagekit.io/iura/Portfolio-project/Ai-created-port.png?updatedAt=1756855026032",
     category: "Portfolio",
     description:
       "AI Created Portfolio is an innovative web project built with React.js, TypeScript, and Tailwind CSS. The application allows users to generate AI-based images using prompt inputs. Its responsive design and intuitive UI make it engaging and accessible across devices. This project demonstrates the integration of AI features into a frontend interface, along with advanced type safety using TypeScript.",
@@ -124,7 +109,7 @@ const ProjectArray = [
     skills: ["React.js", "Tailwind CSS"],
     live: "https://master-farhan.github.io/recipe/",
     github: "https://github.com/master-farhan/recipe",
-    img: Cook,
+    img: "https://ik.imagekit.io/iura/Portfolio-project/Cook.png?updatedAt=1756855026239",
     category: "Frontend",
     description:
       "Code & Cook is a responsive recipe website built with React.js and Tailwind CSS. Users can explore a variety of meal recipes with clear navigation and visually appealing layouts. The project emphasizes user experience, modern design, and smooth interactions, making it an engaging platform for food enthusiasts.",
@@ -134,7 +119,7 @@ const ProjectArray = [
     skills: ["React.js", "Tailwind CSS"],
     live: "https://travel-web-go.netlify.app/",
     github: "https://github.com/master-farhan/Travel",
-    img: Travel,
+    img: "https://ik.imagekit.io/iura/Portfolio-project/Travel.png?updatedAt=1756855031919",
     category: "Frontend",
     description:
       "This Travel Website is a modern frontend project built with React.js and Tailwind CSS. It features scenic destinations, interactive navigation, and a fully responsive layout. Users can browse destinations with ease, while the clean design and smooth transitions enhance the overall user experience, showcasing modern frontend development techniques.",
@@ -144,7 +129,7 @@ const ProjectArray = [
     skills: ["HTML", "CSS", "JavaScript"],
     live: "https://farhan-studio.netlify.app/",
     github: "https://github.com/master-farhan/studio",
-    img: Port,
+    img: "https://ik.imagekit.io/iura/Portfolio-project/Port.png?updatedAt=1756855030771",
     category: "Portfolio",
     description:
       "My Portfolio 03 is a personal portfolio designed to showcase my frontend projects, skills, and contact information. Built with HTML, CSS, and JavaScript, it features an elegant design, responsive layout, and clean presentation, reflecting my growth and attention to user experience in web development.",
@@ -154,7 +139,7 @@ const ProjectArray = [
     skills: ["React.js", "Tailwind CSS"],
     live: "https://hotel-booking-002.netlify.app/",
     github: "https://github.com/master-farhan/hotel-booking",
-    img: Hotel,
+    img: "https://ik.imagekit.io/iura/Portfolio-project/Hotel.png?updatedAt=1756855026528",
     category: "Frontend",
     description:
       "Hotel Booking is a responsive frontend UI built with React.js and Tailwind CSS. Users can explore rooms, view amenities, and navigate the website effortlessly. The project focuses on clean design, intuitive interface, and smooth interactions, highlighting practical frontend development skills.",
@@ -164,7 +149,7 @@ const ProjectArray = [
     skills: ["HTML", "CSS", "JavaScript"],
     live: "https://master-farhan.github.io/Bubble-Game/",
     github: "https://github.com/master-farhan/Bubble-Game",
-    img: Bubble,
+    img: "https://ik.imagekit.io/iura/Portfolio-project/Bubble.png?updatedAt=1756855758197",
     category: "Frontend",
     description:
       "Bubble Game is a fun and interactive casual game developed using vanilla JavaScript, HTML, and CSS. Players can enjoy a simple bubble shooter experience with responsive controls and engaging visuals, demonstrating skills in JavaScript logic, DOM manipulation, and game interface design.",
@@ -174,7 +159,7 @@ const ProjectArray = [
     skills: ["React.js", "Tailwind CSS"],
     live: "https://gemini-frontend-002.netlify.app/",
     github: "https://github.com/master-farhan/gemini-ui",
-    img: Gemini,
+    img: "https://ik.imagekit.io/iura/Portfolio-project/gemini-clone.png?updatedAt=1756855769145",
     category: "Frontend",
     description:
       "Gemini is a frontend UI clone of Google's Gemini, built with React.js and Tailwind CSS. It features a modern design, smooth transitions, and responsive layouts. The project showcases frontend development proficiency in replicating high-quality UI patterns and delivering an interactive user interface.",

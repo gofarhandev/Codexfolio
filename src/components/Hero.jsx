@@ -1,6 +1,5 @@
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
-import gif from "/gif.png";
 import LinkButton from "./LinkButton";
 
 const Hero = () => {
@@ -57,7 +56,7 @@ const Hero = () => {
           <div className="flex flex-col gap-3 lg:gap-[1vw] items-center w-full text-center">
             <img
               ref={imgRef}
-              src={gif}
+              src={"https://ik.imagekit.io/iura/Portfolio-project/gif.png?updatedAt=1756855730320"}
               alt=""
               className="rounded-full shadow-2xl shadow-primary/20 bg-back h-30 w-30 lg:w-[10vw] lg:h-[10vw]"
             />
