@@ -7,6 +7,36 @@ gsap.registerPlugin(ScrollTrigger);
 
 const ProjectArray = [
   {
+    title: "Auto Caption",
+    skills: ["React.js", "Tailwind CSS", "MongoDB", "Express", "Node", "JWT"],
+    live: "https://auto-caption-three.vercel.app/",
+    github: "https://github.com/master-farhan/social-app-backend",
+    img: "https://ik.imagekit.io/iura/Portfolio-project/caption.png?updatedAt=1756855023827",
+    category: "Backend",
+    description:
+      "A backend service for a social media app that powers automatic caption generation. Developed with Node.js, Express, and MongoDB, featuring secure authentication using JWT, robust RESTful APIs, and efficient database management to handle user data and posts.",
+  },
+  {
+    title: "Ai Chat",
+    skills: ["React.js", "Tailwind CSS", "Express", "Node"],
+    live: "https://aichat-seven-ashen.vercel.app/",
+    github: "https://github.com/master-farhan/ai.chat-backend",
+    img: "https://ik.imagekit.io/iura/Portfolio-project/chat.png?updatedAt=1756855024181",
+    category: "Backend",
+    description:
+      "A backend system for an AI-powered chat application. Built with Node.js and Express, it handles real-time communication with Socket.IO, integrates AI response generation, and provides secure, scalable APIs for smooth interaction between users and the AI assistant.",
+  },
+  {
+    title: "Moody Player",
+    skills: ["React.js", "Tailwind CSS", "Express", "Node", "imagekit"],
+    live: "https://moody-player-gold.vercel.app/",
+    github: "https://github.com/master-farhan/moody-player-backend",
+    img: "https://ik.imagekit.io/iura/Portfolio-project/moody.png?updatedAt=1756855030847",
+    category: "Backend",
+    description:
+      "A backend system for a moody music player that recommends and plays songs based on users' facial expressions. Developed with Node.js and Express, it manages audio streaming, mood-based playlist generation, and secure user authentication to deliver a personalized music experience.",
+  },
+  {
     title: "Havmor Ice-Cream",
     skills: [
       "React.js",
