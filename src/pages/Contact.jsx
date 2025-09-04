@@ -3,10 +3,6 @@ import { useForm } from "react-hook-form";
 import Swal from "sweetalert2";
 import ActionButton from "../components/ActionButton";
 import { FaUser, FaEnvelope, FaTag, FaCommentDots } from "react-icons/fa";
-import gsap from "gsap";
-import ScrollTrigger from "gsap/ScrollTrigger";
-
-gsap.registerPlugin(ScrollTrigger);
 
 const Contact = () => {
   const {
@@ -45,30 +41,8 @@ const Contact = () => {
     }
   };
 
-  // gsap
-  useEffect(() => {
-    gsap.registerPlugin(ScrollTrigger);
-
-    gsap.utils
-      .toArray([".contact-heading", ".contact-category"])
-      .forEach((className, index) => {
-        gsap.from(className, {
-          scrollTrigger: {
-            trigger: className,
-            start: "top 85%",
-            toggleActions: "play none none reverse",
-          },
-          opacity: 0,
-          y: 50,
-          duration: 0.6,
-          delay: index * 0.2,
-          ease: "power2.out",
-        });
-      });
-  }, []);
-
   return (
-    <section className="relative pb-15 lg:pb-[5vw] flex items-center justify-center w-full mb-[1vw]">
+    <section className="relative pb-30 lg:pb-[5vw] flex items-center justify-center w-full mb-[1vw]">
       <div className="text-accent overflow-hidden rounded relative w-full sm:w-2/3 lg:max-w-2/3 flex flex-col gap-5 lg:gap-[3vw] justify-center items-center pt-10 lg:pt-[3vw]">
         <h2 className="contact-heading text-xl sm:text-3xl lg:text-[2.5vw] text-grow font-bold">
           Let's Work Together

@@ -8,11 +8,6 @@ import {
   FaCogs,
   FaRocket,
 } from "react-icons/fa";
-import { useEffect } from "react";
-import gsap from "gsap";
-import ScrollTrigger from "gsap/ScrollTrigger";
-
-gsap.registerPlugin(ScrollTrigger);
 
 export const workProcess = [
   {
@@ -60,29 +55,6 @@ export const workProcess = [
 ];
 
 const Services = () => {
-  // gsap
-  useEffect(() => {
-    gsap.registerPlugin(ScrollTrigger);
-
-    gsap.utils
-      .toArray([".service-heading", ".service-category"])
-      .forEach((className, index) => {
-        gsap.from(className, {
-          scrollTrigger: {
-            trigger: className,
-            start: "top 85%",
-            toggleActions: "play none none reverse",
-          },
-          opacity: 0,
-          y: 50,
-          duration: 0.6,
-          delay: index * 0.2,
-          scrub: true,
-          ease: "power2.out",
-        });
-      });
-  }, []);
-
   return (
     <section className="service relative pt-10 pb-10 lg:pt-[3vw] lg:pb-[3vw]">
       {/* Section Title */}

@@ -1,5 +1,4 @@
-import { useEffect, useRef } from "react";
-import gsap from "gsap";
+import { useRef } from "react";
 import LinkButton from "./LinkButton";
 
 const Hero = () => {
@@ -9,45 +8,6 @@ const Hero = () => {
   const descRef = useRef(null);
   const buttonsRef = useRef(null);
 
-  useEffect(() => {
-    const tl = gsap.timeline({ defaults: { ease: "power3.out" } });
-
-    tl.fromTo(
-      imgRef.current,
-      { opacity: 0, y: 40 },
-      { opacity: 1, y: 0, duration: 0.8 }
-    )
-      .fromTo(
-        nameRef.current,
-        { opacity: 0, y: 30 },
-        { opacity: 1, y: 0, duration: 0.6 },
-        "-=0.4"
-      )
-      .fromTo(
-        subtitleRef.current,
-        { opacity: 0, y: 30 },
-        { opacity: 1, y: 0, duration: 0.6 },
-        "-=0.4"
-      )
-      .fromTo(
-        descRef.current,
-        { opacity: 0, y: 20 },
-        { opacity: 1, y: 0, duration: 0.6 },
-        "-=0.3"
-      )
-      .fromTo(
-        buttonsRef.current.children,
-        { opacity: 0, y: 20 },
-        {
-          opacity: 1,
-          y: 0,
-          duration: 0.6,
-          stagger: 0.2,
-        },
-        "-=0.4"
-      );
-  }, []);
-
   return (
     <div className="flex items-center justify-center z-10 mb-20 lg:mb-0">
       <div className="text-grow overflow-hidden rounded relative lg:h-[77vh] w-full">
@@ -56,7 +16,9 @@ const Hero = () => {
           <div className="flex flex-col gap-3 lg:gap-[1vw] items-center w-full text-center">
             <img
               ref={imgRef}
-              src={"https://ik.imagekit.io/iura/Portfolio-project/gif.png?updatedAt=1756855730320"}
+              src={
+                "https://ik.imagekit.io/iura/Portfolio-project/gif.png?updatedAt=1756855730320"
+              }
               alt=""
               className="rounded-full shadow-2xl shadow-primary/20 bg-back h-30 w-30 lg:w-[10vw] lg:h-[10vw]"
             />

@@ -9,14 +9,15 @@ import {
   FaNpm,
 } from "react-icons/fa";
 import { FaRegFilePdf, FaLinkedinIn } from "react-icons/fa6";
-import { SiRedux, SiTailwindcss, SiJavascript, SiSass, SiExpress } from "react-icons/si";
+import {
+  SiRedux,
+  SiTailwindcss,
+  SiJavascript,
+  SiSass,
+  SiExpress,
+} from "react-icons/si";
 import { FiGithub } from "react-icons/fi";
 import AnchorButton from "../components/AnchorButton";
-import { useEffect } from "react";
-import gsap from "gsap";
-import ScrollTrigger from "gsap/ScrollTrigger";
-
-gsap.registerPlugin(ScrollTrigger);
 
 const skills = [
   { name: "React", icon: <FaReact className="text-cyan-400" /> },
@@ -35,30 +36,8 @@ const skills = [
 ];
 
 const About = () => {
-  // gsap
-  useEffect(() => {
-    gsap.registerPlugin(ScrollTrigger);
-
-    gsap.utils
-      .toArray([".about-heading", ".about-p", ".about-a", ".about-s"])
-      .forEach((className, index) => {
-        gsap.from(className, {
-          scrollTrigger: {
-            trigger: className,
-            start: "top 85%",
-            toggleActions: "play none none reverse",
-          },
-          opacity: 0,
-          y: 50,
-          duration: 0.6,
-          delay: index * 0.2,
-          ease: "power2.out",
-        });
-      });
-  }, []);
-
   return (
-    <section className="relative pt-[4vw] pb-20 lg:pb-[5.5vw]">
+    <section className="relative py-25 lg:py-[7vw]">
       <h2 className="project-heading text-grow text-xl sm:text-3xl lg:text-[2.5vw] flex justify-center font-bold">
         Who I Am
       </h2>
@@ -107,7 +86,7 @@ const About = () => {
             {skills.map((skill, index) => (
               <span
                 key={index}
-                className="flex items-center justify-center gap-2 lg:gap-[.5vw] px-3 sm:px-5 lg:px-[1.5vw] py-1 lg:py-[.2vw] text-sm sm:text-xl lg:text-[1.8vw] font-playfair text-primary rounded-full trans"
+                className="flex items-center justify-center gap-2 lg:gap-[.5vw]  text-xl p-2 lg:p-[.5vw] lg:text-[1.8vw] font-playfair text-primary rounded-full trans"
               >
                 {skill.icon}
                 {skill.name}

@@ -2,10 +2,6 @@
 import React, { useEffect, useRef } from "react";
 import useEmblaCarousel from "embla-carousel-react";
 import Autoplay from "embla-carousel-autoplay";
-import gsap from "gsap";
-import ScrollTrigger from "gsap/ScrollTrigger";
-
-gsap.registerPlugin(ScrollTrigger);
 
 const Testimonials = () => {
   const testimonials = [
@@ -44,29 +40,6 @@ const Testimonials = () => {
   // Embla Carousel hook
   const autoplay = useRef(Autoplay({ delay: 3000, stopOnInteraction: false }));
   const [emblaRef] = useEmblaCarousel({ loop: true }, [autoplay.current]);
-
-  // gsap
-  useEffect(() => {
-    gsap.registerPlugin(ScrollTrigger);
-
-    gsap.utils
-      .toArray([".testimonial-heading", ".testimonial-category"])
-      .forEach((className, index) => {
-        gsap.from(className, {
-          scrollTrigger: {
-            trigger: className,
-            start: "top 85%",
-            toggleActions: "play none none reverse",
-          },
-          opacity: 0,
-          y: 50,
-          duration: 0.6,
-          delay: index * 0.2,
-          scrub: true,
-          ease: "power2.out",
-        });
-      });
-  }, []);
 
   return (
     <div className="my-20 lg:my-[8vw]">

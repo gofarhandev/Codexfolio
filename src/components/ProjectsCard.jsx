@@ -12,7 +12,7 @@ const ProjectsCard = ({ ProjectArray }) => {
   };
 
   return (
-    <div className="grid grid-cols-1 pt-10 lg:pt-[3vw] md:grid-cols-2 lg:grid-cols-4 gap-5 lg:gap-[2.5vw]">
+    <div className="grid grid-cols-1 pt-10 lg:pt-[3vw] md:grid-cols-2 lg:grid-cols-3 gap-5 lg:gap-[2.5vw]">
       {ProjectArray.map((item, index) => {
         const limit = 100;
         const isLong = item.description.length > limit;
@@ -34,7 +34,7 @@ const ProjectsCard = ({ ProjectArray }) => {
               />
               <div className="px-3 lg:px-[1.2vw] py-2 lg:py-[1vw] flex flex-col justify-between">
                 <div className="flex flex-col items-center gap-3 lg:gap-[1vw] lg:my-[.5vw] my-2">
-                  <h2 className="text-base lg:text-[1.3vw] px-2 lg:px-[.5vw] w-full font-semibold whitespace-nowrap">
+                  <h2 className="text-base lg:text-[1.5vw] px-2 lg:px-[.5vw] w-full font-semibold whitespace-nowrap">
                     {item.title}
                   </h2>
 
