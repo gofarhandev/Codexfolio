@@ -28,7 +28,7 @@ const skills = [
   { name: "JavaScript", icon: <SiJavascript className="text-yellow-400" /> },
   { name: "SCSS", icon: <SiSass className="text-pink-400" /> },
   { name: "Node.js", icon: <FaNodeJs className="text-green-600" /> },
-  { name: "Express", icon: <SiExpress className="text-gray-400" /> }, // reused Node icon
+  { name: "Express", icon: <SiExpress className="text-yellow-500" /> }, 
   { name: "MongoDB", icon: <FaDatabase className="text-green-500" /> },
   { name: "JWT", icon: <FaLock className="text-yellow-600" /> },
   { name: "Git", icon: <FaGitAlt className="text-red-500" /> },
@@ -37,7 +37,7 @@ const skills = [
 
 const About = () => {
   return (
-    <section className="relative py-25 lg:py-[7vw]">
+    <section className="relative py-25 lg:pt-[6vw] lg:pb-[7vw]">
       <h2 className="project-heading text-grow text-xl sm:text-3xl lg:text-[2.5vw] flex justify-center font-bold">
         Who I Am
       </h2>
@@ -86,7 +86,7 @@ const About = () => {
             {skills.map((skill, index) => (
               <span
                 key={index}
-                className="flex items-center justify-center gap-2 lg:gap-[.5vw]  text-xl p-2 lg:p-[.5vw] lg:text-[1.8vw] font-playfair text-primary rounded-full trans"
+                className="flex items-center justify-center gap-2 lg:gap-[.5vw]  text-lg px-4 border border-accent lg:px-[1vw] lg:text-[1.6vw] font-playfair text-primary rounded-full trans"
               >
                 {skill.icon}
                 {skill.name}

@@ -26,7 +26,7 @@ const ProjectsCard = ({ ProjectArray }) => {
             id={item.category}
             className="project-category relative group"
           >
-            <div className="block rounded-lg lg:rounded-[1vw] overflow-hidden trans hover:bg-accent/20">
+            <div className="block rounded-lg lg:rounded-[1vw] overflow-hidden trans hover:bg-accent/20 border border-accent">
               <img
                 src={item.img}
                 alt={item.title}

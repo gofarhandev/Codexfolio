@@ -227,9 +227,9 @@ const Projects = () => {
             className={`py-1 lg:py-[.5vw] px-10 lg:px-[3vw] font-Michroma rounded-full cursor-pointer text-sm lg:text-[1vw] whitespace-nowrap
               ${
                 activeCategory === category
-                  ? "bg-accent/50 text-grow"
-                  : "bg-accent/10 hover:bg-accent text-grow/80"
-              } transition duration-300`}
+                  ? "bg-primary/50 text-grow"
+                  : "bg-transparent hover:bg-primary/50 text-grow/80"
+              } transition duration-300  border border-accent `}
           >
             <p>{category}</p>
           </div>

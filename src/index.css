@@ -4,8 +4,8 @@
 @theme {
   --color-back: #242424;
   --color-grow: #fff;
-  --color-primary: #ff6a6a;
-  --color-accent: #111;
+  --color-primary: #6a85ff;
+  --color-accent: #2a304a;
   --font-Michroma: "Michroma", serif;
   --font-montserrat: "Ubuntu", sans-serif;
 }
@@ -15,7 +15,7 @@ body {
 }
 
 p {
-  --color-primary: #ff6a6a;
+  --color-primary: #2a304a;
 }
 /* ffa500 */
 h1,
