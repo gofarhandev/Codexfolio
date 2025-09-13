@@ -3,6 +3,25 @@ import ProjectsCard from "../components/ProjectsCard";
 
 const ProjectArray = [
   {
+    title: "ChatGPT",
+    skills: [
+      "React.js",
+      "Tailwind CSS",
+      "GeminiAi",
+      "MongoDB",
+      "Express",
+      "Node",
+      "JWT",
+    ],
+    live: "https://gpt-0-09.onrender.com/",
+    github: "https://github.com/master-farhan/gpt-client",
+    img: "https://ik.imagekit.io/iura/Portfolio-project/gpt.png?updatedAt=1757763856691",
+    category: "Full-Stack",
+    description:
+      "A full-stack AI-powered chatbot application that leverages GeminiAi for intelligent conversations. Built with a React.js frontend, Node.js/Express backend, and MongoDB for data storage. Implements JWT authentication for secure user management and provides a responsive, modern UI using Tailwind CSS.",
+  },
+
+  {
     title: "Auto Caption",
     skills: ["React.js", "Tailwind CSS", "MongoDB", "Express", "Node", "JWT"],
     live: "https://auto-caption-three.vercel.app/",
@@ -119,16 +138,6 @@ const ProjectArray = [
     category: "Portfolio",
     description:
       "My Portfolio 02 is an enhanced personal portfolio website built to better showcase my skills, projects, and growth as a frontend developer. Using HTML, CSS, and JavaScript, the site features improved design elements and responsive layouts, reflecting a more polished and professional approach to web development.",
-  },
-  {
-    title: "AI Created Portfolio",
-    skills: ["React.js", "TypeScript", "Tailwind CSS"],
-    live: "https://ai-created-00.netlify.app/",
-    github: "https://github.com/master-farhan/luminous-farhan-portfolio",
-    img: "https://ik.imagekit.io/iura/Portfolio-project/Ai-created-port.png?updatedAt=1756855026032",
-    category: "Portfolio",
-    description:
-      "AI Created Portfolio is an innovative web project built with React.js, TypeScript, and Tailwind CSS. The application allows users to generate AI-based images using prompt inputs. Its responsive design and intuitive UI make it engaging and accessible across devices. This project demonstrates the integration of AI features into a frontend interface, along with advanced type safety using TypeScript.",
   },
   {
     title: "Code & Cook",
