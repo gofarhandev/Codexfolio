@@ -1,12 +1,16 @@
-// App.jsx
-import MainRoutes from "./Routes/MainRoutes";
+// src/App.jsx
+import React from "react";
+import { HelmetProvider } from "react-helmet-async";
 import { BrowserRouter } from "react-router-dom";
+import MainRoutes from "./Routes/MainRoutes";
 
 function App() {
   return (
-    <BrowserRouter>
-      <MainRoutes />
-    </BrowserRouter>
+    <HelmetProvider>
+      <BrowserRouter>
+        <MainRoutes />
+      </BrowserRouter>
+    </HelmetProvider>
   );
 }
 

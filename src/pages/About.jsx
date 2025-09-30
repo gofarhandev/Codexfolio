@@ -86,7 +86,7 @@ const About = () => {
             {skills.map((skill, index) => (
               <span
                 key={index}
-                className="flex items-center justify-center gap-2 lg:gap-[.5vw]  text-lg px-4 border border-accent lg:px-[1vw] lg:text-[1.6vw] font-playfair text-primary rounded-full trans"
+                className="flex items-center justify-center gap-2 lg:gap-[.5vw]  text-lg px-4 border border-accent lg:px-[1vw] lg:text-[1.6vw] font-playfair text-grow rounded-full trans"
               >
                 {skill.icon}
                 {skill.name}

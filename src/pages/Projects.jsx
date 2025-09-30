@@ -14,42 +14,11 @@ const ProjectArray = [
       "JWT",
     ],
     live: "https://gpt-0-09.onrender.com/",
-    github: "https://github.com/master-farhan/gpt-client",
+    github: "https://github.com/gofarhandev/gpt-client",
     img: "https://ik.imagekit.io/iura/Portfolio-project/gpt.png?updatedAt=1757763856691",
     category: "Full-Stack",
     description:
       "A full-stack AI-powered chatbot application that leverages GeminiAi for intelligent conversations. Built with a React.js frontend, Node.js/Express backend, and MongoDB for data storage. Implements JWT authentication for secure user management and provides a responsive, modern UI using Tailwind CSS.",
-  },
-
-  {
-    title: "Auto Caption",
-    skills: ["React.js", "Tailwind CSS", "MongoDB", "Express", "Node", "JWT"],
-    live: "https://auto-caption-three.vercel.app/",
-    github: "https://github.com/master-farhan/social-app-backend",
-    img: "https://ik.imagekit.io/iura/Portfolio-project/caption.png?updatedAt=1756855023827",
-    category: "Backend",
-    description:
-      "A backend service for a social media app that powers automatic caption generation. Developed with Node.js, Express, and MongoDB, featuring secure authentication using JWT, robust RESTful APIs, and efficient database management to handle user data and posts.",
-  },
-  {
-    title: "Ai Chat",
-    skills: ["React.js", "Socket.io", "Tailwind CSS", "Express", "Node"],
-    live: "https://aichat-seven-ashen.vercel.app/",
-    github: "https://github.com/master-farhan/ai.chat-backend",
-    img: "https://ik.imagekit.io/iura/Portfolio-project/chat.png?updatedAt=1756855024181",
-    category: "Backend",
-    description:
-      "A backend system for an AI-powered chat application. Built with Node.js and Express, it handles real-time communication with Socket.IO, integrates AI response generation, and provides secure, scalable APIs for smooth interaction between users and the AI assistant.",
-  },
-  {
-    title: "Moody Player",
-    skills: ["React.js", "Tailwind CSS", "Express", "Node", "imagekit"],
-    live: "https://moody-player-gold.vercel.app/",
-    github: "https://github.com/master-farhan/moody-player-backend",
-    img: "https://ik.imagekit.io/iura/Portfolio-project/moody.png?updatedAt=1756855030847",
-    category: "Backend",
-    description:
-      "A backend system for a moody music player that recommends and plays songs based on users' facial expressions. Developed with Node.js and Express, it manages audio streaming, mood-based playlist generation, and secure user authentication to deliver a personalized music experience.",
   },
   {
     title: "Havmor Ice-Cream",
@@ -63,17 +32,57 @@ const ProjectArray = [
       "JWT",
     ],
     live: "https://havmor.vercel.app/",
-    github: "https://github.com/master-farhan/hackathon-frontend",
+    github: "https://github.com/gofarhandev/hackathon-frontend",
     img: "https://ik.imagekit.io/iura/Portfolio-project/Havmor.png?updatedAt=1756855023552",
     category: "Full-Stack",
     description:
       "Havmor Ice-Cream is a full-stack web application developed as part of the Sheriyans Hackathon. This project features a modern and responsive user interface built with React.js and styled using Tailwind CSS, ensuring smooth and visually appealing experiences across devices. GSAP animations are used to add engaging transitions and interactive elements throughout the app. On the backend, it utilizes Node.js and Express to handle server-side logic, while MongoDB provides a scalable database solution for storing and managing user and product data. Secure user authentication is implemented using JWT, enabling protected routes and personalized experiences. The application includes real-world features such as dynamic product listings, user account management, and seamless interactivity, making it a robust full-stack project showcasing practical web development skills from frontend design to backend functionality.",
   },
   {
+    title: "Personal Modern Portfolio",
+    skills: ["React.js", "Tailwind CSS", "GSAP", "Framer Motion"],
+    live: "https://gofarhandev.vercel.app/",
+    github: "https://github.com/gofarhandev/portfolio",
+    img: "https://ik.imagekit.io/iura/Portfolio-project/portf.png?updatedAt=1759218760061",
+    category: "Portfolio",
+    description:
+      "A sleek, responsive personal portfolio built with React and Tailwind CSS. Animations and micro-interactions powered by GSAP for smooth entrance effects and section transitions. Showcases projects, blog links, and contact form with email integration.",
+  },
+  {
+    title: "Auto Caption",
+    skills: ["React.js", "Tailwind CSS", "MongoDB", "Express", "Node", "JWT"],
+    live: "https://auto-caption-three.vercel.app/",
+    github: "https://github.com/gofarhandev/social-app-backend",
+    img: "https://ik.imagekit.io/iura/Portfolio-project/caption.png?updatedAt=1756855023827",
+    category: "Backend",
+    description:
+      "A backend service for a social media app that powers automatic caption generation. Developed with Node.js, Express, and MongoDB, featuring secure authentication using JWT, robust RESTful APIs, and efficient database management to handle user data and posts.",
+  },
+  {
+    title: "Ai Chat",
+    skills: ["React.js", "Socket.io", "Tailwind CSS", "Express", "Node"],
+    live: "https://aichat-seven-ashen.vercel.app/",
+    github: "https://github.com/gofarhandev/ai.chat-backend",
+    img: "https://ik.imagekit.io/iura/Portfolio-project/chat.png?updatedAt=1756855024181",
+    category: "Backend",
+    description:
+      "A backend system for an AI-powered chat application. Built with Node.js and Express, it handles real-time communication with Socket.IO, integrates AI response generation, and provides secure, scalable APIs for smooth interaction between users and the AI assistant.",
+  },
+  {
+    title: "Moody Player",
+    skills: ["React.js", "Tailwind CSS", "Express", "Node", "imagekit"],
+    live: "https://moody-player-gold.vercel.app/",
+    github: "https://github.com/gofarhandev/moody-player-backend",
+    img: "https://ik.imagekit.io/iura/Portfolio-project/moody.png?updatedAt=1756855030847",
+    category: "Backend",
+    description:
+      "A backend system for a moody music player that recommends and plays songs based on users' facial expressions. Developed with Node.js and Express, it manages audio streaming, mood-based playlist generation, and secure user authentication to deliver a personalized music experience.",
+  },
+  {
     title: "GTA 6",
     skills: ["React.js", "Tailwind CSS", "GSAP"],
     live: "https://gta-6-02.vercel.app/",
-    github: "https://github.com/master-farhan/GTA-6",
+    github: "https://github.com/gofarhandev/GTA-6",
     img: "https://ik.imagekit.io/iura/Portfolio-project/GTA-6.png?updatedAt=1756855026210",
     category: "Frontend",
     description:
@@ -83,7 +92,7 @@ const ProjectArray = [
     title: "Clothing Store",
     skills: ["React.js", "Tailwind CSS"],
     live: "https://clothes-store-002.netlify.app/",
-    github: "https://github.com/master-farhan/clothes-shop",
+    github: "https://github.com/gofarhandev/clothes-shop",
     img: "https://ik.imagekit.io/iura/Portfolio-project/DripNest-pro.png?updatedAt=1756855024647",
     category: "Frontend",
     description:
@@ -93,7 +102,7 @@ const ProjectArray = [
     title: "Cocktails",
     skills: ["React.js", "Tailwind CSS", "GSAP"],
     live: "https://cocktails-02.vercel.app/",
-    github: "https://github.com/master-farhan/gsap-cocktails",
+    github: "https://github.com/gofarhandev/gsap-cocktails",
     img: "https://ik.imagekit.io/iura/Portfolio-project/Cocktails.png?updatedAt=1756855024827",
     category: "Frontend",
     description:
@@ -103,7 +112,7 @@ const ProjectArray = [
     title: "3D Portfolio",
     skills: ["React.js", "Tailwind CSS", "Spline"],
     live: "https://spline-with-animation.netlify.app/",
-    github: "https://github.com/master-farhan/Hero-Section-with-Spline",
+    github: "https://github.com/gofarhandev/Hero-Section-with-Spline",
     img: "https://ik.imagekit.io/iura/Portfolio-project/Spline-port.png?updatedAt=1756855032932",
     category: "Portfolio",
     description:
@@ -113,7 +122,7 @@ const ProjectArray = [
     title: "My Gadget Bd",
     skills: ["React.js", "Redux", "Tailwind CSS"],
     live: "https://my-gadget-bd.netlify.app/",
-    github: "https://github.com/master-farhan/My-Gadget",
+    github: "https://github.com/gofarhandev/My-Gadget",
     img: "https://ik.imagekit.io/iura/Portfolio-project/Gadget.png?updatedAt=1756855024500",
     category: "Frontend",
     description:
@@ -122,8 +131,8 @@ const ProjectArray = [
   {
     title: "My Portfolio 01",
     skills: ["HTML", "CSS", "JavaScript"],
-    live: "https://master-farhan.github.io/portfolio-01/",
-    github: "https://github.com/master-farhan/portfolio-01",
+    live: "https://gofarhandev.github.io/portfolio-01/",
+    github: "https://github.com/gofarhandev/portfolio-01",
     img: "https://ik.imagekit.io/iura/Portfolio-project/port01.png?updatedAt=1756855031172",
     category: "Portfolio",
     description:
@@ -132,8 +141,8 @@ const ProjectArray = [
   {
     title: "My Portfolio 02",
     skills: ["HTML", "CSS", "JavaScript"],
-    live: "https://master-farhan.github.io/portfolio-02/",
-    github: "https://github.com/master-farhan/portfolio-02",
+    live: "https://gofarhandev.github.io/portfolio-02/",
+    github: "https://github.com/gofarhandev/portfolio-02",
     img: "https://ik.imagekit.io/iura/Portfolio-project/port02.png?updatedAt=1756855030900",
     category: "Portfolio",
     description:
@@ -142,8 +151,8 @@ const ProjectArray = [
   {
     title: "Code & Cook",
     skills: ["React.js", "Tailwind CSS"],
-    live: "https://master-farhan.github.io/recipe/",
-    github: "https://github.com/master-farhan/recipe",
+    live: "https://gofarhandev.github.io/recipe/",
+    github: "https://github.com/gofarhandev/recipe",
     img: "https://ik.imagekit.io/iura/Portfolio-project/Cook.png?updatedAt=1756855026239",
     category: "Frontend",
     description:
@@ -153,7 +162,7 @@ const ProjectArray = [
     title: "Travel Website",
     skills: ["React.js", "Tailwind CSS"],
     live: "https://travel-web-go.netlify.app/",
-    github: "https://github.com/master-farhan/Travel",
+    github: "https://github.com/gofarhandev/Travel",
     img: "https://ik.imagekit.io/iura/Portfolio-project/Travel.png?updatedAt=1756855031919",
     category: "Frontend",
     description:
@@ -163,7 +172,7 @@ const ProjectArray = [
     title: "My Portfolio 03",
     skills: ["HTML", "CSS", "JavaScript"],
     live: "https://farhan-studio.netlify.app/",
-    github: "https://github.com/master-farhan/studio",
+    github: "https://github.com/gofarhandev/studio",
     img: "https://ik.imagekit.io/iura/Portfolio-project/Port.png?updatedAt=1756855030771",
     category: "Portfolio",
     description:
@@ -173,7 +182,7 @@ const ProjectArray = [
     title: "Hotel Booking",
     skills: ["React.js", "Tailwind CSS"],
     live: "https://hotel-booking-002.netlify.app/",
-    github: "https://github.com/master-farhan/hotel-booking",
+    github: "https://github.com/gofarhandev/hotel-booking",
     img: "https://ik.imagekit.io/iura/Portfolio-project/Hotel.png?updatedAt=1756855026528",
     category: "Frontend",
     description:
@@ -182,8 +191,8 @@ const ProjectArray = [
   {
     title: "Bubble Game",
     skills: ["HTML", "CSS", "JavaScript"],
-    live: "https://master-farhan.github.io/Bubble-Game/",
-    github: "https://github.com/master-farhan/Bubble-Game",
+    live: "https://gofarhandev.github.io/Bubble-Game/",
+    github: "https://github.com/gofarhandev/Bubble-Game",
     img: "https://ik.imagekit.io/iura/Portfolio-project/Bubble.png?updatedAt=1756855758197",
     category: "Frontend",
     description:
@@ -193,7 +202,7 @@ const ProjectArray = [
     title: "Gemini",
     skills: ["React.js", "Tailwind CSS"],
     live: "https://gemini-frontend-002.netlify.app/",
-    github: "https://github.com/master-farhan/gemini-ui",
+    github: "https://github.com/gofarhandev/gemini-ui",
     img: "https://ik.imagekit.io/iura/Portfolio-project/gemini-clone.png?updatedAt=1756855769145",
     category: "Frontend",
     description:

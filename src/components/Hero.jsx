@@ -1,5 +1,6 @@
 import { useRef } from "react";
 import LinkButton from "./LinkButton";
+import { Typewriter } from "react-simple-typewriter";
 
 const Hero = () => {
   const imgRef = useRef(null);
@@ -17,10 +18,10 @@ const Hero = () => {
             <img
               ref={imgRef}
               src={
-                "https://ik.imagekit.io/iura/Portfolio-project/gif.png?updatedAt=1756855730320"
+                "https://ik.imagekit.io/iura/Portfolio-project/ppp.png?updatedAt=1759219064100"
               }
               alt=""
-              className="rounded-full shadow-2xl shadow-primary/20 bg-back h-30 w-30 lg:w-[10vw] lg:h-[10vw]"
+              className="rounded-full shadow-2xl shadow-primary/20 bg-back h-30 w-30 lg:w-[10vw] object-cover lg:h-[10vw]"
             />
             <h1
               ref={nameRef}
@@ -28,11 +29,21 @@ const Hero = () => {
             >
               MD FARHAN SADIK
             </h1>
-            <h2
-              ref={subtitleRef}
-              className="font-bold text-grow text-lg sm:text-2xl lg:text-[2.5vw] pb-4 lg:pb-[1.5vw]"
-            >
-              Fullstack Developer
+            <h2 className="font-bold text-primary uppercase text-sm sm:text-xl lg:text-[2vw] pb-4 lg:pb-[1.3vw]">
+              <Typewriter
+                words={[
+                  "Fullstack Developer",
+                  "Frontend Developer",
+                  "Backend Developer",
+                  "MERN Stack Developer",
+                ]}
+                loop={true}
+                cursor
+                cursorStyle="|"
+                typeSpeed={70}
+                deleteSpeed={50}
+                delaySpeed={3000}
+              />
             </h2>
           </div>
 
