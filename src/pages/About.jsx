@@ -57,7 +57,7 @@ const About = () => {
 
           <div className="about-a flex w-full items-center gap-5 lg:gap-[1.5vw] justify-center">
             <AnchorButton
-              href="https://github.com/master-farhan"
+              href="https://github.com/gofarhandev/"
               label="Github"
               icon={
                 <FiGithub className="transition-transform duration-300 group-hover:text-sm lg:text-[1vw] lg:group-hover:text-[1.2vw] group-hover:-rotate-12" />
@@ -65,7 +65,7 @@ const About = () => {
             />
 
             <AnchorButton
-              href="https://drive.google.com/file/d/1TBnogM5kvkINjoo6vZw7KzIYzMzkidja/view?usp=sharing"
+              href="https://www.canva.com/design/DAGuoR1mqnw/DvmWx30ZBGVfNVv1b28Jsw/view?utm_content=DAGuoR1mqnw&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=hb4dfbd4ce2"
               download={true}
               label="Resume"
               icon={
@@ -74,7 +74,7 @@ const About = () => {
             />
 
             <AnchorButton
-              href="https://www.linkedin.com/in/md-farhan-sadik-467340316/"
+              href="https://www.linkedin.com/in/gofarhandev/"
               label="LinkedIn"
               icon={
                 <FaLinkedinIn className="transition-transform duration-300 group-hover:text-sm lg:text-[1vw] lg:group-hover:text-[1.2vw] group-hover:-rotate-12" />
